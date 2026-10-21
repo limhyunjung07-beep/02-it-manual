@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1-1 꿈it다 로그인 방법</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1864AB}a:hover{color:#0d3f73}
+.root{--c:#E8590C;--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF;--p:#6B5BD2;--pl:#EEEBFB;width:1760px;height:990px;box-sizing:border-box;background:#fff;font-family:'Noto Sans KR',sans-serif;color:#1f2433;display:flex;flex-direction:column;overflow:hidden}
+.hd{background:#0E5C58;color:#fff;display:flex;align-items:center;gap:20px;padding:0 28px 0 36px;height:88px;flex-shrink:0}
+.stp{background:var(--c);color:#fff;border-radius:14px;padding:8px 16px;display:flex;flex-direction:column;align-items:center;line-height:1.15;flex-shrink:0}
+.stp small{font-size:11px;font-weight:900;letter-spacing:0.1em}
+.stp b{font-size:17px;font-weight:900}
+.ht{display:flex;flex-direction:column;gap:5px;flex:1}
+.ht h1{margin:0;font-size:31px;font-weight:900;letter-spacing:-0.02em;display:flex;align-items:center;gap:12px}
+.no{background:#ffd23f;color:#0E5C58;font-size:20px;font-weight:900;border-radius:999px;padding:2px 14px}
+.ht p{margin:0;font-size:14px;color:#d3ebe8}
+.org{text-align:right;line-height:1.35}
+.org small{font-size:14px;color:#d3ebe8;display:block}
+.org b{font-size:22px;font-weight:900}
+.home{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:64px;height:64px;border-radius:16px;background:#ffd23f;color:#0E5C58;text-decoration:none;font-size:13px;font-weight:900;flex-shrink:0;box-shadow:0 3px 0 #c9a21a}
+.home:hover{background:#ffe27a;color:#0E5C58}
+.flow{height:6px;background:var(--c);flex-shrink:0}
+.body{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:16px 18px;padding:16px 24px 0}
+.card{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:0;background:#fff}
+.ch{background:var(--l);display:flex;align-items:center;gap:10px;padding:7px 14px;flex-shrink:0}
+.num{width:28px;height:28px;border-radius:50%;background:var(--d);color:#fff;font-weight:900;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ch b{font-size:16.5px;font-weight:900;letter-spacing:-0.03em}
+.shot{height:212px;flex-shrink:0;background:#eef0f4;border-bottom:1px solid #e3e5ea;padding:10px 16px;box-sizing:border-box;display:flex}
+.cap{margin:0;padding:8px 14px 8px 32px;font-size:13px;line-height:1.55;letter-spacing:-0.02em}
+.cap li{margin-bottom:1px}
+.cap b{color:var(--d)}
+.hl{background:#fff3a3;font-weight:700;padding:0 2px}
+.warn{color:#B42318;font-weight:700}
+
+/* screen mockups */
+.win{flex:1;background:#fff;border:1px solid #cfd3dc;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.08);min-width:0}
+.wb{height:14px;background:#e4e6ec;display:flex;align-items:center;gap:4px;padding:0 7px;flex-shrink:0}
+.wb i{width:6px;height:6px;border-radius:50%;background:#b9bdc8;display:block}
+.wc{flex:1;min-height:0;position:relative;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;justify-content:space-between;padding:5px 10px 4px;border-bottom:1px solid #eee}
+.brand{font-size:11px;font-weight:900;color:#2b2f6e;display:flex;align-items:center;gap:4px}
+.brand i{width:12px;height:12px;border-radius:3px;background:linear-gradient(135deg,#E53935,#1E7FD8);display:block}
+.nav{display:flex;gap:7px;font-size:7.5px;font-weight:700;color:#444}
+.util{display:flex;gap:4px;align-items:center;font-size:7.5px;color:#555}
+.ub{border:1px solid #c9ccd6;border-radius:3px;padding:1px 5px;background:#fff}
+.hit{outline:3px solid #E53935;outline-offset:2px;position:relative;border-radius:3px}
+.bd{position:absolute;width:18px;height:18px;border-radius:50%;background:#E53935;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;top:-16px;right:-16px;box-shadow:0 0 0 2px #fff;z-index:2}
+.banner{margin:6px 10px 0;height:58px;border-radius:6px;background:var(--pl);display:flex;align-items:center;justify-content:space-between;padding:0 12px}
+.banner b{font-size:12px;font-weight:900;color:#2b2f6e;line-height:1.2}
+.banner span{font-size:8px;color:#555}
+.banner em{font-style:normal;font-size:9px;font-weight:900;color:#fff;background:var(--p);border-radius:4px;padding:3px 6px}
+.quick{display:flex;gap:7px;justify-content:center;margin-top:8px}
+.qk{width:44px;height:36px;background:#f4f3fb;border:1px solid #dcd8f2;border-radius:6px;font-size:7px;font-weight:700;color:#444;display:flex;align-items:flex-end;justify-content:center;padding-bottom:3px;box-sizing:border-box;position:relative}
+.qk::before{content:"";position:absolute;top:6px;left:50%;width:12px;height:12px;margin-left:-6px;border:1.5px solid #6B5BD2;border-radius:3px}
+.mt{text-align:center;font-size:11px;font-weight:900;color:#2b2f6e;margin-top:auto;padding:6px 0 7px;background:#f7f6fd}
+.center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px}
+.lt{font-size:11px;font-weight:900;color:#222}
+.key{width:26px;height:30px;border-radius:13px 13px 6px 6px;background:linear-gradient(180deg,#E86AA6,#7C5CE0);position:relative}
+.key::after{content:"";position:absolute;left:8px;top:8px;width:10px;height:10px;border-radius:50%;background:#fff}
+.bigbtn{width:150px;height:24px;border-radius:5px;background:var(--p);color:#fff;font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.op{font-size:13px;font-weight:900;color:#222;display:flex;align-items:center;gap:5px}
+.op i{width:12px;height:14px;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,#E86AA6,#7C5CE0);display:block}
+.who{display:flex;gap:12px}
+.wcard{width:92px;height:104px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:7px 0 0;box-sizing:border-box;overflow:hidden;font-size:10px;font-weight:900}
+.wcard .fig{display:flex;gap:4px;align-items:flex-end}
+.wcard .fig i{display:block;width:16px;border-radius:8px 8px 3px 3px}
+.wcard u{text-decoration:none;width:100%;text-align:center;font-size:9px;padding:4px 0;color:#fff}
+.tabs{display:flex;width:190px;border:1px solid #c9ccd6;border-radius:5px;overflow:hidden;font-size:8.5px;font-weight:700}
+.tabs span{flex:1;text-align:center;padding:4px 0;color:#666;background:#fff}
+.tabs .on{background:var(--pl);color:var(--p);box-shadow:inset 0 0 0 1.5px var(--p)}
+.fld{width:190px;height:18px;border:1px solid #cfd3dc;border-radius:4px;font-size:8px;color:#999;display:flex;align-items:center;padding:0 7px;box-sizing:border-box}
+.links{display:flex;gap:10px;font-size:8px;color:#555;font-weight:700}
+.modal{position:absolute;left:50%;top:6px;bottom:6px;width:62%;margin-left:-31%;background:#fff;border-radius:7px;box-shadow:0 4px 14px rgba(0,0,0,0.25);display:flex;flex-direction:column;padding:8px 10px;box-sizing:border-box;gap:4px;z-index:1}
+.dim{position:absolute;inset:0;background:rgba(30,32,44,0.45)}
+.mtt{font-size:10px;font-weight:900;text-align:center}
+.tl{height:4px;border-radius:2px;background:#e3e5ea}
+.tbl{border:1px solid #e3e5ea;border-radius:3px;height:30px;background:repeating-linear-gradient(90deg,#fafafa 0,#fafafa 33%,#e3e5ea 33%,#e3e5ea 33.6%)}
+.agree{display:flex;justify-content:flex-end;gap:8px;font-size:8.5px;font-weight:700;margin-top:auto}
+.agree span{display:flex;align-items:center;gap:3px}
+.agree i{width:8px;height:8px;border-radius:50%;border:1.5px solid #888;display:block}
+.agree .y i{border-color:var(--p);background:radial-gradient(circle,var(--p) 40%,#fff 45%)}
+.okb{height:18px;border-radius:4px;background:var(--p);color:#fff;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center}
+
+.age{border:2px solid #0E5C58;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.age .ah{background:#0E5C58;color:#fff;font-size:16px;font-weight:900;padding:8px 14px;letter-spacing:-0.02em}
+.age .ah span{font-size:12px;font-weight:500;color:#d3ebe8;margin-left:6px}
+.ag{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:10px 12px 0;flex:1;min-height:0}
+.ac{display:flex;flex-direction:column;gap:5px;min-width:0}
+.ac h5{margin:0;font-size:13.5px;font-weight:900;color:#0E5C58;text-align:center;border-bottom:2px solid #0E5C58;padding-bottom:3px}
+.ac h5 small{display:block;font-size:11px;font-weight:700;color:#55596a}
+.bx{border:1.5px solid #9cc9c4;border-radius:8px;padding:5px 7px;font-size:11.8px;line-height:1.45;text-align:center;letter-spacing:-0.03em;background:#f2f9f8}
+.bx.r{border-color:#E4A39B;background:#FDF1EF}
+.ar{text-align:center;color:#0E5C58;font-size:11px;line-height:1;height:10px}
+.anote{margin:8px 12px 10px;background:#fff7d6;border-radius:8px;padding:6px 10px;font-size:12px;line-height:1.5;letter-spacing:-0.02em}
+.tips{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:18px;margin:14px 24px 0;flex-shrink:0}
+.tip{border-radius:12px;padding:9px 14px;font-size:12.8px;line-height:1.55;letter-spacing:-0.02em;display:flex;gap:10px;align-items:center}
+.tip .t{font-weight:900;font-size:13px;color:#fff;background:var(--d);border-radius:6px;padding:2px 8px;flex-shrink:0}
+.t1{background:var(--l);border:2px dashed var(--c)}
+.t2{background:#f1f3f8;border:1.5px solid #d6dbe6}
+.idl{display:inline-block;width:150px;border-bottom:1.5px solid #555;margin:0 4px}
+.back{text-decoration:none;color:#fff;background:#0E5C58;font-weight:900;border-radius:999px;padding:6px 14px;font-size:12.5px}
+.back:hover{background:#0a4542;color:#fff}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:10px 26px 12px;font-size:12.5px;color:#4a4f5c;flex-shrink:0}
+.modes{display:flex;background:rgba(255,255,255,0.14);border-radius:999px;padding:5px;gap:4px;flex-shrink:0}
+.mode{font-size:16px;font-weight:900;color:#d3ebe8;text-decoration:none;border-radius:999px;padding:9px 20px;min-height:24px;display:flex;align-items:center}
+.mode.on{background:#ffd23f;color:#0E5C58}
+a.mode:hover{background:rgba(255,255,255,0.22);color:#fff}
+.pdfbtn{flex-shrink:0;text-decoration:none;background:#F4EAFB;color:#6F2DA8;font-weight:900;font-size:15px;border-radius:999px;padding:10px 18px;border:2px solid #E2CDF2}
+.pdfbtn:hover{background:#fff;color:#6F2DA8}
+</style>
+
+<style>
+html,body{margin:0;background:#e9ecf1}
+#stage{display:flex;align-items:flex-start;justify-content:center;overflow:hidden;min-height:100vh}
+#wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
+@media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="wrap">
+<div class="root">
+  <header class="hd">
+    <div class="stp"><small>STEP 01</small><b>자기이해</b></div>
+    <div class="ht">
+      <h1><span class="no">1-1</span>꿈it(잇)다 <span style="color: #ffd23f">로그인 방법</span></h1>
+      <p>교육디지털원패스 하나로 꿈it(잇)다에 들어가요 · 빨간 테두리를 번호 순서대로 눌러 보세요</p>
+    </div>
+    <nav class="modes" aria-label="보기 방식"><span class="mode on" aria-current="page">한 장용</span><a class="mode" href="slides/login.html">PPT용 ↗</a></nav>
+    <a class="pdfbtn" href="kit.html">선생님 꿀팁 꾸러미 ▶</a>
+    <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
+    <a class="home" href="index.html" aria-label="학생용 매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
+  </header>
+  <div class="flow"></div>
+
+  <div class="body">
+    <!-- 1 -->
+    <section class="card">
+      <div class="ch"><span class="num">1</span><b>꿈it(잇)다 접속 → [로그인]</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="꿈it(잇)다 메인 화면, 오른쪽 위 로그인 버튼 표시">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="top" style="border-bottom: 0; padding-bottom: 0; justify-content: flex-end">
+              <div class="util"><span class="ub hit" style="font-weight: 900">로그인<span class="bd">1</span></span><span>한국어</span></div>
+            </div>
+            <div class="top">
+              <div class="brand"><i></i>경기도교육청 · 꿈it(잇)다</div>
+              <div class="nav"><span>AI 진로설계</span><span>진로로드맵</span><span>진학로드맵</span><span>AI 모의면접</span><span>자료실</span></div>
+            </div>
+            <div class="banner"><div><b>경기도<br>사이버 진로교육</b></div><em>AI 모의면접</em></div>
+            <div class="quick"><span class="qk">직업정보</span><span class="qk">대학정보</span><span class="qk">진로체험처</span><span class="qk">AI 모의면접</span></div>
+            <div class="mt">경기도교육청 꿈it(잇)다</div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li>꿈it(잇)다 메인 페이지에 접속해요.</li>
+        <li>화면 <b>오른쪽 위 [로그인]</b>을 누르면 <span class="hl">교육디지털원패스 로그인 페이지</span>로 이동해요.</li>
+      </ul>
+    </section>
+
+    <!-- 2 -->
+    <section class="card">
+      <div class="ch"><span class="num">2</span><b>교육 디지털 원패스 로그인</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="교육 디지털 원패스 로그인 화면, 로그인 버튼 표시">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="top"><div class="brand"><i></i>경기도교육청 · 꿈it(잇)다</div><div class="nav"><span>AI 진로설계</span><span>진로로드맵</span><span>자료실</span></div></div>
+            <div class="center">
+              <div class="lt">교육 디지털 원패스 로그인</div>
+              <div class="key"></div>
+              <div class="bigbtn hit">로그인<span class="bd">2</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li>‘교육 디지털 원패스 로그인’ 화면이 나와요.</li>
+        <li>가운데 <span class="hl">[로그인]</span> 버튼을 눌러요.</li>
+      </ul>
+    </section>
+
+    <!-- 3 -->
+    <section class="card">
+      <div class="ch"><span class="num">3</span><b>[학생] 선택</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="교육디지털원패스 교직원과 학생 선택 화면, 학생 표시">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="center">
+              <div class="op"><i></i>교육디지털원패스</div>
+              <div class="who">
+                <div class="wcard" style="background: #E6EEFB; color: #2C4F9E">교직원
+                  <div class="fig"><i style="height: 30px; background: #7F9BD6"></i><i style="height: 26px; background: #A9BCE6"></i></div>
+                  <u style="background: #4E73C9">로그인 ›</u>
+                </div>
+                <div class="wcard hit" style="background: #FFF4CC; color: #8A6100">학생
+                  <div class="fig"><i style="height: 28px; background: #F2B33D"></i><i style="height: 24px; background: #F6CD72"></i></div>
+                  <u style="background: #E8A317">로그인 ›</u>
+                  <span class="bd">3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li>교직원 / 학생 중 <span class="hl">[학생]</span>의 ‘로그인’을 눌러요.</li>
+        <li>교직원 칸을 누르지 않도록 주의해요.</li>
+      </ul>
+    </section>
+
+    <!-- 4 -->
+    <section class="card">
+      <div class="ch"><span class="num">4</span><b>아이디 또는 간편인증으로 로그인</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="아이디 비밀번호와 간편인증 로그인 화면">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="center" style="gap: 6px">
+              <div class="op"><i></i>교육디지털원패스</div>
+              <div class="tabs"><span class="on">아이디/비밀번호</span><span>간편인증</span></div>
+              <div class="fld">아이디</div>
+              <div class="fld">비밀번호</div>
+              <div class="bigbtn hit" style="width: 190px">학생 로그인<span class="bd">4</span></div>
+              <div class="links"><span>회원가입</span><span>아이디 찾기</span><span>비밀번호 찾기</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li><span class="hl">2가지 방법</span> 중 하나: 아이디·비밀번호 또는 간편인증</li>
+        <li>입력 후 <b>[학생 로그인]</b> 클릭</li>
+        <li>가입 전이면 <b>[회원가입]</b> 후 다시 접속 · 잊었으면 <b>아이디/비밀번호 찾기</b></li>
+      </ul>
+    </section>
+
+    <!-- 5 -->
+    <section class="card">
+      <div class="ch"><span class="num">5</span><b>처음 접속 시 개인정보 동의</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="개인정보 수집·이용 동의서 팝업, 동의와 확인 표시">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="top"><div class="brand"><i></i>꿈it(잇)다</div><div class="nav"><span>마이페이지</span></div></div>
+            <div class="dim"></div>
+            <div class="modal">
+              <div class="mtt">개인정보 수집·이용 동의서</div>
+              <div class="tl" style="width: 95%"></div>
+              <div class="tl" style="width: 80%"></div>
+              <div class="tbl"></div>
+              <div class="tl" style="width: 88%"></div>
+              <div class="agree"><span class="y hit"><i></i>동의<span class="bd" style="top: -14px; right: -14px">5</span></span><span><i></i>비동의</span></div>
+              <div class="okb">확인</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li>처음 메뉴를 누르면 <b>개인정보 수집·이용 동의서</b>가 떠요.</li>
+        <li><span class="hl">[동의]</span> 체크 → <span class="hl">[확인]</span> 을 누르면 메뉴로 이동!</li>
+        <li class="warn">[비동의]를 누르면 이용이 제한되고 로그아웃돼요.</li>
+      </ul>
+    </section>
+
+    <section class="age">
+      <div class="ah">회원가입은 나이에 따라 달라요<span>교육디지털원패스 가입</span></div>
+      <div class="ag">
+        <div class="ac">
+          <h5>만 14세 미만<small>초5 ~ 중2</small></h5>
+          <div class="bx">디지털원패스(어린이/청소년) 회원가입 시작</div>
+          <div class="ar">▼</div>
+          <div class="bx r"><b>보호자</b> 휴대폰 인증 또는 아이핀으로 <b>동의 필수</b></div>
+          <div class="ar">▼</div>
+          <div class="bx">학교/학년/반/번호 정보 매칭 후 로그인 완료</div>
+        </div>
+        <div class="ac">
+          <h5>만 14세 이상<small>중2 ~ 중3</small></h5>
+          <div class="bx">디지털원패스 직접 가입 진행</div>
+          <div class="ar">▼</div>
+          <div class="bx"><b>본인</b> 휴대폰 또는 간편인증 (카카오·네이버·PASS)</div>
+          <div class="ar">▼</div>
+          <div class="bx">꿈it(잇)다 접속 및 학교 정보 매칭</div>
+        </div>
+      </div>
+      <div class="anote"><b style="color: #0E5C58">TIP</b> 한 번 가입 후 <b>간편인증을 등록</b>해 두면 다음부터는 터치 몇 번으로 빠르게 접속할 수 있어요.</div>
+    </section>
+  </div>
+
+  <div class="tips">
+    <div class="tip t1"><span class="t">TIP</span><div>받은 아이디는 <b>한곳에 모아 두기!</b> 나의 아이디 <span class="idl"></span></div></div>
+    <div class="tip t2"><span class="t" style="background: #0E5C58">가정통신문</span><div><b>교육디지털원패스 회원가입 안내</b>와 <b>개인정보 수집·이용 동의서</b>(만 14세 미만)를 확인해요.</div></div>
+    <div class="tip t2"><span class="t" style="background: #6F2DA8">주의</span><div>비밀번호는 나만 알기 · 공용 PC에서는 꼭 <b>로그아웃</b>하기</div></div>
+  </div>
+
+  <footer class="ft">
+    <div>로그인이 안 되면 <b>담임 선생님</b> 또는 <b>매탄중 진로상담실</b>에 문의해요. <span style="color: #8a8f9c">※ 화면 그림은 이해를 돕기 위한 예시로, 실제 화면과 조금 다를 수 있어요.</span></div>
+    <div style="display: flex; gap: 16px; align-items: center"><a class="back" href="index.html">◀ 학생용 매뉴얼로 돌아가기</a><a class="back" href="breath.html">다음 ▶ 1-2 심장 집중 호흡</a></div>
+  </footer>
+</div>
+</div></div>
+<script>
+(function(){var W=1760,H=990,w=document.getElementById('wrap');
+function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+addEventListener('resize',fit);fit();})();
+</script>
+
+</body>
+</html>

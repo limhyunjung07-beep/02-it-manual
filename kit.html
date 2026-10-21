@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>선생님 꿀팁 꾸러미</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1864AB}a:hover{color:#0d3f73}
+.root{--c:#1C7ED6;--d:#1864AB;--l:#E8F2FC;--m:#C5DEF7;--p:#6B5BD2;--pl:#EEEBFB;width:1760px;height:990px;box-sizing:border-box;background:#fff;font-family:'Noto Sans KR',sans-serif;color:#1f2433;display:flex;flex-direction:column;overflow:hidden}
+.hd{background:#0E5C58;color:#fff;display:flex;align-items:center;gap:20px;padding:0 28px 0 36px;height:88px;flex-shrink:0}
+.stp{background:var(--c);color:#fff;border-radius:14px;padding:8px 16px;display:flex;flex-direction:column;align-items:center;line-height:1.15;flex-shrink:0}
+.stp small{font-size:11px;font-weight:900;letter-spacing:0.1em}
+.stp b{font-size:17px;font-weight:900}
+.ht{display:flex;flex-direction:column;gap:5px;flex:1}
+.ht h1{margin:0;font-size:31px;font-weight:900;letter-spacing:-0.02em;display:flex;align-items:center;gap:12px}
+.no{background:#ffd23f;color:#0E5C58;font-size:20px;font-weight:900;border-radius:999px;padding:2px 14px}
+.ht p{margin:0;font-size:14px;color:#d3ebe8}
+.org{text-align:right;line-height:1.35}
+.org small{font-size:14px;color:#d3ebe8;display:block}
+.org b{font-size:22px;font-weight:900}
+.home{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:64px;height:64px;border-radius:16px;background:#ffd23f;color:#0E5C58;text-decoration:none;font-size:13px;font-weight:900;flex-shrink:0;box-shadow:0 3px 0 #c9a21a}
+.home:hover{background:#ffe27a;color:#0E5C58}
+.flow{height:6px;background:var(--c);flex-shrink:0}
+.body{flex:1;min-height:0;display:grid;grid-template-columns:640px minmax(0,1fr);gap:20px;padding:14px 24px 0}
+.card{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.ch{background:var(--l);display:flex;align-items:center;gap:10px;padding:7px 14px;flex-shrink:0}
+.num{width:28px;height:28px;border-radius:50%;background:var(--d);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ch b{font-size:16.5px;font-weight:900;letter-spacing:-0.03em;flex:1}
+.ch span{font-size:12px;font-weight:700;color:var(--d)}
+.ch .num{color:#fff;font-size:15px;font-weight:900}
+.shot{background:#eef0f4;padding:12px 16px;flex-shrink:0;display:flex}
+.win{flex:1;background:#fff;border:1px solid #cfd3dc;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+.wb{height:13px;background:#e4e6ec;display:flex;align-items:center;gap:4px;padding:0 7px}
+.wb i{width:6px;height:6px;border-radius:50%;background:#b9bdc8;display:block}
+.top{display:flex;align-items:center;justify-content:space-between;padding:5px 12px;border-bottom:1px solid #eee}
+.brand{font-size:10px;font-weight:900;color:#2b2f6e;display:flex;align-items:center;gap:4px}
+.brand i{width:11px;height:11px;border-radius:3px;background:linear-gradient(135deg,#E53935,#1E7FD8);display:block}
+.nav{display:flex;gap:8px;font-size:8px;font-weight:700;color:#444}
+.wc{padding:12px 18px 16px;display:flex;flex-direction:column;align-items:center;gap:13px}
+.hit{outline:3px solid #E53935;outline-offset:3px;position:relative;border-radius:4px}
+.bd{font-style:normal;position:absolute;width:19px;height:19px;border-radius:50%;background:#E53935;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;top:-17px;left:-17px;box-shadow:0 0 0 2px #fff;z-index:2}
+.tabs3{display:flex;gap:6px}
+.tabs3 span{font-size:9px;font-weight:700;border-radius:999px;padding:3px 12px;background:#f1f1f5;color:#777}
+.tabs3 .on{background:var(--pl);color:var(--p);box-shadow:inset 0 0 0 1.5px var(--p)}
+.wt{font-size:13px;font-weight:900}
+.jobrow{display:flex;gap:10px;width:100%}
+.job{flex:1;display:flex;align-items:center;gap:10px;background:var(--pl);border-radius:8px;padding:8px 12px}
+.job i{width:30px;height:30px;border-radius:50%;background:var(--p);color:#fff;font-style:normal;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.job small{display:block;font-size:8px;color:#666}
+.job b{font-size:12px;font-weight:900}
+.chg{width:120px;background:#fff;border:1.5px solid var(--p);color:var(--p);border-radius:8px;font-size:9.5px;font-weight:900;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3}
+.filt{display:flex;gap:8px;align-items:center;background:#f2f3f6;border-radius:8px;padding:6px 10px;width:100%;box-sizing:border-box}
+.sel{background:#fff;border:1px solid #d6d9e2;border-radius:5px;font-size:8.5px;padding:4px 8px;display:flex;justify-content:space-between;gap:10px}
+.rad{display:flex;gap:10px;font-size:8.5px;font-weight:700;align-items:center}
+.rad span{display:flex;align-items:center;gap:3px}
+.rad i{width:9px;height:9px;border-radius:50%;border:1.5px solid #999;display:block}
+.rad .y i{border-color:var(--p);background:radial-gradient(circle,var(--p) 40%,#fff 45%)}
+.pt{display:flex;gap:6px}
+.pt span{font-size:10px;font-weight:900;border-radius:999px;padding:4px 16px;background:#eee;color:#555}
+.pt .on{background:#111;color:#fff}
+.res{display:flex;flex-direction:column;align-items:center;gap:3px}
+.res small{font-size:8.5px;color:#555}
+.res small em{font-style:normal;background:var(--pl);color:var(--p);border-radius:3px;padding:0 4px;margin-right:4px;font-weight:700}
+.res b{font-size:17px;font-weight:900}
+.exp{margin:0;padding:14px 20px 14px;list-style:none;display:grid;grid-template-columns:minmax(0,1fr);gap:10px;font-size:14px;line-height:1.5;letter-spacing:-0.03em}
+.exp li{display:flex;gap:7px}
+.exp li i{font-style:normal;flex-shrink:0;width:19px;height:19px;border-radius:50%;background:#E53935;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.exp b{color:var(--d)}
+.right{display:flex;flex-direction:column;gap:12px;min-height:0}
+.rc{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;flex:1}
+.rc .rb{flex:1}
+.rb{display:flex;gap:14px;padding:10px 14px;align-items:stretch}
+.mk{width:300px;flex-shrink:0;background:#eef0f4;border-radius:8px;padding:9px;box-sizing:border-box}
+.act{background:#fff;border-radius:8px;padding:9px 11px}
+.act b{font-size:11.5px;font-weight:900;display:block;margin-bottom:3px}
+.act p{margin:0;font-size:10px;line-height:1.55;color:#444}
+.lab{font-size:10px;font-weight:900;color:var(--p);margin-bottom:5px}
+.vid{background:#fff;border:1px solid #d6d9e2;border-radius:8px;overflow:hidden}
+.th{height:84px;background:linear-gradient(135deg,#cfd8e6,#9fb2cc);display:flex;align-items:center;justify-content:center;position:relative}
+.th i{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center}
+.vid b{display:block;font-size:11px;font-weight:900;padding:5px 8px}
+.tb{width:100%;border-collapse:collapse;font-size:8.5px;background:#fff}
+.tb th{border-top:1.5px solid #333;border-bottom:1px solid #ccc;padding:3px 2px;font-weight:900}
+.tb td{border-bottom:1px solid #e3e3e3;padding:3px 2px;text-align:center;color:#444}
+.do{flex:1;display:flex;flex-direction:column;gap:5px;font-size:12.8px;line-height:1.55;letter-spacing:-0.03em}
+.do ul{margin:0;padding-left:17px}
+.do b{color:var(--d)}
+.wl{display:flex;align-items:flex-end;gap:6px;font-size:12px;font-weight:900;color:#0E5C58;height:24px;margin-top:auto}
+.wl i{flex:1;border-bottom:1.5px solid #9aa0ad;height:100%}
+.tip{margin:12px 24px 0;border-radius:12px;background:var(--l);border:2px dashed var(--c);padding:8px 14px;font-size:13px;letter-spacing:-0.02em;flex-shrink:0}
+.tip b.t{color:#fff;background:var(--d);border-radius:5px;padding:1px 8px;margin-right:8px;font-size:12px}
+.back{text-decoration:none;color:#fff;background:#0E5C58;font-weight:900;border-radius:999px;padding:6px 14px;font-size:12.5px}
+.back:hover{background:#0a4542;color:#fff}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:10px 26px 12px;font-size:12.5px;color:#4a4f5c;flex-shrink:0}
+.go2{flex-shrink:0;text-decoration:none;background:var(--d);color:#fff;font-weight:900;font-size:15px;border-radius:12px;padding:8px 16px;text-align:center;line-height:1.3;box-shadow:0 3px 0 #0d3f73}
+.go2 small{display:block;font-size:10.5px;font-weight:700;color:#cfe3f7}
+.go2:hover{background:#0d4f8a;color:#fff}
+.kit{flex:1;min-height:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding:18px 28px 0}
+.kc{border:3px solid var(--kc);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;min-height:0;background:#fff}
+.kh{background:var(--kc);color:#fff;display:flex;align-items:center;gap:14px;padding:12px 20px}
+.kh em{font-style:normal;background:#ffd23f;color:#4A3600;font-size:15px;font-weight:900;border-radius:999px;padding:4px 14px}
+.kh b{font-size:24px;font-weight:900;letter-spacing:-0.03em}
+.kb{display:flex;flex-direction:column;gap:14px;padding:16px 20px 18px;flex:1;min-height:0}
+.pics{display:flex;gap:14px;justify-content:center;background:#f3f4f7;border-radius:14px;padding:12px}
+.pics img{border-radius:10px;object-fit:contain;background:#fff}
+.dl{display:flex;flex-direction:column;gap:8px}
+.dh{font-size:17px;font-weight:900;color:#0E5C58;display:flex;align-items:center;gap:8px}
+.dh::before{content:"";width:6px;height:18px;border-radius:2px;background:#0E5C58}
+.fi{display:flex;align-items:center;gap:14px;border:1.5px solid #e1e4ea;border-radius:12px;padding:7px 14px;text-decoration:none;color:inherit}
+.fi:hover{border-color:var(--kc);background:#fafbfd}
+.fi .ic2{width:38px;height:44px;border-radius:6px;background:#E53935;color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fi .tx2{flex:1;min-width:0}
+.fi .tx2 b{display:block;font-size:17px;font-weight:900;letter-spacing:-0.03em}
+.fi .tx2 span{font-size:13.5px;color:#5a5f6c;letter-spacing:-0.02em}
+.fi .bt{flex-shrink:0;background:var(--kc);color:#fff;font-size:14px;font-weight:900;border-radius:999px;padding:8px 16px}
+.pts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.pts div{background:#f6f8fb;border-radius:10px;padding:8px 12px;font-size:14.5px;line-height:1.5;letter-spacing:-0.03em}
+.pts b{color:var(--kc)}
+</style>
+
+<style>
+html,body{margin:0;background:#e9ecf1}
+#stage{display:flex;align-items:flex-start;justify-content:center;overflow:hidden;min-height:100vh}
+#wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
+@media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="wrap">
+<div class="root">
+  <header class="hd">
+    <div class="stp" style="background: #ffd23f; color: #0E5C58"><small>교사용</small><b>꿀팁</b></div>
+    <div class="ht">
+      <h1>선생님을 위한 <span style="color: #ffd23f">꿀팁 꾸러미</span></h1>
+      <p>1-1 로그인 수업 전에 준비하면 좋은 자료를 한곳에 모았어요 · 필요한 파일을 눌러 내려받으세요</p>
+    </div>
+    <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
+    <a class="home" href="index.html" aria-label="학생용 매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
+  </header>
+  <div class="flow" style="background: #ffd23f"></div>
+
+  <div class="kit">
+    <section class="kc" style="--kc: #0E5C58">
+      <div class="kh"><em>꿀팁 1</em><b>시작은 ‘교육디지털원패스’로</b></div>
+      <div class="kb">
+        <div class="pics"><img src="assets/92895875005f73a91f5afbba85e1365c.png" alt="시작은 교육디지털원패스로: 접속 주소, 아이디 메모, 학생 회원가입 현황, 만 14세 미만 법정대리인 동의" style="width: 520px; height: 290px"></div>
+        <div class="pts">
+          <div><b>접속</b> · 주소창에 jinro.goedu.kr</div>
+          <div><b>메모</b> · 학생 아이디+비번은 교과서에</div>
+          <div><b>꿀팁</b> · 담임 협조로 회원가입 현황 미리 받기</div>
+          <div style="color: #B42318"><b style="color: #B42318">주의</b> · 만 14세 미만은 법정대리인 동의 필수</div>
+        </div>
+        <div class="dl">
+          <div class="dh">꿀팁 1 꾸러미</div>
+          <a class="fi" href="assets/44c111994880495f4191c6f016f28ba7.pdf" target="_blank" rel="noopener" download="꿀팁1-1_회원가입현황_파악_및_초기화_안내.pdf"><span class="ic2">PDF</span><span class="tx2"><b>① 회원 가입 현황 파악 및 초기화 지원 방법 안내</b><span>담임교사용 · 원패스 로그인 → 학생 회원가입 현황 확인</span></span><span class="bt">내려받기 ↓</span></a>
+          <a class="fi" href="assets/6c659b19e936d8d84ba7979f2181904e.pdf" target="_blank" rel="noopener" download="꿀팁1-2_교육디지털원패스_학생_회원가입하기.pdf"><span class="ic2">PDF</span><span class="tx2"><b>② 교육디지털원패스 시작하기 · 학생 회원가입하기</b><span>학생 안내용 (10쪽)</span></span><span class="bt">내려받기 ↓</span></a>
+          <a class="fi" href="assets/219e049d90fef4862d404b9c981dd571.pdf" target="_blank" rel="noopener" download="꿀팁1-3_학급별_회원가입_현황_제출양식.pdf"><span class="ic2">PDF</span><span class="tx2"><b>③ 학급별 회원 가입 현황 제출 양식</b><span>(  )학년 (  )반 제출용</span></span><span class="bt">내려받기 ↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="kc" style="--kc: #6F2DA8">
+      <div class="kh"><em>꿀팁 2</em><b>변수 대응 필수템 ‘진로 도우미’</b></div>
+      <div class="kb">
+        <div class="pics"><img src="assets/c63f31a008165b4399feb91ea3e62bc2.png" alt="디지털 수업의 변수와 진로 도우미의 역할" style="width: 460px; height: 267px"><img src="assets/d6ee0155b3abc5860c195357eae75e7f.png" alt="진로 도우미 명찰 인쇄물과 목걸이 명찰" style="width: 300px; height: 267px"></div>
+        <div class="pts">
+          <div><b>변수</b> · 기기 오류, 로그인 실패, 비밀번호 분실</div>
+          <div><b>역할</b> · 기기 세팅과 또래 로그인 지원</div>
+          <div><b>준비</b> · 반마다 진로 도우미 학생 정하기</div>
+          <div><b>명찰</b> · PDF 인쇄 → 잘라서 목걸이 명찰에</div>
+        </div>
+        <div class="dl">
+          <div class="dh">꿀팁 2 꾸러미</div>
+          <a class="fi" href="assets/db7c4ce4db66405dcbf11b8d530bb832.pdf" target="_blank" rel="noopener" download="꿀팁2_진로도우미_명찰.pdf"><span class="ic2">PDF</span><span class="tx2"><b>진로 도우미 명찰</b><span>A4 1장에 10개 · 인쇄해서 잘라 쓰기</span></span><span class="bt">내려받기 ↓</span></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="ft">
+    <div>꿀팁 슬라이드는 <b>1-1 로그인 방법 › PPT용</b>에서도 볼 수 있어요.</div>
+    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="login.html">◀ 1-1 로그인 방법</a><a class="back" href="index.html">학생용 매뉴얼로 돌아가기</a></div>
+  </footer>
+</div>
+</div></div>
+<script>
+(function(){var W=1760,H=990,w=document.getElementById('wrap');
+function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+addEventListener('resize',fit);fit();})();
+</script>
+
+</body>
+</html>

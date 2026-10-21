@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1-3 진로심리검사 실시</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1864AB}a:hover{color:#0d3f73}
+.root{--c:#E8590C;--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF;--p:#6B5BD2;--pl:#EEEBFB;width:1760px;height:990px;box-sizing:border-box;background:#fff;font-family:'Noto Sans KR',sans-serif;color:#1f2433;display:flex;flex-direction:column;overflow:hidden}
+.hd{background:#0E5C58;color:#fff;display:flex;align-items:center;gap:20px;padding:0 28px 0 36px;height:88px;flex-shrink:0}
+.stp{background:var(--c);color:#fff;border-radius:14px;padding:8px 16px;display:flex;flex-direction:column;align-items:center;line-height:1.15;flex-shrink:0}
+.stp small{font-size:11px;font-weight:900;letter-spacing:0.1em}
+.stp b{font-size:17px;font-weight:900}
+.ht{display:flex;flex-direction:column;gap:5px;flex:1}
+.ht h1{margin:0;font-size:31px;font-weight:900;letter-spacing:-0.02em;display:flex;align-items:center;gap:12px}
+.no{background:#ffd23f;color:#0E5C58;font-size:20px;font-weight:900;border-radius:999px;padding:2px 14px}
+.ht p{margin:0;font-size:14px;color:#d3ebe8}
+.modes{display:flex;background:rgba(255,255,255,0.14);border-radius:999px;padding:5px;gap:4px;flex-shrink:0}
+.mode{font-size:16px;font-weight:900;color:#d3ebe8;text-decoration:none;border-radius:999px;padding:9px 20px;min-height:24px;display:flex;align-items:center}
+.mode.on{background:#ffd23f;color:#0E5C58}
+a.mode:hover{background:rgba(255,255,255,0.22);color:#fff}
+.gojr{flex-shrink:0;text-decoration:none;background:#1864AB;color:#fff;font-weight:900;font-size:16px;border-radius:12px;padding:8px 18px;text-align:center;line-height:1.3;box-shadow:0 3px 0 #0d3f73}
+.gojr small{display:block;font-size:11px;font-weight:700;color:#cfe3f7}
+.gojr:hover{background:#1c74c6;color:#fff}
+.org{text-align:right;line-height:1.35}
+.org small{font-size:14px;color:#d3ebe8;display:block}
+.org b{font-size:22px;font-weight:900}
+.home{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:64px;height:64px;border-radius:16px;background:#ffd23f;color:#0E5C58;text-decoration:none;font-size:13px;font-weight:900;flex-shrink:0;box-shadow:0 3px 0 #c9a21a}
+.home:hover{background:#ffe27a;color:#0E5C58}
+.flow{height:6px;background:var(--c);flex-shrink:0}
+.body{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:14px 18px;padding:14px 24px 0;flex:1;min-height:0}
+.card{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:0;background:#fff}
+.ch{background:var(--l);display:flex;align-items:center;gap:10px;padding:6px 14px;flex-shrink:0}
+.num{width:28px;height:28px;border-radius:50%;background:var(--d);color:#fff;font-weight:900;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ch b{font-size:16px;font-weight:900;letter-spacing:-0.03em}
+.shot{height:188px;flex-shrink:0;background:#eef0f4;border-bottom:1px solid #e3e5ea;padding:10px 16px;box-sizing:border-box;display:flex}
+.cap{margin:0;padding:7px 14px 7px 30px;font-size:12.8px;line-height:1.55;letter-spacing:-0.03em}
+.cap b{color:var(--d)}
+.hl{background:#fff3a3;font-weight:700;padding:0 2px}
+.warn{color:#B42318;font-weight:700}
+
+.win{flex:1;background:#fff;border:1px solid #cfd3dc;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.08);min-width:0}
+.wb{height:13px;background:#e4e6ec;display:flex;align-items:center;gap:4px;padding:0 7px;flex-shrink:0}
+.wb i{width:6px;height:6px;border-radius:50%;background:#b9bdc8;display:block}
+.wc{flex:1;min-height:0;position:relative;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;justify-content:space-between;padding:5px 10px 4px;border-bottom:1px solid #eee}
+.brand{font-size:10.5px;font-weight:900;color:#2b2f6e;display:flex;align-items:center;gap:4px}
+.brand i{width:11px;height:11px;border-radius:3px;background:linear-gradient(135deg,#E53935,#1E7FD8);display:block}
+.nav{display:flex;gap:8px;font-size:8px;font-weight:700;color:#444}
+.hit{outline:3px solid #E53935;outline-offset:2px;position:relative;border-radius:3px}
+.bd{position:absolute;width:18px;height:18px;border-radius:50%;background:#E53935;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;top:-16px;right:-16px;box-shadow:0 0 0 2px #fff;z-index:2}
+.dd{position:absolute;left:10px;top:24px;width:118px;background:#fff;border:1px solid #d6d9e2;border-radius:5px;box-shadow:0 3px 8px rgba(0,0,0,0.12);display:flex;flex-direction:column;padding:4px;gap:3px;font-size:9px;font-weight:700;z-index:3}
+.dd span{padding:4px 6px;border-radius:3px;color:#444}
+.btn{border-radius:4px;font-size:8.5px;font-weight:900;display:flex;align-items:center;justify-content:center;height:18px;padding:0 6px}
+.bp{background:var(--p);color:#fff}
+.bo{background:#fff;color:#555;border:1px solid #cfd3dc}
+.tabs3{display:flex;justify-content:center;gap:4px;margin:6px 0 2px}
+.tabs3 span{font-size:8px;font-weight:700;border-radius:999px;padding:2px 10px;background:#f1f1f5;color:#777}
+.tabs3 .on{background:var(--pl);color:var(--p);box-shadow:inset 0 0 0 1.5px var(--p)}
+.ttl{text-align:center;font-size:11px;font-weight:900}
+.req{text-align:center;font-size:7.5px;color:#B42318;font-weight:700}
+.g4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;padding:5px 10px}
+.tc{border:1px solid #dcdfe8;border-radius:5px;padding:4px 6px;display:flex;flex-direction:column;gap:3px}
+.tc b{font-size:8.5px;font-weight:900}
+.tc small{font-size:6.5px;color:#888}
+.tc .row{display:flex;gap:3px}
+.tc .row .btn{height:12px;font-size:6.5px;flex:1;padding:0 2px}
+.qbar{height:4px;border-radius:2px;background:#e8e8f0;margin:2px 14px}
+.qbar i{display:block;height:100%;width:62%;background:var(--p);border-radius:2px}
+.q{font-size:9px;font-weight:700;text-align:center;margin-top:6px}
+.scale{display:flex;justify-content:center;gap:9px;margin:6px 0 2px;align-items:center}
+.scale i{display:block;border-radius:50%;border:1.5px solid #9aa0b3}
+.scale .s{background:var(--p);border-color:var(--p)}
+.sl{display:flex;justify-content:space-between;font-size:7px;color:#777;margin:0 24px}
+.paper{position:absolute;left:12px;top:8px;bottom:8px;width:52%;background:#fff;border:1px solid #d6d9e2;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.1);padding:8px;box-sizing:border-box;display:flex;flex-direction:column;gap:4px}
+.paper .bar{height:18px;background:#2f6db0;border-radius:2px}
+.pl{height:4px;border-radius:2px;background:#e3e5ea}
+.pr{position:absolute;right:8px;top:6px;width:20px;height:20px;border-radius:5px;background:#fff;border:1px solid #cfd3dc;display:flex;align-items:center;justify-content:center;color:#333}
+.pd{position:absolute;right:10px;top:22px;width:40%;bottom:8px;background:#fff;border:1px solid #d6d9e2;border-radius:6px;box-shadow:0 3px 10px rgba(0,0,0,0.15);padding:8px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px;font-size:8.5px}
+.pd .f{display:flex;justify-content:space-between;align-items:center;gap:4px}
+.pd .sel{border:1px solid #cfd3dc;border-radius:3px;padding:2px 5px;font-weight:900}
+.file{display:flex;align-items:center;gap:6px;font-size:9px;font-weight:700;background:#fff;border:1.5px dashed #9aa0b3;border-radius:6px;padding:5px 8px;margin:0 10px}
+.file i{width:16px;height:20px;background:#E53935;border-radius:2px;display:block;color:#fff;font-style:normal;font-size:6px;font-weight:900;text-align:center;line-height:20px}
+.dim{position:absolute;inset:0;background:rgba(30,32,44,0.45)}
+.modal{position:absolute;left:8%;right:8%;top:6px;bottom:6px;background:#fff;border-radius:7px;box-shadow:0 4px 14px rgba(0,0,0,0.25);display:flex;flex-direction:column;padding:7px 9px;box-sizing:border-box;gap:4px;z-index:1}
+.mtt{font-size:9.5px;font-weight:900;text-align:center}
+.lists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;flex:1;min-height:0}
+.lst{border:1px solid #e0e2ea;border-radius:4px;padding:3px;display:flex;flex-direction:column;gap:2px}
+.lst b{font-size:7.5px;font-weight:900;color:var(--p)}
+.lst span{font-size:7px;padding:2px 4px;border-radius:2px;background:#f6f6fa;color:#555}
+.lst .on{background:var(--pl);color:var(--p);font-weight:900;box-shadow:inset 0 0 0 1px var(--p)}
+
+.band{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin:14px 24px 0;flex-shrink:0}
+.note{border-radius:12px;padding:9px 14px;font-size:12.8px;line-height:1.55;letter-spacing:-0.02em;display:flex;gap:12px;align-items:center}
+.note .t{font-weight:900;font-size:13px;color:#fff;border-radius:6px;padding:3px 9px;flex-shrink:0;text-align:center;line-height:1.3}
+.n1{background:#FDF1EF;border:2px solid #E4A39B}
+.n2{background:var(--l);border:2px dashed var(--c)}
+.back{text-decoration:none;color:#fff;background:#0E5C58;font-weight:900;border-radius:999px;padding:6px 14px;font-size:12.5px}
+.back:hover{background:#0a4542;color:#fff}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:10px 26px 12px;font-size:12.5px;color:#4a4f5c;flex-shrink:0}
+</style>
+
+<style>
+html,body{margin:0;background:#e9ecf1}
+#stage{display:flex;align-items:flex-start;justify-content:center;overflow:hidden;min-height:100vh}
+#wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
+@media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="wrap">
+<div class="root">
+  <header class="hd">
+    <div class="stp"><small>STEP 01</small><b>자기이해</b></div>
+    <div class="ht">
+      <h1><span class="no">1-3</span>진로심리검사 <span style="color: #ffd23f">실시하기</span></h1>
+      <p>커리어넷·고용24 진로심리검사를 꿈it(잇)다에서 실시하고, 결과를 올려 희망 직업까지 골라요 · 검사는 1개 이상 필수!</p>
+    </div>
+    <nav class="modes" aria-label="보기 방식"><span class="mode on" aria-current="page">한 장용</span><a class="mode" href="slides/test.html">PPT용 ↗</a></nav>
+    <a class="gojr" href="https://jinro.goedu.kr" target="_blank" rel="noopener">꿈it(잇)다 바로가기 ↗<small>jinro.goedu.kr</small></a>
+    <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
+    <a class="home" href="index.html" aria-label="학생용 매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
+  </header>
+  <div class="flow"></div>
+
+  <div class="body">
+    <!-- 1 -->
+    <section class="card">
+      <div class="ch"><span class="num">1</span><b>[AI 진로설계] 메뉴로 들어가기</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="상단 메뉴 AI 진로설계를 누르면 나오는 하위 메뉴, AI 진로설계 표시">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="top"><div class="nav"><span class="hit" style="color: #6B5BD2">AI 진로설계</span><span>진로로드맵</span><span>진학로드맵</span><span>AI 모의면접</span><span>자료실</span></div><div class="brand"><i></i>꿈it(잇)다</div></div>
+            <div class="dd"><span>AI 진로설계 소개</span><span>진로심리검사 소개</span><span class="hit" style="background: #EEEBFB; color: #6B5BD2">AI 진로설계<span class="bd">1</span></span></div>
+            <div style="margin: auto 10px 8px auto; font-size: 13px; font-weight: 900; color: #2b2f6e">AI 진로설계 소개</div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li>상단 메뉴 <span class="hl">[AI 진로설계]</span>에 마우스를 올리고</li>
+        <li>하위 메뉴 중 <b>[AI 진로설계]</b>를 눌러요.</li>
+      </ul>
+    </section>
+
+    <!-- 2 -->
+    <section class="card">
+      <div class="ch"><span class="num">2</span><b>‘자기이해’ 화면 확인하기</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="자기이해 화면, 네 가지 진로심리검사 카드">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="tabs3"><span class="on">① 자기이해</span><span>② 진로설계</span><span>③ 진로상담</span></div>
+            <div class="ttl">자기 이해</div>
+            <div class="req">진로심리검사 1개 이상 필수</div>
+            <div class="g4">
+              <div class="tc"><b>직업적성검사</b><small>커리어넷</small></div>
+              <div class="tc"><b>직업가치관검사</b><small>커리어넷</small></div>
+              <div class="tc"><b>직업흥미검사(H)</b><small>커리어넷</small></div>
+              <div class="tc"><b>직업흥미검사(K)</b><small>커리어넷</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li>맨 위 단계가 <b>자기이해 → 진로설계 → 진로상담</b>이에요.</li>
+        <li>4가지 검사 중 <span class="hl">1개 이상 필수</span>, 3가지 이상 하면 더 좋아요.</li>
+      </ul>
+    </section>
+
+    <!-- 3 -->
+    <section class="card">
+      <div class="ch"><span class="num">3</span><b>[검사시작] → 응답 → [제출하기]</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="검사 문항 응답 화면과 제출하기 버튼">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="ttl" style="margin-top: 6px">직업적성검사</div>
+            <div class="qbar"><i></i></div>
+            <div class="q">다른 사람의 이야기를 잘 들어 준다.</div>
+            <div class="scale"><i style="width: 18px; height: 18px"></i><i style="width: 14px; height: 14px"></i><i style="width: 11px; height: 11px"></i><i class="s" style="width: 14px; height: 14px"></i><i style="width: 18px; height: 18px"></i></div>
+            <div class="sl"><span>전혀 아니다</span><span>매우 그렇다</span></div>
+            <div style="display: flex; justify-content: center; margin-top: auto; padding-bottom: 10px"><span class="btn bp hit" style="width: 150px; height: 20px">제출하기<span class="bd">3</span></span></div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li>검사 카드의 <span class="hl">[검사시작]</span>을 눌러요.</li>
+        <li>문항마다 솔직하게 고르고, 끝나면 <b>[제출하기]</b>!</li>
+      </ul>
+    </section>
+
+    <!-- 4 -->
+    <section class="card">
+      <div class="ch"><span class="num">4</span><b>결과지를 PDF로 저장하기</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="결과지 화면의 프린터 아이콘과 PDF로 저장 인쇄 창">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="paper">
+              <div style="font-size: 8px; font-weight: 900; color: #2f6db0">CareerNet</div>
+              <div class="bar"></div>
+              <div style="font-size: 9px; font-weight: 900">직업적성검사 결과지</div>
+              <div class="pl" style="width: 90%"></div><div class="pl" style="width: 75%"></div><div class="pl" style="width: 85%"></div>
+              <span class="pr hit" style="right: -12px; top: -2px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9V3h12v6"></path><rect x="3" y="9" width="18" height="8" rx="2"></rect><path d="M7 14h10v7H7z"></path></svg><span class="bd" style="top: -14px; right: -14px">4</span></span>
+            </div>
+            <div class="pd">
+              <b style="font-size: 9.5px">인쇄</b>
+              <div class="f"><span>대상</span><span class="sel hit">PDF로 저장</span></div>
+              <div class="f"><span>페이지</span><span class="sel" style="font-weight: 500">전체</span></div>
+              <span class="btn bp" style="margin-top: auto">저장</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li>결과지의 <span class="hl">프린터 모양</span>을 눌러요.</li>
+        <li>대상을 <b>‘PDF로 저장’</b>으로 바꾸고 <b>[저장]</b> → 내 파일 폴더에 저장</li>
+      </ul>
+    </section>
+
+    <!-- 5 -->
+    <section class="card">
+      <div class="ch"><span class="num">5</span><b>[검사결과 업로드]로 결과지 올리기</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="검사 카드의 검사결과 업로드 버튼과 PDF 파일">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc" style="justify-content: center; gap: 10px">
+            <div class="tc" style="margin: 0 18px; padding: 8px 10px; gap: 6px; border-color: #c9c4ef">
+              <b style="font-size: 11px">직업적성검사</b>
+              <small style="font-size: 8px">직업과 관련된 다양한 능력을 알아봐요</small>
+              <div class="row" style="gap: 5px">
+                <span class="btn bo hit" style="height: 18px; font-size: 8px">검사결과 업로드<span class="bd">5</span></span>
+                <span class="btn bo" style="height: 18px; font-size: 8px">검사결과 보기</span>
+                <span class="btn bp" style="height: 18px; font-size: 8px">검사재시작</span>
+              </div>
+            </div>
+            <div class="file"><i>PDF</i>직업적성검사_결과지.pdf <span style="margin-left: auto; color: #6B5BD2">업로드 ↑</span></div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li><span class="hl">[검사결과 업로드]</span>를 누르고 저장한 <b>PDF 파일</b>을 올려요.</li>
+        <li>[검사재시작]을 누르면 다시 응시할 수 있어요.</li>
+      </ul>
+    </section>
+
+    <!-- 6 -->
+    <section class="card">
+      <div class="ch"><span class="num">6</span><b>[검사결과 보기] → 희망 직업 선택</b></div>
+      <div class="shot">
+        <div class="win" role="img" aria-label="검사결과 상세보기 팝업과 희망 직업 선택 목록">
+          <div class="wb"><i></i><i></i><i></i></div>
+          <div class="wc">
+            <div class="dim"></div>
+            <div class="modal">
+              <div class="mtt">검사결과 상세보기</div>
+              <div class="pl" style="width: 90%; margin: 0 auto"></div>
+              <div style="font-size: 8px; font-weight: 900">희망직업 선택하기</div>
+              <div class="lists hit">
+                <div class="lst"><b>1. 직업분류</b><span>경영·사무·금융</span><span class="on">교육·연구·법률</span><span>보건·의료</span><span>예술·디자인·방송</span></div>
+                <div class="lst"><b>2. 세부분류</b><span>대학 교수</span><span class="on">중등학교 교사</span><span>상담 전문가</span><span>연구원</span></div>
+                <span class="bd">6</span>
+              </div>
+              <span class="btn bp">선택완료</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="cap">
+        <li><span class="hl">[검사결과 보기]</span>로 결과를 확인한 뒤</li>
+        <li>아래에서 <b>10가지 직업 분류 중 하나</b> → <b>세부 직업 1가지</b>를 골라요.</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="band">
+    <div class="note n1"><span class="t" style="background: #B42318">직업흥미검사(H)<br>는 조금 달라요</span><div>[검사시작]을 누르면 <b>고용24 사이트</b>로 이동해 로그인·본인 인증 후 검사해요. 결과지는 <b>PDF로 내 태블릿에 저장만</b> 할 수 있고, <span class="warn">꿈it(잇)다 시스템에는 업로드되지 않아요.</span></div></div>
+    <div class="note n2"><span class="t" style="background: var(--d)">TIP</span><div>검사 결과는 다음 단계 <b>1-4 심리검사 결과정리</b>에 쓰여요. 저장한 PDF 파일 이름을 기억해 두세요!</div></div>
+  </div>
+
+  <footer class="ft">
+    <div>검사 중 문제가 생기면 <b>매탄중 진로상담실</b>에 문의해요. <span style="color: #8a8f9c">※ 화면 그림은 이해를 돕기 위한 예시로, 실제 화면과 조금 다를 수 있어요.</span></div>
+    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="breath.html">◀ 1-2 심장 집중 호흡</a><a class="back" href="index.html">학생용 매뉴얼로 돌아가기</a><a class="back" href="result.html">다음 ▶ 1-4 결과정리</a></div>
+  </footer>
+</div>
+</div></div>
+<script>
+(function(){var W=1760,H=990,w=document.getElementById('wrap');
+function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+addEventListener('resize',fit);fit();})();
+</script>
+
+</body>
+</html>

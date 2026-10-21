@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2-4 진학로드맵</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1864AB}a:hover{color:#0d3f73}
+.root{--c:#1C7ED6;--d:#1864AB;--l:#E8F2FC;--m:#C5DEF7;--p:#6B5BD2;--pl:#EEEBFB;width:1760px;height:990px;box-sizing:border-box;background:#fff;font-family:'Noto Sans KR',sans-serif;color:#1f2433;display:flex;flex-direction:column;overflow:hidden}
+.hd{background:#0E5C58;color:#fff;display:flex;align-items:center;gap:20px;padding:0 28px 0 36px;height:88px;flex-shrink:0}
+.stp{background:var(--c);color:#fff;border-radius:14px;padding:8px 16px;display:flex;flex-direction:column;align-items:center;line-height:1.15;flex-shrink:0}
+.stp small{font-size:11px;font-weight:900;letter-spacing:0.1em}
+.stp b{font-size:17px;font-weight:900}
+.ht{display:flex;flex-direction:column;gap:5px;flex:1}
+.ht h1{margin:0;font-size:31px;font-weight:900;letter-spacing:-0.02em;display:flex;align-items:center;gap:12px}
+.no{background:#ffd23f;color:#0E5C58;font-size:20px;font-weight:900;border-radius:999px;padding:2px 14px}
+.ht p{margin:0;font-size:14px;color:#d3ebe8}
+.org{text-align:right;line-height:1.35}
+.org small{font-size:14px;color:#d3ebe8;display:block}
+.org b{font-size:22px;font-weight:900}
+.home{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:64px;height:64px;border-radius:16px;background:#ffd23f;color:#0E5C58;text-decoration:none;font-size:13px;font-weight:900;flex-shrink:0;box-shadow:0 3px 0 #c9a21a}
+.home:hover{background:#ffe27a;color:#0E5C58}
+.flow{height:6px;background:var(--c);flex-shrink:0}
+.body{flex:1;min-height:0;display:grid;grid-template-columns:640px minmax(0,1fr);gap:20px;padding:14px 24px 0}
+.card{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.ch{background:var(--l);display:flex;align-items:center;gap:10px;padding:7px 14px;flex-shrink:0}
+.num{width:28px;height:28px;border-radius:50%;background:var(--d);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ch b{font-size:16.5px;font-weight:900;letter-spacing:-0.03em;flex:1}
+.ch span{font-size:12px;font-weight:700;color:var(--d)}
+.ch .num{color:#fff;font-size:15px;font-weight:900}
+.shot{background:#eef0f4;padding:12px 16px;flex-shrink:0;display:flex}
+.win{flex:1;background:#fff;border:1px solid #cfd3dc;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+.wb{height:13px;background:#e4e6ec;display:flex;align-items:center;gap:4px;padding:0 7px}
+.wb i{width:6px;height:6px;border-radius:50%;background:#b9bdc8;display:block}
+.top{display:flex;align-items:center;justify-content:space-between;padding:5px 12px;border-bottom:1px solid #eee}
+.brand{font-size:10px;font-weight:900;color:#2b2f6e;display:flex;align-items:center;gap:4px}
+.brand i{width:11px;height:11px;border-radius:3px;background:linear-gradient(135deg,#E53935,#1E7FD8);display:block}
+.nav{display:flex;gap:8px;font-size:8px;font-weight:700;color:#444}
+.wc{padding:12px 18px 16px;display:flex;flex-direction:column;align-items:center;gap:13px}
+.hit{outline:3px solid #E53935;outline-offset:3px;position:relative;border-radius:4px}
+.bd{font-style:normal;position:absolute;width:19px;height:19px;border-radius:50%;background:#E53935;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;top:-17px;left:-17px;box-shadow:0 0 0 2px #fff;z-index:2}
+.tabs3{display:flex;gap:6px}
+.tabs3 span{font-size:9px;font-weight:700;border-radius:999px;padding:3px 12px;background:#f1f1f5;color:#777}
+.tabs3 .on{background:var(--pl);color:var(--p);box-shadow:inset 0 0 0 1.5px var(--p)}
+.wt{font-size:13px;font-weight:900}
+.jobrow{display:flex;gap:10px;width:100%}
+.job{flex:1;display:flex;align-items:center;gap:10px;background:var(--pl);border-radius:8px;padding:8px 12px}
+.job i{width:30px;height:30px;border-radius:50%;background:var(--p);color:#fff;font-style:normal;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.job small{display:block;font-size:8px;color:#666}
+.job b{font-size:12px;font-weight:900}
+.chg{width:120px;background:#fff;border:1.5px solid var(--p);color:var(--p);border-radius:8px;font-size:9.5px;font-weight:900;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3}
+.filt{display:flex;gap:8px;align-items:center;background:#f2f3f6;border-radius:8px;padding:6px 10px;width:100%;box-sizing:border-box}
+.sel{background:#fff;border:1px solid #d6d9e2;border-radius:5px;font-size:8.5px;padding:4px 8px;display:flex;justify-content:space-between;gap:10px}
+.rad{display:flex;gap:10px;font-size:8.5px;font-weight:700;align-items:center}
+.rad span{display:flex;align-items:center;gap:3px}
+.rad i{width:9px;height:9px;border-radius:50%;border:1.5px solid #999;display:block}
+.rad .y i{border-color:var(--p);background:radial-gradient(circle,var(--p) 40%,#fff 45%)}
+.pt{display:flex;gap:6px}
+.pt span{font-size:10px;font-weight:900;border-radius:999px;padding:4px 16px;background:#eee;color:#555}
+.pt .on{background:#111;color:#fff}
+.res{display:flex;flex-direction:column;align-items:center;gap:3px}
+.res small{font-size:8.5px;color:#555}
+.res small em{font-style:normal;background:var(--pl);color:var(--p);border-radius:3px;padding:0 4px;margin-right:4px;font-weight:700}
+.res b{font-size:17px;font-weight:900}
+.exp{margin:0;padding:14px 20px 14px;list-style:none;display:grid;grid-template-columns:minmax(0,1fr);gap:10px;font-size:14px;line-height:1.5;letter-spacing:-0.03em}
+.exp li{display:flex;gap:7px}
+.exp li i{font-style:normal;flex-shrink:0;width:19px;height:19px;border-radius:50%;background:#E53935;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.exp b{color:var(--d)}
+.right{display:flex;flex-direction:column;gap:12px;min-height:0}
+.rc{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;flex:1}
+.rc .rb{flex:1}
+.rb{display:flex;gap:14px;padding:10px 14px;align-items:stretch}
+.mk{width:300px;flex-shrink:0;background:#eef0f4;border-radius:8px;padding:9px;box-sizing:border-box}
+.act{background:#fff;border-radius:8px;padding:9px 11px}
+.act b{font-size:11.5px;font-weight:900;display:block;margin-bottom:3px}
+.act p{margin:0;font-size:10px;line-height:1.55;color:#444}
+.lab{font-size:10px;font-weight:900;color:var(--p);margin-bottom:5px}
+.vid{background:#fff;border:1px solid #d6d9e2;border-radius:8px;overflow:hidden}
+.th{height:84px;background:linear-gradient(135deg,#cfd8e6,#9fb2cc);display:flex;align-items:center;justify-content:center;position:relative}
+.th i{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center}
+.vid b{display:block;font-size:11px;font-weight:900;padding:5px 8px}
+.tb{width:100%;border-collapse:collapse;font-size:8.5px;background:#fff}
+.tb th{border-top:1.5px solid #333;border-bottom:1px solid #ccc;padding:3px 2px;font-weight:900}
+.tb td{border-bottom:1px solid #e3e3e3;padding:3px 2px;text-align:center;color:#444}
+.do{flex:1;display:flex;flex-direction:column;gap:5px;font-size:12.8px;line-height:1.55;letter-spacing:-0.03em}
+.do ul{margin:0;padding-left:17px}
+.do b{color:var(--d)}
+.wl{display:flex;align-items:flex-end;gap:6px;font-size:12px;font-weight:900;color:#0E5C58;height:24px;margin-top:auto}
+.wl i{flex:1;border-bottom:1.5px solid #9aa0ad;height:100%}
+.tip{margin:12px 24px 0;border-radius:12px;background:var(--l);border:2px dashed var(--c);padding:8px 14px;font-size:13px;letter-spacing:-0.02em;flex-shrink:0}
+.tip b.t{color:#fff;background:var(--d);border-radius:5px;padding:1px 8px;margin-right:8px;font-size:12px}
+.back{text-decoration:none;color:#fff;background:#0E5C58;font-weight:900;border-radius:999px;padding:6px 14px;font-size:12.5px}
+.back:hover{background:#0a4542;color:#fff}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:10px 26px 12px;font-size:12.5px;color:#4a4f5c;flex-shrink:0}
+.bar{display:flex;align-items:center;gap:20px;margin:14px 24px 0;border:2px solid var(--m);border-radius:14px;padding:12px 18px;background:var(--l);flex-shrink:0}
+.crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:#777;background:#fff;border-radius:999px;padding:6px 14px}
+.crumb b{color:#111;font-weight:900}
+.bt{flex:1;font-size:13.5px;line-height:1.6;letter-spacing:-0.03em}
+.bt b{color:var(--d)}
+.go{flex-shrink:0;text-decoration:none;background:var(--d);color:#fff;font-weight:900;font-size:16px;border-radius:12px;padding:12px 20px;text-align:center;line-height:1.3;box-shadow:0 3px 0 #0d3f73}
+.go small{display:block;font-size:11px;font-weight:700;color:#cfe3f7}
+.go:hover{background:#0d4f8a;color:#fff}
+.cols{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:14px 24px 0}
+.col{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.ms{background:#eef0f4;padding:10px 10px;height:300px;box-sizing:border-box;flex-shrink:0}
+.mw{zoom:1.2;background:#fff;border:1px solid #d6d9e2;border-radius:8px;height:233px;padding:8px 10px;box-sizing:border-box;display:flex;flex-direction:column;gap:7px;overflow:hidden}
+.tg{display:flex;justify-content:center;gap:5px}
+.tg span{font-size:9px;font-weight:700;border-radius:999px;padding:3px 10px;background:#eee;color:#555}
+.tg .on{background:#111;color:#fff}
+.srow{display:flex;justify-content:space-between;align-items:center;font-size:8.5px;color:#555}
+.srch{background:#f0f0f2;border-radius:5px;padding:3px 8px;font-size:8px;color:#888;min-width:90px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.vc{border:1px solid #e0e2e8;border-radius:6px;overflow:hidden}
+.vc .im{height:46px;background:linear-gradient(135deg,#5a4b9e,#2f2a5e);display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px}
+.vc .im span{background:#f6c445;color:#4a2e86;font-size:7px;font-weight:900;border-radius:3px;padding:1px 4px}
+.vc .im.w{background:linear-gradient(135deg,#d9d2c4,#a9b7c9)}
+.vc small{display:block;font-size:6.5px;color:#777;padding:3px 5px 0}
+.vc b{display:block;font-size:8.5px;font-weight:900;padding:0 5px 4px}
+.cls{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid #dcdfe6;border-radius:5px;overflow:hidden;background:#fff}
+.cls span{font-size:6.5px;text-align:center;padding:4px 2px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:1.3}
+.cls .on{background:var(--pl);color:var(--p);font-weight:900}
+.sbar{display:flex;gap:5px}
+.sbar i{flex:1;background:#fff;border:1px solid #dcdfe6;border-radius:4px;font-style:normal;font-size:8px;color:#999;padding:3px 6px}
+.sbar b{background:var(--p);color:#fff;font-size:8px;border-radius:4px;padding:3px 9px}
+.jc{border:1px solid #e0e2e8;border-radius:6px;padding:5px 7px}
+.jc small{font-size:6.5px;color:#888}
+.jc b{display:block;font-size:9px;font-weight:900;margin:1px 0}
+.jc p{margin:0;font-size:7px;color:#555;line-height:1.4}
+.cd{padding:10px 16px 12px;display:flex;flex-direction:column;gap:7px;flex:1;font-size:13px;line-height:1.6;letter-spacing:-0.03em}
+.cd .what{background:#f6f8fb;border-radius:8px;padding:7px 10px;font-size:12.5px}
+.cd .what b{color:var(--d)}
+.cd ol{margin:0;padding-left:20px}
+.cd ol b{color:var(--d)}
+.mt{text-align:center;font-size:12px;font-weight:900;margin-top:2px}
+.fl{display:flex;gap:4px;background:#f0f0f2;border-radius:6px;padding:5px}
+.fl span{background:#fff;border-radius:4px;font-size:7.5px;padding:3px 6px;color:#555;white-space:nowrap}
+.fl span.q{flex:1;color:#999}
+.fl b{background:var(--p);color:#fff;font-size:7.5px;border-radius:4px;padding:3px 7px}
+.tbm{width:100%;border-collapse:collapse;font-size:7px}
+.tbm th{border-top:1.2px solid #333;border-bottom:1px solid #ccc;padding:3px 2px;font-weight:900}
+.tbm td{border-bottom:1px solid #e6e6e6;padding:4px 2px;text-align:center;color:#444}
+.dt{display:inline-block;background:#eee;border-radius:3px;padding:1px 4px;font-size:6.5px}
+.dep{border-top:1px solid #e6e6e6;padding-top:5px}
+.dep em{font-style:normal;background:#eee;border-radius:3px;padding:1px 5px;font-size:7px;color:#555}
+.dep b{display:block;font-size:10px;font-weight:900;margin:3px 0 2px}
+.dep p{margin:0;font-size:7px;color:#555;line-height:1.45}
+.ks{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px}
+.ks span{font-size:6.5px;background:var(--pl);color:var(--p);border-radius:3px;padding:1px 4px;font-weight:700}
+.col .ch b{font-size:15.5px}
+.cd{font-size:12.5px}
+.cd .what{font-size:12px}
+</style>
+
+<style>
+html,body{margin:0;background:#e9ecf1}
+#stage{display:flex;align-items:flex-start;justify-content:center;overflow:hidden;min-height:100vh}
+#wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
+@media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="wrap">
+<div class="root">
+  <header class="hd">
+    <div class="stp"><small>STEP 02</small><b>진로설계</b></div>
+    <div class="ht">
+      <h1><span class="no">2-4</span>진학로드맵 <span style="color: #ffd23f">학교 · 학과 정보</span></h1>
+      <p>중학교 · 고등학교 · 대학교 · 학과정보로 나의 진학 경로를 그려 봐요</p>
+    </div>
+    <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
+    <a class="home" href="index.html" aria-label="학생용 매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
+  </header>
+  <div class="flow"></div>
+
+  <div class="bar">
+    <div class="crumb"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h14V9"></path></svg>›<span>진학로드맵</span>›<b>중학교 · 고등학교 · 대학교 · 학과정보</b></div>
+    <div class="bt">상단 메뉴 <b>[진학로드맵]</b>에서 네 가지 정보를 골라 봐요. 오른쪽 버튼은 <b>중학교 정보</b>로 바로 연결돼요.</div>
+    <a class="go" href="https://jinro.goedu.kr/middleSchoolInfo" target="_blank" rel="noopener">진학로드맵 바로가기 ↗<small>jinro.goedu.kr/middleSchoolInfo</small></a>
+  </div>
+
+  <div class="cols">
+    <section class="col">
+      <div class="ch"><span class="num">1</span><b>중학교 정보</b><span>지역 · 학교명 검색</span></div>
+      <div class="ms"><div class="mw" role="img" aria-label="중학교 정보 화면 예시"><div class="mt">중학교 정보</div><div class="fl"><span>○○시 ▾</span><span class="q">학교명을 입력하세요.</span><b>검색</b></div>
+<table class="tbm"><thead><tr><th>지역</th><th>학교명</th><th>주소</th><th>상세</th></tr></thead><tbody><tr><td>○○시</td><td>○○중학교</td><td>경기도 ○○시…</td><td><span class="dt">⌕ 상세</span></td></tr><tr><td>○○시</td><td>○○중학교</td><td>경기도 ○○시…</td><td><span class="dt">⌕ 상세</span></td></tr><tr><td>○○시</td><td>○○중학교</td><td>경기도 ○○시…</td><td><span class="dt">⌕ 상세</span></td></tr><tr><td>○○시</td><td>○○중학교</td><td>경기도 ○○시…</td><td><span class="dt">⌕ 상세</span></td></tr></tbody></table></div></div>
+      <div class="cd">
+        <div class="what">우리 지역 <b>중학교</b>를 찾아 학교 정보를 확인해요.</div>
+        <ol><li><b>지역</b>을 고르고 <b>학교명</b>을 입력해요.</li><li><b>[상세보기]</b>로 학교 정보를 봐요.</li><li>우리 학교의 특징을 적어요.</li></ol>
+        <div class="wl" style="margin-top: auto">우리 학교 특징 <i></i></div>
+        <div class="wl" style="margin-top: 10px"><i></i></div>
+      </div>
+    </section>
+    <section class="col">
+      <div class="ch"><span class="num">2</span><b>고등학교 정보</b><span>학교특성 · 지역 검색</span></div>
+      <div class="ms"><div class="mw" role="img" aria-label="고등학교 정보 화면 예시"><div class="mt">고등학교 정보</div><div class="fl"><span>학교특성 ▾</span><span>○○시 ▾</span></div><div class="fl"><span class="q">학교명을 입력하세요.</span><b>검색</b></div>
+<table class="tbm"><thead><tr><th>지역</th><th>학교특성</th><th>학교명</th><th>상세</th></tr></thead><tbody><tr><td>○○시</td><td>특성화고</td><td>○○고등학교</td><td><span class="dt">⌕</span></td></tr><tr><td>○○시</td><td>일반고</td><td>○○고등학교</td><td><span class="dt">⌕</span></td></tr><tr><td>○○시</td><td>자율고</td><td>○○고등학교</td><td><span class="dt">⌕</span></td></tr></tbody></table></div></div>
+      <div class="cd">
+        <div class="what"><b>일반고 · 특성화고 · 자율고</b> 등 학교특성별로 고등학교를 찾아요.</div>
+        <ol><li><b>학교특성</b>과 <b>지역</b>을 골라요.</li><li>관심 있는 학교를 <b>[상세보기]</b>해요.</li><li>가 보고 싶은 고등학교를 적어요.</li></ol>
+        <div class="wl" style="margin-top: auto">관심 고등학교 <i></i></div>
+        <div class="wl" style="margin-top: 10px"><i></i></div>
+      </div>
+    </section>
+    <section class="col">
+      <div class="ch"><span class="num">3</span><b>대학교 정보</b><span>일반대학 · 전문대학</span></div>
+      <div class="ms"><div class="mw" role="img" aria-label="대학교 정보 화면 예시"><div class="mt">대학교 정보</div><div class="tg"><span class="on">일반대학</span><span>전문대학</span></div><div class="fl"><span>지역선택 ▾</span><span class="q">학교명을 입력하세요.</span><b>검색</b></div>
+<table class="tbm"><thead><tr><th>지역</th><th>대학구분</th><th>학교명</th><th>홈</th></tr></thead><tbody><tr><td>○○도</td><td>대학교</td><td>○○대학교(본교)</td><td><span class="dt">⌂</span></td></tr><tr><td>○○도</td><td>대학교</td><td>○○대학교(본교)</td><td><span class="dt">⌂</span></td></tr><tr><td>○○도</td><td>대학교</td><td>○○대학교(본교)</td><td><span class="dt">⌂</span></td></tr></tbody></table></div></div>
+      <div class="cd">
+        <div class="what"><b>일반대학</b>과 <b>전문대학</b>을 지역별로 찾아볼 수 있어요.</div>
+        <ol><li><b>일반대학 / 전문대학</b> 탭을 골라요.</li><li><b>지역</b>과 <b>학교명</b>으로 검색해요.</li><li><b>홈페이지</b> 버튼으로 대학을 둘러봐요.</li></ol>
+        <div class="wl" style="margin-top: auto">관심 대학교 <i></i></div>
+        <div class="wl" style="margin-top: 10px"><i></i></div>
+      </div>
+    </section>
+    <section class="col">
+      <div class="ch"><span class="num">4</span><b>학과정보</b><span>고등학교 · 대학교 학과</span></div>
+      <div class="ms"><div class="mw" role="img" aria-label="학과정보 화면 예시"><div class="mt">학과정보</div><div class="tg"><span class="on">고등학교 학과정보</span><span>대학교 학과정보</span></div><div class="fl"><span>전공계열 선택 ▾</span><span class="q">학과명을 입력하세요</span><b>검색</b></div>
+<div class="dep"><em>자연계열</em><b>식품·조리</b><p>식품과 영양에 관한 기초 지식과 조리 이론·실무 능력을 길러 전문 조리인을 양성합니다.</p><div class="ks"><span>학과개요</span><span>관련 고교 교과목</span><span>세부관련학과</span><span>적성과 흥미</span><span>졸업 후 진출분야</span></div></div></div></div>
+      <div class="cd">
+        <div class="what">계열별 <b>학과개요 · 관련 교과목 · 적성과 흥미 · 진출분야</b>를 알려 줘요.</div>
+        <ol><li><b>고등학교 / 대학교 학과정보</b> 탭을 골라요.</li><li><b>전공계열</b>이나 <b>학과명</b>으로 검색해요.</li><li>관련 교과목과 진출분야를 확인해요.</li></ol>
+        <div class="wl" style="margin-top: auto">관심 학과 <i></i></div>
+        <div class="wl" style="margin-top: 10px"><i></i></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="tip"><b class="t">TIP</b>중학교 → 고등학교 → 대학교(학과) 순서로 <b>나의 진학 경로</b>를 이어 보기 · 2-2에서 본 관련학과를 <b>학과정보</b>에서 찾아보기</div>
+
+  <footer class="ft">
+    <div>고른 고등학교 · 대학교 · 학과는 진학 계획을 세울 때 활용해요. <span style="color: #8a8f9c">※ 화면 그림은 예시로, 실제 화면과 조금 다를 수 있어요.</span></div>
+    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="jobinfo.html">◀ 2-3 직업정보</a><a class="back" href="index.html">학생용 매뉴얼로 돌아가기</a><a class="back" href="interview.html">다음 ▶ 2-5 모의면접기</a></div>
+  </footer>
+</div>
+</div></div>
+<script>
+(function(){var W=1760,H=990,w=document.getElementById('wrap');
+function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+addEventListener('resize',fit);fit();})();
+</script>
+
+</body>
+</html>

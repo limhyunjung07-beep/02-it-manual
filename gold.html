@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1-5 황금지점 찾기</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1864AB}a:hover{color:#0d3f73}
+.root{--c:#E8590C;--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF;--g:#E0A800;--gd:#8A6100;--gl:#FFF7D6;width:1760px;height:990px;box-sizing:border-box;background:#fff;font-family:'Noto Sans KR',sans-serif;color:#1f2433;display:flex;flex-direction:column;overflow:hidden}
+.hd{background:#0E5C58;color:#fff;display:flex;align-items:center;gap:20px;padding:0 28px 0 36px;height:88px;flex-shrink:0}
+.stp{background:var(--c);color:#fff;border-radius:14px;padding:8px 16px;display:flex;flex-direction:column;align-items:center;line-height:1.15;flex-shrink:0}
+.stp small{font-size:11px;font-weight:900;letter-spacing:0.1em}
+.stp b{font-size:17px;font-weight:900}
+.ht{display:flex;flex-direction:column;gap:5px;flex:1}
+.ht h1{margin:0;font-size:30px;font-weight:900;letter-spacing:-0.02em;display:flex;align-items:center;gap:12px}
+.no{background:#ffd23f;color:#0E5C58;font-size:20px;font-weight:900;border-radius:999px;padding:2px 14px}
+.ht p{margin:0;font-size:14px;color:#d3ebe8}
+.org{text-align:right;line-height:1.35}
+.org small{font-size:14px;color:#d3ebe8;display:block}
+.org b{font-size:22px;font-weight:900}
+.home{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:64px;height:64px;border-radius:16px;background:#ffd23f;color:#0E5C58;text-decoration:none;font-size:13px;font-weight:900;flex-shrink:0;box-shadow:0 3px 0 #c9a21a}
+.home:hover{background:#ffe27a;color:#0E5C58}
+.flow{height:6px;background:var(--c);flex-shrink:0}
+.body{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:22px;padding:14px 24px 0}
+.left{display:flex;flex-direction:column;gap:12px;min-height:0}
+.bot{display:flex;align-items:center;gap:18px;border-radius:14px;background:var(--gl);border:2px solid var(--g);padding:12px 18px;flex-shrink:0}
+.venn{flex-shrink:0}
+.bt{flex:1;min-width:0}
+.bt b{display:block;font-size:20px;font-weight:900;color:var(--gd);letter-spacing:-0.03em}
+.bt span{font-size:13px;line-height:1.55;letter-spacing:-0.02em;color:#3a3f4c}
+.go{flex-shrink:0;text-decoration:none;background:#0E5C58;color:#fff;font-weight:900;font-size:17px;border-radius:14px;padding:14px 20px;text-align:center;line-height:1.3;box-shadow:0 3px 0 #083a37}
+.go small{display:block;font-size:11.5px;font-weight:700;color:#bfe3de}
+.go:hover{background:#0a4542;color:#fff}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;flex-shrink:0}
+.sc.fin{border-color:var(--g);background:var(--gl)}
+.sc.fin .sh{background:var(--g)}
+.sc.fin .sh b{color:#fff}
+.sc.fin .num{background:#fff;color:var(--gd)}
+.sc{border:2px solid var(--m);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.sh{background:var(--l);display:flex;align-items:center;gap:8px;padding:6px 10px}
+.num{width:24px;height:24px;border-radius:50%;background:var(--d);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sh b{font-size:14.5px;font-weight:900;letter-spacing:-0.03em}
+.sc p{margin:0;padding:7px 10px 9px;font-size:12.3px;line-height:1.55;letter-spacing:-0.03em}
+.sc p b{color:var(--d)}
+.main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:12px}
+.tpl{border:2px solid #0E5C58;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.tph{background:#0E5C58;color:#fff;padding:6px 12px;display:flex;justify-content:space-between;align-items:center}
+.tph b{font-size:14px;font-weight:900}
+.tph span{font-size:11px;color:#bfe3de}
+.tpb{padding:8px 12px;font-size:12px;line-height:1.75;letter-spacing:-0.03em;background:#f6faf9;flex:1}
+.tpb p{margin:0 0 3px}
+.tpb .k{display:inline-block;font-weight:900;color:#fff;background:#0E5C58;border-radius:4px;padding:0 5px;font-size:11px;margin-right:4px}
+.bl{display:inline-block;min-width:44px;border-bottom:1.5px solid #8a8f9c;margin:0 2px;height:14px;vertical-align:-2px}
+.ask{font-weight:900;color:var(--d)}
+.chat{border:1.5px solid #d6d9e2;border-radius:12px;background:#eef0f4;display:flex;flex-direction:column;overflow:hidden;min-height:0}
+.cbar{background:#fff;border-bottom:1px solid #e3e5ea;padding:6px 10px;font-size:12px;font-weight:900;display:flex;align-items:center;gap:6px}
+.cbar i{width:16px;height:16px;border-radius:50%;background:var(--g);display:block}
+.msgs{flex:1;display:flex;flex-direction:column;gap:8px;padding:10px}
+.me,.ai{max-width:86%;border-radius:12px;padding:7px 10px;font-size:11.5px;line-height:1.5;letter-spacing:-0.03em}
+.me{align-self:flex-end;background:#0E5C58;color:#fff;border-bottom-right-radius:3px}
+.ai{align-self:flex-start;background:#fff;border:1px solid #dfe1e8;border-bottom-left-radius:3px}
+.ai b{color:var(--gd)}
+.qs{display:flex;flex-direction:column;gap:4px;padding:0 10px 10px}
+.qs span{font-size:11px;font-weight:700;background:#fff;border:1.5px dashed var(--g);border-radius:999px;padding:2px 10px;color:var(--gd);align-self:flex-start}
+.right{border:2px solid #0E5C58;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:0;background:#f4f6f8}
+.rh{background:#0E5C58;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:8px 14px}
+.rh b{font-size:15px;font-weight:900}
+.dl{text-decoration:none;background:#ffd23f;color:#0E5C58;font-weight:900;font-size:12px;border-radius:999px;padding:4px 11px}
+.dl:hover{background:#ffe27a;color:#0E5C58}
+.dls{display:flex;gap:6px;flex-shrink:0}
+.dl.hwp{background:#DCEBFB;color:#1864AB}
+.dl.hwp:hover{background:#fff;color:#1864AB}
+.sheet{flex:1;min-height:0;display:flex;justify-content:center;padding:10px;position:relative}
+.sheet img{height:100%;max-width:100%;object-fit:contain;box-shadow:0 2px 10px rgba(0,0,0,0.15);background:#fff}
+.mk{position:absolute;left:18px;background:var(--d);color:#fff;font-size:11px;font-weight:900;border-radius:6px;padding:2px 7px;box-shadow:0 0 0 2px #fff}
+.warnbar{display:flex;gap:10px;flex-shrink:0}
+.wn{flex:1;border-radius:10px;padding:7px 12px;font-size:12.3px;letter-spacing:-0.02em;display:flex;gap:8px;align-items:center}
+.wn b.t{color:#fff;border-radius:5px;padding:1px 7px;font-size:11.5px;flex-shrink:0}
+.back{text-decoration:none;color:#fff;background:#0E5C58;font-weight:900;border-radius:999px;padding:6px 14px;font-size:12.5px}
+.back:hover{background:#0a4542;color:#fff}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:10px 26px 12px;font-size:12.5px;color:#4a4f5c;flex-shrink:0}
+</style>
+
+<style>
+html,body{margin:0;background:#e9ecf1}
+#stage{display:flex;align-items:flex-start;justify-content:center;overflow:hidden;min-height:100vh}
+#wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
+@media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="wrap">
+<div class="root">
+  <header class="hd">
+    <div class="stp"><small>STEP 01</small><b>자기이해</b></div>
+    <div class="ht">
+      <h1><span class="no">1-5</span>매라매 챗봇으로 <span style="color: #ffd23f">교집합 찾기(황금지점)</span></h1>
+      <p>흥미·적성·가치관이 만나는 나만의 황금지점을 챗봇과 대화하며 찾고, 탐색할 직업을 정해요</p>
+    </div>
+    <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
+    <a class="home" href="index.html" aria-label="학생용 매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
+  </header>
+  <div class="flow"></div>
+
+  <div class="body">
+    <div class="left">
+      <div class="bot">
+        <svg class="venn" width="150" height="104" viewBox="0 0 150 104" role="img" aria-label="흥미, 적성, 가치관 세 원이 겹치는 가운데가 황금지점">
+          <circle cx="55" cy="40" r="34" fill="#E8590C" fill-opacity="0.2" stroke="#E8590C" stroke-width="2"></circle>
+          <circle cx="95" cy="40" r="34" fill="#1C7ED6" fill-opacity="0.2" stroke="#1C7ED6" stroke-width="2"></circle>
+          <circle cx="75" cy="68" r="30" fill="#8E3FB0" fill-opacity="0.2" stroke="#8E3FB0" stroke-width="2"></circle>
+          <circle cx="75" cy="50" r="7" fill="#E0A800"></circle>
+          <g font-family="Noto Sans KR, sans-serif" font-size="11" font-weight="900" text-anchor="middle">
+            <text x="40" y="32" fill="#C2410C">흥미</text><text x="110" y="32" fill="#1864AB">적성</text><text x="75" y="96" fill="#6F2DA8">가치관</text>
+          </g>
+        </svg>
+        <div class="bt"><b>나의 황금지점 = 흥미 ∩ 적성 ∩ 가치관</b><span>1-4에서 정리한 세 검사 결과를 매라매 챗봇에게 알려 주면, 세 결과가 <b>모두 만나는 직업</b>을 함께 찾아 줘요.</span></div>
+        <a class="go" href="https://notebook.google.com/notebook/064f0a62-c11b-45e8-b4a6-3a023f61ac9b/preview" target="_blank" rel="noopener">매라매 챗봇 열기 ↗<small>활동지 오른쪽 위 QR로도 접속</small></a>
+      </div>
+
+      <div class="steps">
+        <div class="sc"><div class="sh"><span class="num">1</span><b>대화 시작</b></div><p><b>[매라매 챗봇 열기]</b>를 누르거나 활동지의 <b>QR</b>을 찍어 챗봇을 열어요.</p></div>
+        <div class="sc"><div class="sh"><span class="num">2</span><b>정리한 결과 입력</b></div><p>활동지 <b>01·02·03</b>의 문장을 아래 <b>대화 시작 문장</b> 그대로 입력해요.</p></div>
+        <div class="sc"><div class="sh"><span class="num">3</span><b>질문에 답하기</b></div><p>챗봇의 질문에 답하고, <b>추천 이유</b>도 꼭 물어봐요. 궁금한 건 이어서 질문!</p></div>
+        <div class="sc"><div class="sh"><span class="num">4</span><b>황금지점 확인</b></div><p>추천 직업 <b>1~3순위</b>를 활동지 ‘탐색할 직업’에 적고, <b>★최종 직업</b>을 골라요.</p></div>
+        <div class="sc fin"><div class="sh"><span class="num">5</span><b>꿈it(잇)다에 직업 선택</b></div><p>자기이해 <b>[검사결과 보기]</b> → 아래 <b>희망직업 선택</b>에서 10가지 분류 중 하나 → <b>세부 직업 1개</b> 선택!</p></div>
+      </div>
+
+      <div class="main">
+        <div class="tpl">
+          <div class="tph"><b>② 대화 시작 문장 (활동지 내용 그대로)</b><span>빈칸은 1-4에서 적은 내용</span></div>
+          <div class="tpb">
+            <p>매라매 챗봇님, 안녕하세요. 저는 중학교 <span class="bl" style="min-width: 22px"></span>학년 학생으로, 진로 수업 시간에 ‘꿈it(잇)다’ 시스템을 이용해 진로심리검사 3가지를 했습니다.</p>
+            <p><span class="k">01</span><b>직업흥미검사(H)</b> 일반 흥미 유형 1순위 <span class="bl"></span>, 2순위 <span class="bl"></span> / 선호 직업군 1순위 <span class="bl"></span>, 2순위 <span class="bl"></span> / 관심 직업 <span class="bl"></span>, <span class="bl"></span></p>
+            <p><span class="k">02</span><b>직업적성검사</b> 높은 적성 ① <span class="bl"></span> ② <span class="bl"></span> ③ <span class="bl"></span> / 가장 낮은 능력 <span class="bl"></span> / 관심 직업 <span class="bl"></span>, <span class="bl"></span></p>
+            <p><span class="k">03</span><b>직업가치관검사</b> 상위 가치관 ① <span class="bl"></span> ② <span class="bl"></span> ③ <span class="bl"></span> / 중요하게 생각하는 가치관 <span class="bl"></span> / 관심 직업 <span class="bl"></span>, <span class="bl"></span></p>
+            <p class="ask">매라매 챗봇님, 저의 직업흥미검사(H), 직업적성검사, 직업가치관검사 결과에 가장 알맞은 직업을 추천해 주세요.</p>
+          </div>
+        </div>
+        <div class="chat" role="img" aria-label="매라매 챗봇 대화 예시">
+          <div class="cbar"><i></i>매라매 챗봇 · 대화 예시</div>
+          <div class="msgs">
+            <div class="me">매라매 챗봇님, 안녕하세요. 저는 중학교 3학년 학생으로… 가장 알맞은 직업을 추천해 주세요.</div>
+            <div class="ai">결과를 보니 <b>흥미·적성·가치관이 함께 만나는 곳</b>은 ○○ 분야예요. 추천 직업 1순위는 …</div>
+            <div class="me">왜 그 직업을 추천했나요?</div>
+          </div>
+          <div class="qs">
+            <span>③ 이어서 물어보기 예시</span>
+            <span>“추천한 이유를 알려 주세요.”</span>
+            <span>“이 직업에 필요한 능력은 뭐예요?”</span>
+            <span>“세 결과가 모두 맞는 직업만 3개 골라 주세요.”</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="warnbar">
+        <div class="wn" style="background: #FDF1EF; border: 1.5px solid #E4A39B"><b class="t" style="background: #B42318">주의</b>이름·학교·전화번호 같은 <b>개인정보는 입력하지 않아요.</b></div>
+        <div class="wn" style="background: var(--l); border: 1.5px dashed var(--c)"><b class="t" style="background: var(--d)">TIP</b>AI 추천은 <b>참고용</b> · 검사 결과와 함께 보고 내가 결정해요.</div>
+      </div>
+    </div>
+
+    <section class="right">
+      <div class="rh"><b>결과정리 활동지에서 채울 곳</b><span class="dls"><a class="dl" href="assets/42bb6120405a543b3bb3f1b6ed5e0eb5.pdf" target="_blank" rel="noopener">PDF 내려받기 ↓</a><a class="dl hwp" href="https://drive.google.com/uc?export=download&amp;id=1upZ_KmGzqkBVZ2NXPdixjchJ2OEAaB9k" target="_blank" rel="noopener">HWP 내려받기 ↓</a></span></div>
+      <div class="sheet">
+        <img src="assets/71dca3f515e0f60ad06ce328536be862.png" alt="나의 진로 보물지도 결과 정리 활동지">
+      </div>
+    </section>
+  </div>
+
+  <footer class="ft">
+    <div>★최종 직업을 <b>꿈it(잇)다에 희망직업으로 선택</b>하면 <b>STEP 02 진로설계 · 2-1 진로 직업탐색</b>로 이어져요.</div>
+    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="result.html">◀ 1-4 결과정리</a><a class="back" href="index.html">학생용 매뉴얼로 돌아가기</a><a class="back" href="career.html">다음 ▶ 2-1 진로 직업탐색</a></div>
+  </footer>
+</div>
+</div></div>
+<script>
+(function(){var W=1760,H=990,w=document.getElementById('wrap');
+function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+addEventListener('resize',fit);fit();})();
+</script>
+
+</body>
+</html>

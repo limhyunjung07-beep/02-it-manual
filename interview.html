@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2-5 모의면접기</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1864AB}a:hover{color:#0d3f73}
+.root{--c:#1C7ED6;--d:#1864AB;--l:#E8F2FC;--m:#C5DEF7;width:1760px;height:990px;box-sizing:border-box;background:#fff;font-family:'Noto Sans KR',sans-serif;color:#1f2433;display:flex;flex-direction:column;overflow:hidden}
+.hd{background:#0E5C58;color:#fff;display:flex;align-items:center;gap:20px;padding:0 28px 0 36px;height:88px;flex-shrink:0}
+.stp{background:var(--c);color:#fff;border-radius:14px;padding:8px 16px;display:flex;flex-direction:column;align-items:center;line-height:1.15;flex-shrink:0}
+.stp small{font-size:11px;font-weight:900;letter-spacing:0.1em}
+.stp b{font-size:17px;font-weight:900}
+.ht{display:flex;flex-direction:column;gap:5px;flex:1}
+.ht h1{margin:0;font-size:31px;font-weight:900;letter-spacing:-0.02em;display:flex;align-items:center;gap:12px}
+.no{background:#ffd23f;color:#0E5C58;font-size:20px;font-weight:900;border-radius:999px;padding:2px 14px}
+.ht p{margin:0;font-size:14px;color:#d3ebe8}
+.org{text-align:right;line-height:1.35}
+.org small{font-size:14px;color:#d3ebe8;display:block}
+.org b{font-size:22px;font-weight:900}
+.home{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:64px;height:64px;border-radius:16px;background:#ffd23f;color:#0E5C58;text-decoration:none;font-size:13px;font-weight:900;flex-shrink:0;box-shadow:0 3px 0 #c9a21a}
+.home:hover{background:#ffe27a;color:#0E5C58}
+.flow{height:6px;background:var(--c);flex-shrink:0}
+.body{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:20px;padding:14px 24px 0}
+.card{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.ch{background:var(--l);display:flex;align-items:center;gap:10px;padding:8px 16px;flex-shrink:0}
+.num{width:28px;height:28px;border-radius:50%;background:var(--d);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ch b{font-size:17px;font-weight:900;letter-spacing:-0.03em;flex:1}
+.ch small{font-size:12px;font-weight:700;color:var(--d)}
+.tabs{display:flex;gap:6px;padding:12px 16px 0;border-bottom:4px solid var(--d)}
+.tab{flex:1;font-family:inherit;font-size:16px;font-weight:900;border-radius:12px 12px 0 0;padding:10px 6px;min-height:48px;border:2px solid var(--m);border-bottom:none;background:var(--l);color:#3a3f4c;cursor:pointer;letter-spacing:-0.02em}
+.tab:hover{background:#fff;color:var(--d)}
+.tab.on{background:var(--d);border-color:var(--d);color:#fff}
+.pick{display:flex;flex-direction:column;gap:10px;padding:10px 16px 14px;flex:1;min-height:0}
+.info{display:flex;gap:14px;align-items:stretch}
+.tname{flex-shrink:0;width:170px;border-radius:12px;background:var(--d);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:10px 14px}
+.tname small{font-size:11.5px;font-weight:700;color:#cfe3f7}
+.tname b{font-size:22px;font-weight:900;letter-spacing:-0.03em;line-height:1.2}
+.desc{flex:1;border-radius:12px;background:#f5f8fc;border:1.5px solid var(--m);padding:10px 14px;font-size:13.5px;line-height:1.65;letter-spacing:-0.03em}
+.desc b{color:var(--d)}
+.qh{font-size:15px;font-weight:900;color:#0E5C58;display:flex;align-items:center;gap:8px;margin-top:2px}
+.qh::before{content:"";width:6px;height:16px;border-radius:2px;background:#0E5C58}
+.qs{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
+.q{display:flex;gap:10px;align-items:center;border:1.5px solid #e1e3ea;border-radius:10px;padding:8px 12px;font-size:14px;letter-spacing:-0.03em}
+.q i{font-style:normal;flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--l);color:var(--d);font-weight:900;font-size:12.5px;display:flex;align-items:center;justify-content:center}
+.q em{font-style:normal;margin-left:auto;flex-shrink:0;font-size:11px;font-weight:900;border-radius:999px;padding:2px 9px}
+.q em.c{background:#eef0f4;color:#555b6a}
+.q em.s{background:#FFF1E6;color:#C2410C}
+.tipb{border-radius:10px;background:#FFF7D6;border:1.5px dashed #E0B400;padding:8px 12px;font-size:13px;line-height:1.55;letter-spacing:-0.02em}
+.tipb b{color:#8A6100}
+.school{display:flex;align-items:center;gap:10px;margin-top:auto}
+.school label{font-size:14px;font-weight:900;color:#0E5C58;flex-shrink:0}
+.school input{flex:1;font-family:inherit;font-size:14px;border:none;border-bottom:2px solid #9aa0ad;padding:8px 4px;background:transparent;outline:none}
+.school input:focus{border-bottom-color:var(--d)}
+.right{display:flex;flex-direction:column;gap:12px;min-height:0}
+.steps{margin:0;padding:12px 16px 14px;list-style:none;display:flex;flex-direction:column;gap:9px}
+.steps li{display:flex;gap:10px;font-size:13.5px;line-height:1.55;letter-spacing:-0.03em}
+.steps li i{font-style:normal;flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--d);color:#fff;font-weight:900;font-size:12.5px;display:flex;align-items:center;justify-content:center}
+.steps b{color:var(--d)}
+.go{display:block;margin:0 16px 14px;text-decoration:none;background:#0E5C58;color:#fff;font-weight:900;font-size:18px;border-radius:14px;padding:14px;text-align:center;box-shadow:0 3px 0 #083a37}
+.go small{display:block;font-size:12px;font-weight:700;color:#bfe3de;margin-top:2px}
+.go:hover{background:#0a4542;color:#fff}
+.gos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 16px 14px}
+.gos .go{margin:0;font-size:15.5px;padding:12px 8px}
+.go.t{background:#fff;color:#0E5C58;border:2px solid #0E5C58;box-shadow:0 3px 0 #9cc9c4}
+.go.t small{color:#4a7c78}
+.go.t:hover{background:#f2f9f8;color:#0E5C58}
+.frame{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px 16px 14px}
+.fr{border-radius:10px;padding:8px 10px;font-size:12.5px;line-height:1.5;letter-spacing:-0.03em}
+.fr b{display:block;font-size:14px;font-weight:900}
+.warn{border-radius:12px;background:#FDF1EF;border:1.5px solid #E4A39B;padding:9px 14px;font-size:12.5px;line-height:1.55;letter-spacing:-0.02em}
+.warn b{color:#B42318}
+.back{text-decoration:none;color:#fff;background:#0E5C58;font-weight:900;border-radius:999px;padding:6px 14px;font-size:12.5px}
+.back:hover{background:#0a4542;color:#fff}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:10px 26px 12px;font-size:12.5px;color:#4a4f5c;flex-shrink:0}
+</style>
+<style>.pickwrap{display:flex;flex-direction:column;flex:1;min-height:0}.pickwrap>.pick{flex:1}.pick[hidden]{display:none}</style>
+<style>
+html,body{margin:0;background:#e9ecf1}
+#stage{display:flex;align-items:flex-start;justify-content:center;overflow:hidden;min-height:100vh}
+#wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
+@media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="wrap">
+<div class="root">
+  <header class="hd">
+    <div class="stp"><small>STEP 02</small><b>진로설계</b></div>
+    <div class="ht">
+      <h1><span class="no">2-5</span><span><span style="color: #ffd23f">모의면접기</span>로 면접 연습</span></h1>
+      <p>가고 싶은 학교 유형을 고르고, 예상 질문을 확인한 뒤 모의면접기로 실전처럼 연습해요</p>
+    </div>
+    <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
+    <a class="home" href="index.html" aria-label="학생용 매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
+  </header>
+  <div class="flow"></div>
+
+  <div class="body">
+    <section class="card">
+      <div class="ch"><span class="num">1</span><b>학교 선택</b><small>가고 싶은 고등학교 유형을 눌러 보세요</small></div>
+      <div class="tabs" role="tablist" aria-label="학교 유형 선택">
+        <button class="tab on" role="tab" aria-selected="true" data-id="voc">특성화고</button><button class="tab" role="tab" aria-selected="false" data-id="mei">마이스터고</button><button class="tab" role="tab" aria-selected="false" data-id="sci">과학고</button><button class="tab" role="tab" aria-selected="false" data-id="flg">외고·국제고</button><button class="tab" role="tab" aria-selected="false" data-id="pri">자율형사립고</button>
+      </div>
+      <div class="pickwrap"><div class="pick" data-panel="voc">
+        <div class="info">
+          <div class="tname"><small>선택한 학교 유형</small><b>특성화고</b></div>
+          <div class="desc">전공 학과에서 기술·실무를 배우며 취업과 진학을 함께 준비하는 학교예요.<br><b>면접 포인트</b> · 학과 선택 이유, 진로 계획, 성실성</div>
+        </div>
+        <div class="qh">예상 질문</div>
+        <ol class="qs">
+          <li class="q"><i>1</i><span>우리 학교, 이 학과에 지원한 이유는 무엇인가요?</span><em class="s">특성화고</em></li><li class="q"><i>2</i><span>졸업 후 취업이나 진학 계획을 말해 보세요.</span><em class="s">특성화고</em></li><li class="q"><i>3</i><span>따고 싶은 자격증과 준비 계획이 있나요?</span><em class="s">특성화고</em></li><li class="q"><i>4</i><span>나의 장점과 단점을 말해 보세요.</span><em class="c">공통</em></li><li class="q"><i>5</i><span>친구와 의견이 달랐을 때 어떻게 해결했나요?</span><em class="c">공통</em></li><li class="q"><i>6</i><span>마지막으로 하고 싶은 말이 있나요?</span><em class="c">공통</em></li>
+        </ol>
+        <div class="tipb"><b>답변 TIP</b> · 왜 이 학과인지, 졸업 후 무엇을 하고 싶은지 구체적인 직업 이름으로 말해 보세요.</div></div><div class="pick" data-panel="mei" hidden>
+        <div class="info">
+          <div class="tname"><small>선택한 학교 유형</small><b>마이스터고</b></div>
+          <div class="desc">산업 분야의 전문 기술 인재(영 마이스터)를 기르는 학교예요.<br><b>면접 포인트</b> · 기술에 대한 관심, 끈기, 협동심</div>
+        </div>
+        <div class="qh">예상 질문</div>
+        <ol class="qs">
+          <li class="q"><i>1</i><span>이 산업 분야에 관심을 갖게 된 계기는 무엇인가요?</span><em class="s">마이스터고</em></li><li class="q"><i>2</i><span>어려운 일을 끝까지 해낸 경험을 말해 보세요.</span><em class="s">마이스터고</em></li><li class="q"><i>3</i><span>졸업 후 어떤 기술인이 되고 싶나요?</span><em class="s">마이스터고</em></li><li class="q"><i>4</i><span>나의 장점과 단점을 말해 보세요.</span><em class="c">공통</em></li><li class="q"><i>5</i><span>친구와 의견이 달랐을 때 어떻게 해결했나요?</span><em class="c">공통</em></li><li class="q"><i>6</i><span>마지막으로 하고 싶은 말이 있나요?</span><em class="c">공통</em></li>
+        </ol>
+        <div class="tipb"><b>답변 TIP</b> · 그 산업 분야에 관심을 갖게 된 계기와, 직접 만들어 보거나 고쳐 본 경험을 넣어 보세요.</div></div><div class="pick" data-panel="sci" hidden>
+        <div class="info">
+          <div class="tname"><small>선택한 학교 유형</small><b>과학고</b></div>
+          <div class="desc">수학·과학 분야의 깊은 탐구 활동을 하는 학교예요.<br><b>면접 포인트</b> · 탐구 경험, 자기주도학습 과정</div>
+        </div>
+        <div class="qh">예상 질문</div>
+        <ol class="qs">
+          <li class="q"><i>1</i><span>가장 기억에 남는 수학·과학 탐구 경험은 무엇인가요?</span><em class="s">과학고</em></li><li class="q"><i>2</i><span>스스로 공부한 방법과 그 과정에서 배운 점은?</span><em class="s">과학고</em></li><li class="q"><i>3</i><span>입학 후 연구하고 싶은 주제가 있나요?</span><em class="s">과학고</em></li><li class="q"><i>4</i><span>나의 장점과 단점을 말해 보세요.</span><em class="c">공통</em></li><li class="q"><i>5</i><span>친구와 의견이 달랐을 때 어떻게 해결했나요?</span><em class="c">공통</em></li><li class="q"><i>6</i><span>마지막으로 하고 싶은 말이 있나요?</span><em class="c">공통</em></li>
+        </ol>
+        <div class="tipb"><b>답변 TIP</b> · 탐구 과정에서 무엇을 궁금해했고, 어떻게 해결했는지 순서대로 설명해 보세요.</div></div><div class="pick" data-panel="flg" hidden>
+        <div class="info">
+          <div class="tname"><small>선택한 학교 유형</small><b>외고·국제고</b></div>
+          <div class="desc">외국어와 국제 이해 교육에 중점을 둔 학교예요.<br><b>면접 포인트</b> · 외국어 학습 과정, 국제 이슈 관심</div>
+        </div>
+        <div class="qh">예상 질문</div>
+        <ol class="qs">
+          <li class="q"><i>1</i><span>외국어를 공부하면서 가장 노력한 점은 무엇인가요?</span><em class="s">외고·국제고</em></li><li class="q"><i>2</i><span>최근 관심 있게 본 국제 뉴스가 있나요?</span><em class="s">외고·국제고</em></li><li class="q"><i>3</i><span>외국어 능력을 살려 어떤 일을 하고 싶나요?</span><em class="s">외고·국제고</em></li><li class="q"><i>4</i><span>나의 장점과 단점을 말해 보세요.</span><em class="c">공통</em></li><li class="q"><i>5</i><span>친구와 의견이 달랐을 때 어떻게 해결했나요?</span><em class="c">공통</em></li><li class="q"><i>6</i><span>마지막으로 하고 싶은 말이 있나요?</span><em class="c">공통</em></li>
+        </ol>
+        <div class="tipb"><b>답변 TIP</b> · 외국어를 공부한 나만의 방법과, 관심 있는 국제 이슈를 하나 정해 두세요.</div></div><div class="pick" data-panel="pri" hidden>
+        <div class="info">
+          <div class="tname"><small>선택한 학교 유형</small><b>자율형사립고</b></div>
+          <div class="desc">학교만의 특색 있는 교육과정을 운영하는 학교예요.<br><b>면접 포인트</b> · 자기주도학습, 학교 교육과정 이해</div>
+        </div>
+        <div class="qh">예상 질문</div>
+        <ol class="qs">
+          <li class="q"><i>1</i><span>우리 학교의 교육과정 중 기대되는 점은?</span><em class="s">자율형사립고</em></li><li class="q"><i>2</i><span>스스로 계획을 세워 공부한 경험을 말해 보세요.</span><em class="s">자율형사립고</em></li><li class="q"><i>3</i><span>고등학교 3년 동안의 목표는 무엇인가요?</span><em class="s">자율형사립고</em></li><li class="q"><i>4</i><span>나의 장점과 단점을 말해 보세요.</span><em class="c">공통</em></li><li class="q"><i>5</i><span>친구와 의견이 달랐을 때 어떻게 해결했나요?</span><em class="c">공통</em></li><li class="q"><i>6</i><span>마지막으로 하고 싶은 말이 있나요?</span><em class="c">공통</em></li>
+        </ol>
+        <div class="tipb"><b>답변 TIP</b> · 그 학교의 특색 교육과정을 미리 찾아보고, 내 계획과 연결해 말해 보세요.</div></div></div><div class="pick" style="flex:0 0 auto;padding-top:0"><div class="school"><label for="schoolName">지원하고 싶은 학교</label><input id="schoolName" type="text" placeholder="학교 이름을 적어 보세요 (예: ○○고등학교 ○○과)"></div>
+      </div>
+    </section>
+
+    <div class="right">
+      <section class="card">
+        <div class="ch"><span class="num">2</span><b>모의면접기로 연습하기</b></div>
+        <ol class="steps">
+          <li><i>1</i><div>왼쪽에서 <b>학교 유형</b>을 고르고 예상 질문을 소리 내어 읽어 봐요.</div></li>
+          <li><i>2</i><div>아래 버튼으로 <b>모의면접기</b>를 열어요.</div></li>
+          <li><i>3</i><div>질문에 <b>내 말로</b> 답하고, 피드백을 확인해요.</div></li>
+          <li><i>4</i><div>부족한 답변은 고쳐서 <b>다시 한 번</b> 연습해요.</div></li>
+        </ol>
+        <div class="gos"><a class="go" href="https://claude.ai/artifact/RME88iXHPFo8FDwYWkhffd" target="_blank" rel="noopener">모의면접기 (학생용) ↗<small>학생이 직접 연습해요</small></a><a class="go t" href="https://claude.ai/artifact/QppP9yvFvLycZVh2jZj33D" target="_blank" rel="noopener">모의면접기 (교사용) ↗<small>선생님이 수업·상담에서 활용</small></a></div>
+      </section>
+
+      <section class="card">
+        <div class="ch"><span class="num">3</span><b>답변 틀 (4단계)</b></div>
+        <div class="frame">
+          <div class="fr" style="background: #E8F2FC"><b>① 결론</b>질문에 대한 내 답을 먼저 한 문장으로</div>
+          <div class="fr" style="background: #FFF1E6"><b>② 이유</b>그렇게 생각하는 까닭</div>
+          <div class="fr" style="background: #F4EAFB"><b>③ 경험</b>중학교 때 해 본 구체적인 활동</div>
+          <div class="fr" style="background: #FFF7D6"><b>④ 다짐</b>입학 후 하고 싶은 일·계획</div>
+        </div>
+      </section>
+
+      <div class="warn"><b>꼭 확인!</b> 면접을 보는지, 어떤 방식인지는 <b>학교와 해마다 달라요.</b> 지원 전에 그 학교의 <b>입학전형 요강</b>을 확인하고 선생님과 상의해요.</div>
+    </div>
+  </div>
+
+  <footer class="ft">
+    <div>질문과 답변은 연습을 돕기 위한 <b>예시</b>예요. 외우기보다 <b>내 경험</b>으로 말해 보세요.</div>
+    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="roadmap.html">◀ 2-4 진학로드맵</a><a class="back" href="index.html">학생용 매뉴얼로 돌아가기</a><a class="back" href="counsel.html">다음 ▶ 3-1 상담게시판</a></div>
+  </footer>
+</div>
+</div></div>
+<script>
+(function(){var W=1760,H=990,w=document.getElementById('wrap');
+function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+addEventListener('resize',fit);fit();})();
+</script>
+<script>
+document.querySelectorAll('.tab').forEach(function(b){b.addEventListener('click',function(){
+var id=b.dataset.id;document.querySelectorAll('.tab').forEach(function(t){var on=t===b;t.classList.toggle('on',on);t.setAttribute('aria-selected',on?'true':'false');});
+document.querySelectorAll('[data-panel]').forEach(function(p){p.hidden=p.dataset.panel!==id;});});});
+</script>
+</body>
+</html>

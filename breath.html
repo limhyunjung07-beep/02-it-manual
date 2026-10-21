@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1-2 심장 집중 호흡</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1864AB}a:hover{color:#0d3f73}
+.root{--c:#E8590C;--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF;width:1760px;height:990px;box-sizing:border-box;background:#fff;font-family:'Noto Sans KR',sans-serif;color:#1f2433;display:flex;flex-direction:column;overflow:hidden}
+.hd{background:#0E5C58;color:#fff;display:flex;align-items:center;gap:20px;padding:0 28px 0 36px;height:88px;flex-shrink:0}
+.stp{background:var(--c);color:#fff;border-radius:14px;padding:8px 16px;display:flex;flex-direction:column;align-items:center;line-height:1.15;flex-shrink:0}
+.stp small{font-size:11px;font-weight:900;letter-spacing:0.1em}
+.stp b{font-size:17px;font-weight:900}
+.ht{display:flex;flex-direction:column;gap:5px;flex:1}
+.ht h1{margin:0;font-size:31px;font-weight:900;letter-spacing:-0.02em;display:flex;align-items:center;gap:12px}
+.no{background:#ffd23f;color:#0E5C58;font-size:20px;font-weight:900;border-radius:999px;padding:2px 14px}
+.ht p{margin:0;font-size:14px;color:#d3ebe8}
+.org{text-align:right;line-height:1.35}
+.org small{font-size:14px;color:#d3ebe8;display:block}
+.org b{font-size:22px;font-weight:900}
+.home{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:64px;height:64px;border-radius:16px;background:#ffd23f;color:#0E5C58;text-decoration:none;font-size:13px;font-weight:900;flex-shrink:0;box-shadow:0 3px 0 #c9a21a}
+.home:hover{background:#ffe27a;color:#0E5C58}
+.flow{height:6px;background:var(--c);flex-shrink:0}
+.vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:16px 26px 0;flex-shrink:0}
+.vc{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.vh{background:var(--l);display:flex;align-items:center;gap:10px;padding:8px 14px}
+.num{width:28px;height:28px;border-radius:50%;background:var(--d);color:#fff;font-weight:900;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.vh b{font-size:17px;font-weight:900;letter-spacing:-0.03em;flex:1}
+.vh span{font-size:12px;font-weight:700;color:var(--d);background:#fff;border:1.5px solid var(--m);border-radius:999px;padding:1px 10px}
+video{display:block;width:100%;aspect-ratio:16/9;background:#0b2f2d}
+.vt{padding:9px 16px 11px;font-size:13px;line-height:1.6;letter-spacing:-0.02em}
+.vt b{color:var(--d)}
+.credit{font-size:11.5px;color:#7a7f8c;margin-top:2px}
+.tl{display:flex;gap:6px;margin-top:2px}
+.tl div{flex:1;border-radius:8px;padding:5px 8px;font-size:12px;line-height:1.4;text-align:center}
+.tl small{display:block;font-size:11px;font-weight:900;opacity:0.85}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:16px 26px 0;flex-shrink:0}
+.hw{border-radius:14px;background:#f2f9f8;border:1.5px solid #9cc9c4;padding:12px 16px;display:flex;gap:14px;align-items:flex-start}
+.hn{width:38px;height:38px;border-radius:50%;background:#0E5C58;color:#fff;font-size:19px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hw h4{margin:0 0 3px;font-size:16px;font-weight:900;color:#0E5C58;letter-spacing:-0.03em}
+.hw p{margin:0;font-size:13px;line-height:1.55;letter-spacing:-0.02em}
+.tips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:14px 26px 0;flex-shrink:0}
+.tip{border-radius:12px;padding:9px 14px;font-size:12.8px;line-height:1.55;letter-spacing:-0.02em;display:flex;gap:10px;align-items:center;background:var(--l);border:2px dashed var(--c)}
+.tip .t{font-weight:900;font-size:13px;color:#fff;background:var(--d);border-radius:6px;padding:2px 8px;flex-shrink:0}
+.cond{display:inline-flex;gap:6px;margin-left:4px;font-weight:900;color:var(--d)}
+.lec{display:flex;align-items:center;gap:18px;margin:14px 26px 0;border:2px solid #6F2DA8;border-radius:14px;padding:10px 16px;background:#F7F0FC;flex-shrink:0}
+.lt{display:flex;flex-direction:column;align-items:center;line-height:1.2;flex-shrink:0;padding-right:16px;border-right:2px dashed #D9C2EE}
+.lb{font-size:11.5px;font-weight:700;color:#6F2DA8}
+.lt b{font-size:18px;font-weight:900;color:#6F2DA8}
+.li{flex:1;min-width:0}
+.lname{font-size:16px;font-weight:900;letter-spacing:-0.03em}
+.lname span{font-size:13px;font-weight:700;color:#55596a;margin-left:6px}
+.lmeta{font-size:12.5px;color:#4a4f5c;margin-top:2px;letter-spacing:-0.02em}
+.lmeta b{color:#6F2DA8}
+.lgo{flex-shrink:0;text-decoration:none;background:#6F2DA8;color:#fff;font-weight:900;font-size:14px;border-radius:999px;padding:10px 18px}
+.lgo:hover{background:#5a2289;color:#fff}
+.back{text-decoration:none;color:#fff;background:#0E5C58;font-weight:900;border-radius:999px;padding:6px 14px;font-size:12.5px}
+.back:hover{background:#0a4542;color:#fff}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:12px 26px 12px;font-size:12.5px;color:#4a4f5c;flex-shrink:0;margin-top:auto}
+</style>
+
+<style>
+html,body{margin:0;background:#e9ecf1}
+#stage{display:flex;align-items:flex-start;justify-content:center;overflow:hidden;min-height:100vh}
+#wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
+@media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="wrap">
+<div class="root">
+  <header class="hd">
+    <div class="stp"><small>STEP 01</small><b>자기이해</b></div>
+    <div class="ht">
+      <h1><span class="no">1-2</span>검사 전 컨디션 관리 · <span style="color: #ffd23f">심장 집중 호흡</span></h1>
+      <p>진로심리검사 전에 2분 동안 숨을 고르며 몸과 마음을 차분하게 만들어요</p>
+    </div>
+    <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
+    <a class="home" href="index.html" aria-label="학생용 매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
+  </header>
+  <div class="flow"></div>
+
+  <div class="vids">
+    <section class="vc">
+      <div class="vh"><span class="num">1</span><b>설명 영상 보기</b><span>약 1분 40초</span></div>
+      <video controls preload="metadata" src="assets/79ca59da6b435a279b558fe622ea0963.mp4"></video>
+      <div class="vt">
+        <div>심장 집중 호흡법이 무엇인지, <b>어떻게 하는지</b> 먼저 들어 봐요.</div>
+        <div class="credit">영상 자료: 장승훈 (jangsangdy@naver.com) · [기술 1] 심장집중호흡법</div>
+      </div>
+    </section>
+    <section class="vc">
+      <div class="vh"><span class="num">2</span><b>2분 따라 하기</b><span>2분 · 9번 호흡</span></div>
+      <video controls preload="metadata" poster="assets/b9e433e3869ad71fef9aac0449ca8938.jpg" src="assets/9ffdc6893793a38e94e05293f70c6e26.mp4"></video>
+      <div class="vt">
+        <div class="tl">
+          <div style="background: #FFF1E6"><small>0:00 ~ 0:25</small>자세 잡고 손을 가슴에</div>
+          <div style="background: #E3F6FB"><small>0:25 ~ 1:55</small>원이 커지면 들숨 · 작아지면 날숨 (9번)</div>
+          <div style="background: #FFF7D6"><small>1:55 ~ 2:00</small>눈 뜨고 검사 시작</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="how">
+    <div class="hw"><span class="hn">1</span><div><h4>심장에 주의 집중</h4><p>가슴에 손을 얹고, <b>심장으로 숨을 쉬고 있다고</b> 상상해요.</p></div></div>
+    <div class="hw"><span class="hn">2</span><div><h4>5초 들숨 · 5초 날숨</h4><p>천천히 5초 들이마시고, 5초 내쉬어요. 나에게 <b>가장 편안한 리듬</b>도 괜찮아요.</p></div></div>
+    <div class="hw"><span class="hn">3</span><div><h4>산소의 흐름 상상</h4><p>깨끗한 산소가 심장 주변으로 들어와 <b>온몸을 천천히 돌고</b>, 심장 주변으로 빠져나가는 모습을 그려요.</p></div></div>
+  </div>
+
+  <div class="lec">
+    <div class="lt"><span class="lb">더 알고 싶다면</span><b>강의 링크</b></div>
+    <div class="li">
+      <div class="lname">교사와 부모도 돌봄이 필요하다! <span>번아웃 예방과 회복을 위한 스트레스 관리 방법</span></div>
+      <div class="lmeta">강사 <b>장승훈(패치샘)</b> · 미국 HeartMath 연구소의 회복탄력성 방법 바탕 · 2026.11.15 19:30~21:30 · 온라인 · 무료 · 선생님·학부모님 추천</div>
+    </div>
+    <a class="lgo" href="https://ssam.teacherville.co.kr/patchssam/meet/11681.edu" target="_blank" rel="noopener">쌤동네에서 보기 ↗</a>
+  </div>
+
+  <div class="tips">
+    <div class="tip"><span class="t">TIP</span><div>억지로 깊게 쉬지 말고 <b>부드럽고 고르게</b> 쉬어요.</div></div>
+    <div class="tip"><span class="t">TIP</span><div>어지러우면 멈추고 평소처럼 숨 쉬어요.</div></div>
+    <div class="tip"><span class="t">체크</span><div>호흡 후 나의 컨디션<span class="cond">☆ ☆ ☆ ☆ ☆</span></div></div>
+  </div>
+
+  <footer class="ft">
+    <div>호흡이 끝나면 <b>1-3 진로심리검사</b>를 시작해요.</div>
+    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="login.html">◀ 1-1 로그인</a><a class="back" href="index.html">학생용 매뉴얼로 돌아가기</a><a class="back" href="test.html">다음 ▶ 1-3 진로심리검사</a></div>
+  </footer>
+</div>
+</div></div>
+<script>
+(function(){var W=1760,H=990,w=document.getElementById('wrap');
+function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+addEventListener('resize',fit);fit();})();
+</script>
+
+</body>
+</html>

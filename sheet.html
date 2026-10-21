@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>나의 진로 보물지도 활동지</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1b2a57}a:hover{color:#0d1530}
+.pg{--n:#1b2a57;--y:#F2C230;--yl:#FFF8DC;--r:#E53935;width:794px;height:1123px;box-sizing:border-box;background:#fff;font-family:'Noto Sans KR',sans-serif;color:#1f2433;padding:26px 34px 22px;display:flex;flex-direction:column;gap:7px;overflow:hidden}
+.hd{display:flex;height:98px;border-radius:18px;overflow:hidden;flex-shrink:0;position:relative}
+.hl{width:96px;background:var(--r);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.hl span{background:#fff;color:var(--r);font-size:12px;font-weight:900;border-radius:999px;padding:1px 10px;letter-spacing:0.06em}
+.hl b{font-size:20px;font-weight:900;line-height:1.1;text-align:center}
+.hm{flex:1;background:linear-gradient(90deg,#1b2a57,#24407a);display:flex;align-items:center;gap:16px;padding:0 18px}
+.hm img{width:58px;height:58px;border-radius:50%}
+.hm h1{margin:0;font-size:34px;font-weight:900;color:#fff;letter-spacing:-0.03em;line-height:1.1}
+.hm h1 em{font-style:normal;color:var(--y)}
+.hm p{margin:4px 0 0;font-size:14px;font-weight:700;color:#dfe5f5}
+.hr{width:104px;background:#1b2a57;display:flex;align-items:center;justify-content:center}
+.qr{background:#fff;border-radius:10px;padding:6px 6px 3px;display:flex;flex-direction:column;align-items:center}
+.qr img{width:62px;height:62px;display:block}
+.qr span{font-size:9.5px;font-weight:900;color:var(--n);margin-top:1px}
+.rbw{position:absolute;left:96px;right:0;bottom:0;height:6px;display:flex}
+.rbw i{flex:1;display:block}
+.info{border:1.5px solid var(--n);border-radius:12px;height:36px;display:flex;align-items:center;padding:0 16px;font-size:13px;font-weight:900;flex-shrink:0}
+.info .u{display:inline-block;border-bottom:1.3px solid #555;height:18px;margin:0 5px 0 6px}
+.info .bar{width:2px;height:20px;background:var(--n);margin:0 14px}
+.pill{align-self:center;background:var(--y);border-radius:999px;padding:5px 26px;font-size:16px;font-weight:900;color:var(--n);box-shadow:0 3px 0 #d4a514;flex-shrink:0}
+.say{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.say img{width:54px;flex-shrink:0}
+.bub{flex:1;word-break:keep-all;border-radius:14px;padding:6px 14px;font-size:12.8px;line-height:1.65;letter-spacing:-0.02em}
+.b1{background:#EEF2FC;border:1.5px solid #C8D3F0}
+.b2{background:var(--yl);border:1.5px solid var(--y)}
+.red{color:var(--r);font-weight:900}
+.nv{color:var(--n);font-weight:900}
+.sec{border:1.5px solid #d3d7e2;border-radius:14px;padding:7px 16px 9px;display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+.st{display:flex;align-items:center;gap:10px;margin-bottom:1px}
+.st i{font-style:normal;width:32px;height:32px;border-radius:50%;background:var(--n);color:#fff;border:3px solid var(--y);box-sizing:border-box;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.st b{font-size:18px;font-weight:900;flex:1;letter-spacing:-0.03em}
+.st span{font-size:11px;font-weight:700;color:#555b6a;background:#f0f1f5;border-radius:999px;padding:2px 10px}
+.ln{display:flex;align-items:flex-end;flex-wrap:nowrap;font-size:12.8px;line-height:1;height:24px;letter-spacing:-0.03em;white-space:nowrap}
+.ln.sub{padding-left:20px}
+.dm{width:9px;height:9px;background:var(--y);border:1.5px solid #b98a00;transform:rotate(45deg);margin:0 9px 3px 2px;flex-shrink:0}
+.k{color:var(--n);font-weight:900}
+.u{display:inline-block;border-bottom:1.3px solid #7a8090;height:18px;margin:0 7px;flex-shrink:0}
+.nb{display:inline-flex;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--n);font-size:10px;font-weight:900;color:var(--n);align-items:center;justify-content:center;margin-left:8px;flex-shrink:0;margin-bottom:1px}
+.ttl{display:flex;align-items:center;gap:8px;font-size:18px;font-weight:900;flex-shrink:0;margin-top:2px}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;border:2px solid var(--n);border-radius:12px;overflow:hidden;flex-shrink:0}
+.tbl th{height:32px;font-size:14px;font-weight:900}
+.tbl th.g{background:var(--n);color:#fff;width:190px}
+.tbl th.o{background:var(--y);color:var(--n);border-left:1px solid #fff}
+.tbl td{height:50px;border-top:1px solid #d3d7e2;border-left:1px solid #d3d7e2}
+.tbl td.g{background:var(--yl);border-left:0;text-align:center;font-size:12.5px;font-weight:900;line-height:1.5}
+.nbf{display:inline-flex;width:18px;height:18px;border-radius:50%;background:var(--n);color:#fff;font-size:11px;align-items:center;justify-content:center;margin-right:5px}
+.note{align-self:center;background:#f0f2f7;border-radius:999px;padding:4px 22px;font-size:13px;font-weight:900;flex-shrink:0}
+.fin{display:flex;border:2px solid var(--n);border-radius:12px;overflow:hidden;height:66px;flex-shrink:0}
+.fin .l{width:190px;background:var(--y);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:var(--n);line-height:1.4;border-right:2px solid var(--n)}
+.fin .r{flex:1;background:#FFE8F0}
+.foot{align-self:center;background:var(--n);color:#fff;border-radius:8px;padding:5px 18px;font-size:14px;font-weight:900;margin-top:auto}
+.foot em{font-style:normal;color:var(--y)}
+</style>
+
+<style>
+html,body{margin:0;background:#e9ecf1}
+#stage{display:flex;align-items:flex-start;justify-content:center;overflow:hidden;min-height:100vh}
+#wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
+@media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="wrap">
+<div class="pg">
+  <header class="hd">
+    <div class="hl"><span>STEP 1</span><b>자기<br>이해</b></div>
+    <div class="hm">
+      <img src="assets/c47b97ca00c0150aac64b32949d65598.png" alt="">
+      <div><h1><em>나의 진로</em> 보물지도</h1><p>꿈it(잇)다 결과 정리 가이드</p></div>
+    </div>
+    <div class="hr"><div class="qr"><img src="assets/964cfe96ccfe60b7ce2d7bdcb375b5db.png" alt="매라매 챗봇 QR 코드"><span>매라매 챗봇</span></div></div>
+    <div class="rbw"><i style="background: #F57C00"></i><i style="background: #F7C600"></i><i style="background: #2E9E4A"></i><i style="background: #1E7FD8"></i><i style="background: #2B3990"></i><i style="background: #8E3FB0"></i></div>
+  </header>
+
+  <div class="info">20<span class="u" style="width: 34px"></span>년<span class="u" style="width: 28px"></span>월<span class="u" style="width: 28px"></span>일<span class="u" style="width: 28px"></span>교시<span class="bar"></span>3학년<span class="u" style="width: 32px"></span>반<span class="u" style="width: 32px"></span>번<span style="margin-left: 14px">이름</span><span class="u" style="flex: 1"></span></div>
+
+  <div class="pill">✦ 교집합 찾기(황금 지점): 매라매 챗봇과 진로 탐색 ✦</div>
+
+  <div class="say">
+    <img src="assets/c31a6584077755d365441940d2959546.png" alt="">
+    <div class="bub b1"><span class="red">매라매 챗봇님,</span> 안녕하세요. 저는 중학교 <span class="u" style="width: 34px; margin: 0 4px; vertical-align: -4px"></span> 학년 학생으로, 진로 수업 시간에 <span class="nv">‘꿈it(잇)다’</span> 시스템을 이용해 <span class="nv">진로심리검사 3가지</span>를 했습니다.</div>
+  </div>
+
+  <section class="sec">
+    <div class="st"><i>01</i><b>직업흥미검사(H)</b><span>흥미 유형 · 관심 직업</span></div>
+    <div class="ln"><span class="dm"></span><span class="k">일반 흥미 유형</span>으로는 1순위<span class="u" style="width: 92px"></span>유형, 2순위는<span class="u" style="width: 92px"></span>유형이 가장 높게 나왔고,</div>
+    <div class="ln sub">관심 직업으로는<span class="u" style="width: 170px"></span>,<span class="u" style="width: 170px"></span>입니다.</div>
+    <div class="ln"><span class="dm"></span><span class="k">선호 직업군(흥미)</span>&nbsp;결과 1순위<span class="u" style="width: 92px"></span>유형, 2순위는<span class="u" style="width: 92px"></span>유형이 가장 높게 나왔고,</div>
+    <div class="ln sub">관심 직업으로는<span class="u" style="width: 170px"></span>,<span class="u" style="width: 170px"></span>입니다.</div>
+    <div class="ln"><span class="dm"></span>일반 흥미와 선호 직업군(흥미)의&nbsp;<span class="k">일치 정도</span>&nbsp;:<span class="u" style="flex: 1; margin-right: 0"></span></div>
+  </section>
+
+  <section class="sec">
+    <div class="st"><i>02</i><b>직업적성검사</b><span>강점 능력 · 관심 직업</span></div>
+    <div class="ln"><span class="dm"></span><span class="k">높은 적성</span>으로 나온 능력 3가지는<span class="nb">1</span><span class="u" style="width: 100px"></span><span class="nb">2</span><span class="u" style="width: 100px"></span><span class="nb">3</span><span class="u" style="width: 100px"></span>이고,</div>
+    <div class="ln"><span class="dm"></span><span class="k">가장 낮게</span>&nbsp;나온 능력은<span class="u" style="width: 170px"></span>능력입니다.</div>
+    <div class="ln"><span class="dm"></span><span class="k">관심 직업</span>&nbsp;:<span class="u" style="width: 170px"></span>,<span class="u" style="width: 170px"></span>입니다.</div>
+  </section>
+
+  <section class="sec">
+    <div class="st"><i>03</i><b>직업가치관검사</b><span>중요한 가치 · 관심 직업</span></div>
+    <div class="ln"><span class="dm"></span><span class="k">상위 직업가치관</span>으로는<span class="nb">1</span><span class="u" style="width: 110px"></span><span class="nb">2</span><span class="u" style="width: 110px"></span><span class="nb">3</span><span class="u" style="width: 110px"></span>입니다.</div>
+    <div class="ln"><span class="dm"></span>제가&nbsp;<span class="k">중요하게 생각하는</span>&nbsp;직업가치관은<span class="u" style="width: 110px"></span>,<span class="u" style="width: 110px"></span>,<span class="u" style="width: 110px"></span>입니다.</div>
+    <div class="ln"><span class="dm"></span><span class="k">관심 직업</span>&nbsp;:<span class="u" style="width: 170px"></span>,<span class="u" style="width: 170px"></span>입니다.</div>
+  </section>
+
+  <div class="say">
+    <div class="bub b2"><span class="red">매라매 챗봇님,</span> 저의 <span class="nv">직업흥미검사(H), 직업적성검사, 직업가치관검사</span> 결과에 가장 알맞은 직업을 추천해 주세요.</div>
+    <img src="assets/e3fc2fe17bfb2c85d4d43fb71424d17a.png" alt="">
+  </div>
+
+  <div class="ttl"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1b2a57" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="#F2C230"></circle><path d="M15 15l6 6"></path></svg>탐색할 직업</div>
+  <table class="tbl">
+    <thead><tr><th class="g">구분</th><th class="o"><span class="nbf">1</span>1순위</th><th class="o"><span class="nbf">2</span>2순위</th><th class="o"><span class="nbf">3</span>3순위</th></tr></thead>
+    <tbody><tr><td class="g">매라매 챗봇 상담 결과<br>추천받은 직업</td><td></td><td></td><td></td></tr></tbody>
+  </table>
+
+  <div class="note">진로심리검사 결과 <span class="red">+</span> 매라매 챗봇 상담 결과를 함께 살펴보세요.</div>
+
+  <div class="fin"><div class="l"><span>★ 최종 ★</span><span>탐색하고 싶은 직업</span></div><div class="r"></div></div>
+
+  <div class="foot">꿈it(잇)다 <em>진로·진학 로드맵</em></div>
+</div>
+</div></div>
+<script>
+(function(){var W=794,H=1123,w=document.getElementById('wrap');
+function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+addEventListener('resize',fit);fit();})();
+</script>
+
+</body>
+</html>

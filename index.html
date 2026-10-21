@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>꿈it(잇)다 사용자 매뉴얼 · 매탄중학교</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1864AB}a:hover{color:#0d3f73}
+.g1{--c:#E8590C;--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF}
+.g2{--c:#1C7ED6;--d:#1864AB;--l:#E8F2FC;--m:#C5DEF7}
+.g3{--c:#8E3FB0;--d:#6F2DA8;--l:#F4EAFB;--m:#E2CDF2}
+.root{width:1760px;height:990px;box-sizing:border-box;background:#fff;font-family:'Noto Sans KR',sans-serif;color:#1f2433;display:flex;flex-direction:column;overflow:hidden}
+.hd{background:#0E5C58;color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px;height:88px;flex-shrink:0}
+.logo{width:100px;height:60px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ht{display:flex;flex-direction:column;gap:6px;flex:1}
+.ht h1{margin:0;font-size:32px;font-weight:900;letter-spacing:-0.02em;display:flex;align-items:center;gap:12px}
+.ht p{margin:0;font-size:14px;color:#d3ebe8}
+.chip{background:#ffd23f;color:#0E5C58;font-size:16px;font-weight:900;border-radius:999px;padding:4px 14px}
+.org{text-align:right;line-height:1.35}
+.org small{font-size:14px;color:#d3ebe8;display:block}
+.org b{font-size:22px;font-weight:900}
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;padding:14px 30px 0;flex:1;min-height:0}
+.scroll{display:flex;flex-direction:column;min-width:0;min-height:0}
+.rod{position:relative;height:24px;margin:0 2px;flex-shrink:0;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.6) 0,rgba(255,255,255,0.08) 45%,rgba(0,0,0,0.22) 100%),var(--c);box-shadow:0 3px 5px rgba(0,0,0,0.18);z-index:1}
+.rod::before,.rod::after{content:"";position:absolute;top:50%;width:36px;height:36px;margin-top:-18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,0.8) 0,rgba(255,255,255,0) 42%),var(--d);box-shadow:0 2px 4px rgba(0,0,0,0.28),inset 0 0 0 3px rgba(255,255,255,0.25)}
+.rod::before{left:-16px}
+.rod::after{right:-16px}
+.rod i{position:absolute;left:50%;top:50%;width:80px;height:8px;margin:-4px 0 0 -40px;border-radius:3px;background:rgba(255,255,255,0.45)}
+.rod.b{box-shadow:0 -2px 5px rgba(0,0,0,0.12),0 3px 5px rgba(0,0,0,0.18)}
+.paper{flex:1;min-height:0;border-left:8px solid var(--c);border-right:8px solid var(--c);background:#fff;display:flex;flex-direction:column;margin:0 2px;padding:0 12px 10px}
+.head{display:flex;flex-direction:column;align-items:center;gap:4px;padding:40px 6px 12px;border-bottom:2px dashed var(--m);flex-shrink:0;text-align:center}
+.head .pill{background:var(--l);color:var(--d);border:1.5px solid var(--m);font-size:26px;font-weight:900;border-radius:999px;padding:5px 26px;letter-spacing:0.06em}
+.ic{width:88px;height:88px;color:var(--d)}
+.head b{font-size:64px;font-weight:900;color:var(--d);letter-spacing:-0.04em;line-height:1.1}
+.head > span:last-child{font-size:19px;font-weight:700;color:#55596a;margin-top:12px}
+.rows{display:flex;flex-direction:column;justify-content:flex-end;gap:7px;padding-top:9px;flex:1;min-height:0}
+.row{border:1.5px solid var(--m);border-radius:10px;overflow:hidden;flex-shrink:0}
+.rt{background:var(--l);display:flex;align-items:center;gap:5px;padding:6px 8px}
+.no{background:var(--d);color:#fff;font-size:18.8px;font-weight:900;border-radius:999px;padding:1px 9px;letter-spacing:0.04em;flex-shrink:0}
+.rt b{font-size:20.3px;font-weight:900;letter-spacing:-0.1em;flex:1;white-space:nowrap;min-width:0}
+.ck{font-size:11.5px;font-weight:700;color:var(--d)}
+a.lk{text-decoration:none;color:inherit;cursor:pointer}
+a.lk:hover{background:var(--m)}
+.more{font-size:17.4px;font-weight:900;color:#fff;background:var(--c);border-radius:999px;padding:1px 6px;flex-shrink:0;letter-spacing:-0.06em;white-space:nowrap}
+.more{min-width:30px;height:30px;padding:0 !important;display:inline-flex;align-items:center;justify-content:center;border-radius:50% !important;font-size:15px !important}
+.rb{display:flex;gap:10px;padding:7px 10px 8px}
+.qr{width:64px;height:64px;border:2.5px dashed var(--c);color:var(--d);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:14px;text-align:center;flex-shrink:0}
+.qr span{font-size:8.5px;font-weight:500;color:#6b6b6b;line-height:1.25}
+.tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;font-size:9.5px;line-height:1.45;letter-spacing:-0.03em}
+.tx p{margin:0}
+.need{display:inline-flex;align-items:center;font-size:14.5px;font-weight:900;color:#B42318;background:#FDF1EF;border:1px solid #E4A39B;border-radius:4px;padding:0 3px;white-space:nowrap;flex-shrink:0;letter-spacing:-0.1em}
+.tx p b{color:var(--d)}
+.st{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:8px;font-size:17.4px;color:#333}
+.st > div{white-space:nowrap;letter-spacing:-0.07em}
+.st{grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr) !important;column-gap:6px !important}
+.st b{color:var(--d);font-weight:900;margin-right:2px}
+.tip{font-size:9px;color:#4a4f5c}
+.tip b{color:#4A3600;background:#FFD23F;border-radius:4px;padding:0 5px;margin-right:5px;font-size:10px}
+.memo{flex:1;min-height:60px;border:1.5px dashed var(--m);border-radius:10px;padding:6px 12px;display:flex;flex-direction:column}
+.memo h5{margin:0 0 2px;font-size:12.5px;font-weight:900;color:var(--d)}
+.ln{flex:1;background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 27px,#cfcfcf 27px,#cfcfcf 28px)}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:10px 30px 12px;font-size:12.5px;color:#4a4f5c;flex-shrink:0}
+.ft .nm{display:flex;gap:24px;font-weight:700;color:#1f2433}
+.ft .nl{display:inline-block;width:120px;border-bottom:1px solid #8a8a8a;margin-left:8px}
+
+.board{gap:26px}
+.rod.b{display:none}
+.rod{width:56%;height:44px;margin:0;border-radius:18px 18px 0 0;background:var(--c);box-shadow:none}
+.rod::before,.rod::after,.rod i{display:none}
+.paper{border:4px solid var(--c);border-radius:0 22px 22px 22px;margin:0;padding:0 14px 14px;background:#fff}
+.head{padding-top:30px}
+.scroll::after{content:"";display:block;height:10px;margin:0 14px;border-radius:0 0 12px 12px;background:var(--m)}
+</style>
+
+<style>
+html,body{margin:0;background:#e9ecf1}
+#stage{display:flex;align-items:flex-start;justify-content:center;overflow:hidden;min-height:100vh}
+#wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
+@media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="wrap">
+<div class="root">
+  <header class="hd">
+    <div class="logo">
+      <svg width="76" height="40" viewBox="0 0 76 40" aria-hidden="true">
+        <path d="M6 38a32 32 0 0 1 64 0" fill="none" stroke="#E53935" stroke-width="5"></path>
+        <path d="M11 38a27 27 0 0 1 54 0" fill="none" stroke="#F57C00" stroke-width="5"></path>
+        <path d="M16 38a22 22 0 0 1 44 0" fill="none" stroke="#F7C600" stroke-width="5"></path>
+        <path d="M21 38a17 17 0 0 1 34 0" fill="none" stroke="#2E9E4A" stroke-width="5"></path>
+        <path d="M26 38a12 12 0 0 1 24 0" fill="none" stroke="#1E7FD8" stroke-width="5"></path>
+        <path d="M31 38a7 7 0 0 1 14 0" fill="none" stroke="#8E3FB0" stroke-width="5"></path>
+      </svg>
+    </div>
+    <div class="ht">
+      <h1>꿈it(잇)다 <span style="color: #ffd23f">사용자 매뉴얼</span></h1>
+    </div>
+    <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
+  </header>
+
+  <div class="board">
+    <!-- STEP 01 -->
+    <div class="scroll g1">
+      <div class="rod"><i></i></div>
+      <div class="paper">
+        <div class="head">
+          <span class="pill">STEP 01</span>
+          <svg class="ic" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="34" cy="17" r="12" style="fill: var(--m)"></circle>
+            <path d="M30.5 13.5a3.6 3.6 0 1 1 5 3.3c-1 .5-1.5 1.3-1.5 2.4"></path>
+            <path d="M34 23.5h.01"></path>
+            <circle cx="15" cy="31" r="5"></circle>
+            <path d="M5 49c0-5.5 4.5-9.5 10-9.5s10 4 10 9.5"></path>
+          </svg>
+          <b>자기이해</b>
+          <span>진로심리검사 · 결과분석</span>
+        </div>
+        <div class="rows">
+          <div class="row">
+            <a class="rt lk" href="login.html"><span class="no">1-1</span><b>로그인</b><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>꿈it(잇)다 접속 → 원패스 선택</div><div><b>2.</b>아이디·비밀번호로 로그인</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="breath.html"><span class="no">1-2</span><b>검사 전 컨디션 관리</b><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>가슴에 손 얹고 심장에 집중</div><div><b>2.</b>5초 들숨·날숨, 산소 흐름 상상</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="test.html"><span class="no">1-3</span><b>진로심리검사 실시</b><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>AI 진로설계 › 검사시작·제출</div><div><b>2.</b>결과지 PDF 저장·업로드</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="result.html"><span class="no">1-4</span><b>심리검사 결과정리</b><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>검사 결과 화면 열기</div><div><b>2.</b>활동지에 검사별 결과 옮겨 적기</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="gold.html"><span class="no">1-5</span><b>채팅으로 황금지점 찾기</b><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>챗봇에 결과 입력·대화</div><div><b>2.</b>황금지점 확인 → 직업 선택</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rod b"><i></i></div>
+    </div>
+
+    <!-- STEP 02 -->
+    <div class="scroll g2">
+      <div class="rod"><i></i></div>
+      <div class="paper">
+        <div class="head">
+          <span class="pill">STEP 02</span>
+          <svg class="ic" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 24v9c0 3.5 5.8 6.5 13 6.5s13-3 13-6.5v-9" style="fill: var(--m)"></path>
+            <path d="M3 19 26 10l23 9-23 9z" style="fill: #fff"></path>
+            <path d="M49 19v12"></path>
+            <path d="M47 35l2-4 2 4z"></path>
+          </svg>
+          <b>진로설계</b>
+          <span>진로 · 진학</span>
+        </div>
+        <div class="rows">
+          <div class="row">
+            <a class="rt lk" href="career.html"><span class="no">2-1</span><b>진로 직업탐색</b><span class="need" title="꿈it(잇)다 학생용 계정으로 로그인 후 사용 가능">※ 학생용 로그인 필요</span><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>진로설계 › [진로] 탭 열기</div><div><b>2.</b>탐색 활동·영상·체험처 보기</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="advance.html"><span class="no">2-2</span><b>진로 진학탐색</b><span class="need" title="꿈it(잇)다 학생용 계정으로 로그인 후 사용 가능">※ 학생용 로그인 필요</span><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>[진학] 탭 열기</div><div><b>2.</b>준비방법·관련학과·추천 학교</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="jobinfo.html"><span class="no">2-3</span><b>진로로드맵(직업정보)</b><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>진로로드맵 › 직업정보</div><div><b>2.</b>별별직업·직업사전·직업인 영상</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="roadmap.html"><span class="no">2-4</span><b>진학로드맵</b><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>중학교·고등학교 정보</div><div><b>2.</b>대학교·학과정보</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="interview.html"><span class="no">2-5</span><b>모의면접기</b><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>학교 유형 선택·예상 질문</div><div><b>2.</b>모의면접기로 답변·피드백</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rod b"><i></i></div>
+    </div>
+
+    <!-- STEP 03 -->
+    <div class="scroll g3">
+      <div class="rod"><i></i></div>
+      <div class="paper">
+        <div class="head">
+          <span class="pill">STEP 03</span>
+          <svg class="ic" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M26 4C14 4 5 12.5 5 23c0 5.5 2.5 10.3 6.5 13.8L9 47l11-5.5c1.9.4 3.9.6 6 .6 12 0 21-8.5 21-19S38 4 26 4z" style="fill: var(--l)"></path>
+            <circle cx="26" cy="19" r="5.5"></circle>
+            <path d="M16.5 34c1.5-4.5 5-7 9.5-7s8 2.5 9.5 7"></path>
+          </svg>
+          <b>진로 상담</b>
+          <span>상담 지원 및 자료실</span>
+        </div>
+        <div class="rows">
+          <div class="row">
+            <a class="rt lk" href="counsel.html"><span class="no">3-1</span><b>상담게시판 상담</b><span class="need" title="꿈it(잇)다 학생용 계정으로 로그인 후 사용 가능">※ 학생용 로그인 필요</span><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>진로상담 › [등록하기]</div><div><b>2.</b>고민 쓰고 답변 확인</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="https://chatgpt.com/share/6ad887b5-bd8c-83e8-8fce-8d2912ac4d05" target="_blank" rel="noopener"><span class="no">3-2</span><b>상담게시판용 챗봇</b><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>챗봇과 고민 정리</div><div><b>2.</b>상담게시판에 올리기</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="https://jinro.goedu.kr/onDreamCareerClassMaterials" target="_blank" rel="noopener"><span class="no">3-3</span><b>ON-dream 진로수업자료</b><span class="need" title="꿈it(잇)다 교사용 계정으로 로그인 후 사용 가능">※ 교사용 로그인 필요</span><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>자료실 › ON-dream 열기</div><div><b>2.</b>자료 검색·내려받기</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="https://jinro.goedu.kr/careerLinkedSubjectClassMaterials" target="_blank" rel="noopener"><span class="no">3-4</span><b>진로연계교육 수업자료</b><span class="need" title="꿈it(잇)다 교사용 계정으로 로그인 후 사용 가능">※ 교사용 로그인 필요</span><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>자료실 › 진로연계교육</div><div><b>2.</b>자료 검색·내려받기</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="rt lk" href="https://jinro.goedu.kr/careerLinkedEdu" target="_blank" rel="noopener"><span class="no">3-5</span><b>진로교육자료</b><span class="need" title="꿈it(잇)다 교사용 계정으로 로그인 후 사용 가능">※ 교사용 로그인 필요</span><span class="more">▶</span></a>
+            <div class="rb">
+              <div class="tx">
+                <div class="st"><div><b>1.</b>자료실 › 진로교육자료</div><div><b>2.</b>제목 검색·파일 내려받기</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rod b"><i></i></div>
+    </div>
+  </div>
+
+  <footer class="ft">
+    <div>궁금한 점은 <b>상담게시판</b> 또는 <b>매탄중 진로상담실</b>로 문의해요.</div>
+    
+  </footer>
+</div>
+</div></div>
+<script>
+(function(){var W=1760,H=990,w=document.getElementById('wrap');
+function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+addEventListener('resize',fit);fit();})();
+</script>
+
+</body>
+</html>
