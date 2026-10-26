@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1-5 채팅으로 황금지점 찾기</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+html,body{margin:0;height:100%;background:#14181f;font-family:'Noto Sans KR',sans-serif;overflow:hidden}
+#view{position:absolute;inset:0 0 56px 0;display:flex;align-items:center;justify-content:center}
+#deck{width:1920px;height:1080px;position:relative;flex-shrink:0;transform-origin:center center}
+#deck>section{position:absolute;inset:0;box-sizing:border-box;overflow:hidden}
+#deck>section:not(.on){display:none!important}
+#deck aside{display:none}
+#deck h1,#deck h2,#deck h3,#deck p,#deck ul,#deck ol{margin:0}
+#deck h1{font-size:96px;font-weight:600;line-height:1.1}
+#deck h2{font-size:64px;font-weight:600;line-height:1.15}
+#deck h3{font-size:44px;font-weight:600;line-height:1.2}
+#deck p{font-size:32px;line-height:1.4}
+#deck ul,#deck ol{padding-left:1.2em}
+#deck a{color:inherit;text-decoration:none}
+#deck img{display:block}
+#bar{position:absolute;left:0;right:0;bottom:0;height:56px;display:flex;align-items:center;justify-content:center;gap:10px;background:#0E5C58;color:#fff}
+#bar button,#bar a{font-family:inherit;font-size:15px;font-weight:900;border:0;border-radius:999px;padding:9px 18px;cursor:pointer;background:#ffd23f;color:#0E5C58;text-decoration:none;min-height:38px;box-sizing:border-box;display:inline-flex;align-items:center}
+#bar a.home{position:absolute;left:12px;background:#fff}
+#bar .full{position:absolute;right:12px;background:#cfe7e3}
+#num{min-width:80px;text-align:center;font-weight:900}
+@media (max-width:640px){#bar a.home span,#bar .full{display:none}}
+</style>
+</head>
+<body>
+<div id="view"><div id="deck">
+<section id="cover" style="background:#0E5C58;color:#FBF8F3;font-family:'Noto Sans KR', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<div style="position:absolute;left:0;right:0;bottom:0;height:24px;background:linear-gradient(90deg, #E53935 0%, #F57C00 20%, #F7C600 40%, #2E9E4A 60%, #1E7FD8 80%, #8E3FB0 100%)"></div>
+<p style="font-size:32px;font-weight:900;color:#FBF8F3;background:#E8590C;padding:12px 32px;border-radius:999px;align-self:flex-start">STEP 01 · 자기이해</p>
+<h1 style="font-size:120px;font-weight:900;line-height:1.15;color:#FBF8F3">1-5 채팅으로<br><span style="color:#FFD23F">황금지점 찾기</span></h1>
+<p style="font-size:44px;font-weight:500;color:#CFE7E3">흥미·적성·가치관이 만나는 나만의 직업을 찾아요</p>
+<div style="position:absolute;right:128px;bottom:96px;width:520px;background:#1864AB;border-radius:24px;padding:24px 32px;box-shadow:0 6px 0 #0D3F73;display:flex;flex-direction:column;align-items:center;gap:4px">
+<p style="font-size:40px;font-weight:900;color:#FBF8F3;text-align:center"><a target="_blank" rel="noopener" href="https://jinro.goedu.kr">꿈it(잇)다 바로가기 ↗</a></p>
+<p style="font-size:26px;font-weight:700;color:#CFE3F7;text-align:center">jinro.goedu.kr</p>
+</div>
+<p style="position:absolute;left:128px;bottom:72px;width:1000px;font-size:28px;font-weight:700;color:#CFE7E3">매탄중학교 진로상담실</p>
+<aside>1-4에서 정리한 세 검사 결과를 매라매 챗봇에게 알려 주고, 세 결과가 모두 만나는 직업을 찾습니다.</aside>
+</section>
+<section id="idea" style="background:#FFF8E1;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:48px">
+<p style="font-size:30px;font-weight:900;color:#5A4300;background:#FFD23F;border-radius:999px;padding:8px 28px;align-self:flex-start">나의 황금지점</p>
+<h2 style="font-size:80px;font-weight:900;color:#0E5C58;line-height:1.2">흥미 <span style="color:#C2410C">∩</span> 적성 <span style="color:#C2410C">∩</span> 가치관</h2>
+<p style="font-size:40px;line-height:1.5;color:#2F3542">세 검사 결과가 <b>모두 만나는 직업</b>을 챗봇과 함께 찾아요.</p>
+<div style="display:flex;flex-direction:row;gap:24px">
+<p style="font-size:34px;font-weight:900;color:#FBF8F3;background:#C2410C;border-radius:999px;padding:12px 36px">01 흥미</p>
+<p style="font-size:34px;font-weight:900;color:#FBF8F3;background:#2E7D4F;border-radius:999px;padding:12px 36px">02 적성</p>
+<p style="font-size:34px;font-weight:900;color:#FBF8F3;background:#6F2DA8;border-radius:999px;padding:12px 36px">03 가치관</p>
+</div>
+<aside>황금지점은 흥미, 적성, 가치관 세 결과의 교집합입니다. 한 가지 결과만 보지 말고 세 가지를 함께 보게 해 주세요.</aside>
+</section>
+<section id="s1" style="background:#FBF8F3;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#C2410C;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">1</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">매라매 챗봇 열기</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">1-5 황금지점 · 1 / 5</p>
+</div>
+<ul style="font-size:38px;line-height:1.5;color:#2F3542;padding-left:1.2em"><li>아래 <b>[매라매 챗봇 열기]</b>를 누르거나, 활동지 오른쪽 위 <b>QR</b>을 찍어요.</li><li>1-4에서 완성한 <b>결과정리 활동지</b>를 옆에 두고 시작해요.</li><li><span style="color:#B42318"><b>이름·학교·전화번호</b> 같은 개인정보는 입력하지 않아요.</span></li></ul>
+<div style="align-self:flex-start;background:#0E5C58;border-radius:24px;padding:28px 56px;box-shadow:0 6px 0 #083A37"><p style="font-size:44px;font-weight:900;color:#FBF8F3"><a target="_blank" rel="noopener" href="https://notebook.google.com/notebook/064f0a62-c11b-45e8-b4a6-3a023f61ac9b/preview">매라매 챗봇 열기 ↗</a></p></div>
+<aside>챗봇 링크가 수업 기기에서 열리는지 미리 확인해 주세요. 구글 로그인이 필요할 수 있습니다.</aside>
+</section>
+<section id="s2" style="background:#F3EFE7;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#C2410C;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">2</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">정리한 결과 입력</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">1-5 황금지점 · 2 / 5</p>
+</div>
+<p style="font-size:30px;color:#5D6275">활동지 <b>01·02·03</b>의 문장을 그대로 입력해요 · 빈칸은 <b>1-4에서 적은 내용</b></p>
+<div style="background:#FBF8F3;border:3px solid #0E5C58;border-radius:24px;padding:32px 40px;display:flex;flex-direction:column;gap:18px">
+<p style="font-size:30px;line-height:1.5">매라매 챗봇님, 안녕하세요. 저는 중학교 <b>__</b>학년 학생으로, 진로 수업 시간에 ‘꿈it(잇)다’ 시스템을 이용해 진로심리검사 3가지를 했습니다.</p>
+<p style="font-size:30px;line-height:1.5"><span style="color:#C2410C"><b>01 직업흥미검사(H)</b></span> 일반 흥미 유형 1순위 <b>__</b>, 2순위 <b>__</b> / 선호 직업군 1순위 <b>__</b>, 2순위 <b>__</b> / 관심 직업 <b>__</b>, <b>__</b></p>
+<p style="font-size:30px;line-height:1.5"><span style="color:#2E7D4F"><b>02 직업적성검사</b></span> 높은 적성 ① <b>__</b> ② <b>__</b> ③ <b>__</b> / 가장 낮은 능력 <b>__</b> / 관심 직업 <b>__</b>, <b>__</b></p>
+<p style="font-size:30px;line-height:1.5"><span style="color:#6F2DA8"><b>03 직업가치관검사</b></span> 상위 가치관 ① <b>__</b> ② <b>__</b> ③ <b>__</b> / 중요하게 생각하는 가치관 <b>__</b> / 관심 직업 <b>__</b>, <b>__</b></p>
+<p style="font-size:30px;line-height:1.5;color:#B42318"><b>매라매 챗봇님, 저의 직업흥미검사(H), 직업적성검사, 직업가치관검사 결과에 가장 알맞은 직업을 추천해 주세요.</b></p>
+</div>
+<aside>활동지에 쓴 문장을 그대로 옮겨 입력하면 챗봇이 세 결과를 함께 봅니다.</aside>
+</section>
+<section id="s3" style="background:#FBF8F3;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#C2410C;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">3</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">질문에 답하고 더 물어보기</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">1-5 황금지점 · 3 / 5</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:48px;align-items:flex-start">
+<div style="flex:1.2;background:#E9ECF1;border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:20px">
+<p style="font-size:26px;font-weight:900;color:#5D6275">매라매 챗봇 · 대화 예시</p>
+<p style="align-self:flex-end;max-width:640px;font-size:28px;line-height:1.5;color:#FBF8F3;background:#0E5C58;border-radius:20px;padding:16px 24px">매라매 챗봇님, 안녕하세요. 저는 중학교 3학년 학생으로… 가장 알맞은 직업을 추천해 주세요.</p>
+<p style="align-self:flex-start;max-width:640px;font-size:28px;line-height:1.5;background:#FBF8F3;border-radius:20px;padding:16px 24px">결과를 보니 흥미·적성·가치관이 <b>함께 만나는 곳</b>은 ○○ 분야예요. 추천 직업 1순위는 …</p>
+<p style="align-self:flex-end;max-width:640px;font-size:28px;line-height:1.5;color:#FBF8F3;background:#0E5C58;border-radius:20px;padding:16px 24px">왜 그 직업을 추천했나요?</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<ul style="font-size:34px;line-height:1.5;color:#2F3542;padding-left:1.2em"><li>챗봇의 질문에 답하고, <b>추천 이유</b>도 꼭 물어봐요.</li></ul>
+<div style="background:#FFF7D6;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:900;color:#8A6100">이어서 물어보기 예시</p><p style="font-size:30px">“추천한 이유를 알려 주세요.”</p><p style="font-size:30px">“이 직업에 필요한 능력은 뭐예요?”</p><p style="font-size:30px">“세 결과가 모두 맞는 직업만 3개 골라 주세요.”</p></div>
+</div>
+</div>
+<aside>추천 직업만 받고 끝내지 말고 이유와 필요한 능력을 묻게 해 주세요.</aside>
+</section>
+<section id="s4" style="background:#F3EFE7;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#C2410C;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">4</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">황금지점 확인 → 활동지에 적기</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">1-5 황금지점 · 4 / 5</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px">
+<div style="flex:1;background:#FBF8F3;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px"><p style="font-size:30px;font-weight:900;color:#FBF8F3;background:#1864AB;border-radius:12px;padding:6px 20px;align-self:flex-start">추천받은 직업</p><p style="font-size:36px;line-height:1.5">챗봇이 추천한 직업 <b>1~3순위</b>를 활동지 ‘탐색할 직업’에 적어요.</p></div>
+<div style="flex:1;background:#FFF7D6;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px"><p style="font-size:30px;font-weight:900;color:#5A4300;background:#FFD23F;border-radius:12px;padding:6px 20px;align-self:flex-start">★ 최종 ★</p><p style="font-size:36px;line-height:1.5">검사 결과와 함께 보고 <b>탐색하고 싶은 직업</b>을 내가 골라요.</p></div>
+</div>
+<p style="font-size:32px;color:#5D6275"><b style="color:#C2410C">TIP</b> · AI 추천은 참고용이에요. 결정은 내가 해요.</p>
+<aside>AI가 추천한 직업을 그대로 고르기보다, 검사 결과와 비교해 학생이 직접 결정하도록 지도해 주세요.</aside>
+</section>
+<section id="s5" style="background:#FBF8F3;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#C2410C;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">5</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">꿈it(잇)다에 직업 선택</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">1-5 황금지점 · 5 / 5</p>
+</div>
+<div style="background:#E9ECF1;border-radius:24px;padding:24px;display:flex;justify-content:center">
+<img src="../assets/4101b0b69bcf166e5a63a45d1014bf20.png" alt="검사결과 상세보기와 희망직업 선택 화면" style="width:1600px;height:470px;object-fit:contain">
+</div>
+<ul style="font-size:34px;line-height:1.5;color:#2F3542;padding-left:1.2em"><li>자기이해 <b>[검사결과 보기]</b> → 아래 <b>희망직업 선택</b>에서</li><li><span style="color:#C2410C"><b>10가지 분류 중 하나</b></span> → <b>세부 직업 1개</b>를 고르고 [선택완료]!</li></ul>
+<aside>여기서 고른 직업이 2-1, 2-2 진로설계 화면의 기준이 됩니다.</aside>
+</section>
+<section id="end" style="background:#0E5C58;color:#FBF8F3;font-family:'Noto Sans KR', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:56px">
+<h2 style="font-size:72px;font-weight:900;color:#FFD23F;line-height:1.15">황금지점 찾기 끝! 꼭 기억해요</h2>
+<div style="display:flex;flex-direction:row;gap:40px"><div style="flex:1;background:#FBF8F3;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:28px;font-weight:900;color:#FBF8F3;background:#B42318;border-radius:12px;padding:6px 20px;align-self:flex-start">주의</p>
+<p style="font-size:34px;line-height:1.5;color:#1F2433">이름·학교·전화번호는 <b>입력하지 않기</b></p>
+</div><div style="flex:1;background:#FBF8F3;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:28px;font-weight:900;color:#FBF8F3;background:#0E5C58;border-radius:12px;padding:6px 20px;align-self:flex-start">TIP</p>
+<p style="font-size:34px;line-height:1.5;color:#1F2433">AI 추천은 <b>참고용</b> · 결정은 내가</p>
+</div><div style="flex:1;background:#FBF8F3;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:28px;font-weight:900;color:#FBF8F3;background:#6F2DA8;border-radius:12px;padding:6px 20px;align-self:flex-start">다음</p>
+<p style="font-size:34px;line-height:1.5;color:#1F2433">고른 직업으로 <b>2-1 진로 직업탐색</b>!</p>
+</div></div>
+<p style="font-size:32px;color:#CFE7E3">꿈it(잇)다에서 직업을 선택해야 2-1부터 내 직업 기준으로 내용이 나와요.</p>
+<div style="position:absolute;right:128px;bottom:80px;width:560px;background:#FFD23F;border-radius:24px;padding:22px 32px;box-shadow:0 6px 0 #C9A21A;display:flex;flex-direction:column;align-items:center;gap:4px">
+<p style="font-size:38px;font-weight:900;color:#0E5C58;text-align:center"><a href="../gold.html">↩ 매뉴얼로 돌아가기</a></p>
+<p style="font-size:24px;font-weight:700;color:#5A4300;text-align:center">1-5 황금지점 찾기 한 장용</p>
+</div>
+<aside>꿈it(잇)다에 희망 직업을 선택했는지 마지막으로 확인해 주세요.</aside>
+</section>
+</div></div>
+<div id="bar">
+<a class="home" href="../gold.html">◀&nbsp;<span>한 장용으로&nbsp;</span>돌아가기</a>
+<button id="prev" aria-label="이전 슬라이드">◀ 이전</button><span id="num"></span><button id="next" aria-label="다음 슬라이드">다음 ▶</button>
+<button class="full" id="full">전체 화면</button>
+</div>
+<script>
+(function(){
+var s=[].slice.call(document.querySelectorAll('#deck>section')),i=0,d=document.getElementById('deck'),v=document.getElementById('view');
+var h=parseInt(location.hash.slice(1),10);if(h>0&&h<=s.length)i=h-1;
+function show(){s.forEach(function(x,k){x.classList.toggle('on',k===i)});document.getElementById('num').textContent=(i+1)+' / '+s.length;history.replaceState(null,'','#'+(i+1));}
+function fit(){var r=Math.min(v.clientWidth/1920,v.clientHeight/1080);d.style.transform='scale('+r+')';}
+function go(n){i=Math.max(0,Math.min(s.length-1,i+n));show();}
+document.getElementById('prev').onclick=function(){go(-1)};
+document.getElementById('next').onclick=function(){go(1)};
+document.getElementById('full').onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();};
+addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();go(1)}if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1)}});
+var sx=null;v.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+v.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)go(dx<0?1:-1);sx=null});
+addEventListener('hashchange',function(){var n=parseInt(location.hash.slice(1),10);if(n>0&&n<=s.length&&n-1!==i){i=n-1;show();}});
+addEventListener('resize',fit);fit();show();
+})();
+</script>
+</body>
+</html>

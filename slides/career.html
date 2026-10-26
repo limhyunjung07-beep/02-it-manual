@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2-1 진로 직업탐색</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>
+html,body{margin:0;height:100%;background:#14181f;font-family:'Noto Sans KR',sans-serif;overflow:hidden}
+#view{position:absolute;inset:0 0 56px 0;display:flex;align-items:center;justify-content:center}
+#deck{width:1920px;height:1080px;position:relative;flex-shrink:0;transform-origin:center center}
+#deck>section{position:absolute;inset:0;box-sizing:border-box;overflow:hidden}
+#deck>section:not(.on){display:none!important}
+#deck aside{display:none}
+#deck h1,#deck h2,#deck h3,#deck p,#deck ul,#deck ol{margin:0}
+#deck h1{font-size:96px;font-weight:600;line-height:1.1}
+#deck h2{font-size:64px;font-weight:600;line-height:1.15}
+#deck h3{font-size:44px;font-weight:600;line-height:1.2}
+#deck p{font-size:32px;line-height:1.4}
+#deck ul,#deck ol{padding-left:1.2em}
+#deck a{color:inherit;text-decoration:none}
+#deck img{display:block}
+#bar{position:absolute;left:0;right:0;bottom:0;height:56px;display:flex;align-items:center;justify-content:center;gap:10px;background:#0E5C58;color:#fff}
+#bar button,#bar a{font-family:inherit;font-size:15px;font-weight:900;border:0;border-radius:999px;padding:9px 18px;cursor:pointer;background:#ffd23f;color:#0E5C58;text-decoration:none;min-height:38px;box-sizing:border-box;display:inline-flex;align-items:center}
+#bar a.home{position:absolute;left:12px;background:#fff}
+#bar .full{position:absolute;right:12px;background:#cfe7e3}
+#num{min-width:80px;text-align:center;font-weight:900}
+@media (max-width:640px){#bar a.home span,#bar .full{display:none}}
+</style>
+</head>
+<body>
+<div id="view"><div id="deck">
+<section id="cover" style="background:#0E5C58;color:#FBF8F3;font-family:'Noto Sans KR', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<div style="position:absolute;left:0;right:0;bottom:0;height:24px;background:linear-gradient(90deg, #E53935 0%, #F57C00 20%, #F7C600 40%, #2E9E4A 60%, #1E7FD8 80%, #8E3FB0 100%)"></div>
+<p style="font-size:32px;font-weight:900;color:#FBF8F3;background:#1C7ED6;padding:12px 32px;border-radius:999px;align-self:flex-start">STEP 02 · 진로설계</p>
+<h1 style="font-size:120px;font-weight:900;line-height:1.15;color:#FBF8F3">2-1 진로<br><span style="color:#FFD23F">직업탐색</span></h1>
+<p style="font-size:44px;font-weight:500;color:#CFE7E3">내가 고른 직업으로 탐색 활동·직업인 영상·체험처를 살펴봐요</p>
+<div style="position:absolute;right:128px;bottom:96px;width:520px;background:#1864AB;border-radius:24px;padding:24px 32px;box-shadow:0 6px 0 #0D3F73;display:flex;flex-direction:column;align-items:center;gap:4px">
+<p style="font-size:40px;font-weight:900;color:#FBF8F3;text-align:center"><a target="_blank" rel="noopener" href="https://jinro.goedu.kr/roadmapPlan/step2">꿈it(잇)다 바로가기 ↗</a></p>
+<p style="font-size:26px;font-weight:700;color:#CFE3F7;text-align:center">진로설계 화면 바로가기</p>
+</div>
+<p style="position:absolute;left:128px;bottom:72px;width:1000px;font-size:28px;font-weight:700;color:#CFE7E3">매탄중학교 진로상담실</p>
+<aside>1-5에서 고른 직업을 기준으로 진로 탐색 활동, 직업인 영상, 체험처 목록을 살펴봅니다.</aside>
+</section>
+<section id="scr1" style="background:#FBF8F3;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#1864AB;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">1</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">[진로설계] 화면 살펴보기 ①</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">2-1 직업탐색 · 1 / 5</p>
+</div>
+<div style="background:#E9ECF1;border-radius:24px;padding:24px;display:flex;justify-content:center">
+<img src="../assets/ppt-c_win.png" alt="진로설계 화면: 단계 탭, 선택한 직업, 직업 변경 버튼" style="width:1600px;height:470px;object-fit:contain">
+</div>
+<ul style="font-size:34px;line-height:1.5;color:#2F3542;padding-left:1.2em"><li>① <b>[진로설계]</b> 단계를 눌러요 · ② <b>내가 선택한 직업</b>이 보여요(1-5에서 고른 직업)</li><li>③ <b>[나의 희망직업 변경하기]</b>로 직업을 바꾸거나 새로 고를 수 있어요.</li></ul>
+<aside>빨간 테두리 번호 순서대로 화면을 함께 짚어 주세요.</aside>
+</section>
+<section id="scr2" style="background:#F3EFE7;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#1864AB;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">2</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">[진로설계] 화면 살펴보기 ②</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">2-1 직업탐색 · 2 / 5</p>
+</div>
+<div style="background:#E9ECF1;border-radius:24px;padding:24px;display:flex;justify-content:center">
+<img src="../assets/ppt-c_win.png" alt="진로설계 화면: 검사 선택, 희망직업과 선생님 추천직업, 진로·진학 탭" style="width:1600px;height:470px;object-fit:contain">
+</div>
+<ul style="font-size:34px;line-height:1.5;color:#2F3542;padding-left:1.2em"><li>④ <b>연도별·날짜별</b> 검사 결과 고르기 · ⑤ <b>나의 희망직업</b> / <b>선생님 추천직업</b> 고르기</li><li>⑥ <span style="color:#1864AB"><b>[진로]</b></span> 탭은 직업 탐색·체험처, <b>[진학]</b> 탭은 진학 준비(2-2)</li></ul>
+<aside>2-1에서는 진로 탭을, 2-2에서는 진학 탭을 씁니다.</aside>
+</section>
+<section id="act" style="background:#FBF8F3;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#1864AB;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">3</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">진로 탐색 활동</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">2-1 직업탐색 · 3 / 5</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:48px;align-items:center;flex:1">
+<div style="background:#E9ECF1;border-radius:24px;padding:24px;display:flex;justify-content:center;flex-shrink:0">
+<img src="../assets/ppt-c_mk1.png" alt="진로 탐색 활동 예시: 진로박람회 참석" style="width:900px;height:520px;object-fit:contain">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<ul style="font-size:34px;line-height:1.5;color:#2F3542;padding-left:1.2em"><li>내 직업에 맞는 <b>추천 활동</b>을 읽어 봐요.</li><li>그중 <b>직접 해 볼 활동 1가지</b>를 골라요.</li></ul>
+<p style="font-size:30px;font-weight:900;color:#0E5C58;border-bottom:3px solid #9AA0AD;padding-bottom:10px">해 볼 활동 :</p>
+</div>
+</div>
+<aside>[진로] 탭 직업탐색에서 추천 활동을 확인합니다.</aside>
+</section>
+<section id="vid" style="background:#F3EFE7;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#1864AB;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">4</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">직업인 영상</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">2-1 직업탐색 · 4 / 5</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:48px;align-items:center;flex:1">
+<div style="background:#E9ECF1;border-radius:24px;padding:24px;display:flex;justify-content:center;flex-shrink:0">
+<img src="../assets/ppt-c_mk2.png" alt="직업인 영상 카드 예시" style="width:900px;height:520px;object-fit:contain">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<ul style="font-size:34px;line-height:1.5;color:#2F3542;padding-left:1.2em"><li>영상을 눌러 <b>현직자가 하는 일</b>을 직접 들어 봐요.</li><li>새로 알게 된 점, 더 궁금한 점을 적어요.</li></ul>
+<p style="font-size:30px;font-weight:900;color:#0E5C58;border-bottom:3px solid #9AA0AD;padding-bottom:10px">알게 된 점 :</p>
+</div>
+</div>
+<aside>이어폰을 준비하면 좋습니다.</aside>
+</section>
+<section id="exp" style="background:#FBF8F3;color:#1F2433;font-family:'Noto Sans KR', Arial, sans-serif;padding:96px 128px 112px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<div style="width:88px;height:88px;border-radius:50%;background:#1864AB;display:flex;align-items:center;justify-content:center;flex-shrink:0"><p style="font-size:48px;font-weight:900;color:#FBF8F3;text-align:center">5</p></div>
+<h2 style="font-size:60px;font-weight:900;color:#0E5C58;line-height:1.15">체험처 목록</h2>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#6A6F7C;white-space:nowrap">2-1 직업탐색 · 5 / 5</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:48px;align-items:center;flex:1">
+<div style="background:#E9ECF1;border-radius:24px;padding:24px;display:flex;justify-content:center;flex-shrink:0">
+<img src="../assets/ppt-c_mk3.png" alt="체험처 목록 표 예시" style="width:900px;height:520px;object-fit:contain">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<ul style="font-size:34px;line-height:1.5;color:#2F3542;padding-left:1.2em"><li>내 직업군과 관련된 <b>진로체험처</b>를 확인해요.</li><li><b>주소</b>를 보고 집·학교와 가까운 곳을 찾아요.</li></ul>
+<p style="font-size:30px;font-weight:900;color:#0E5C58;border-bottom:3px solid #9AA0AD;padding-bottom:10px">가 보고 싶은 곳 :</p>
+</div>
+</div>
+<aside>체험 신청은 선생님과 상의하도록 안내해 주세요.</aside>
+</section>
+<section id="end" style="background:#0E5C58;color:#FBF8F3;font-family:'Noto Sans KR', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:56px">
+<h2 style="font-size:72px;font-weight:900;color:#FFD23F;line-height:1.15">직업탐색 끝! 꼭 기억해요</h2>
+<div style="display:flex;flex-direction:row;gap:40px"><div style="flex:1;background:#FBF8F3;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:28px;font-weight:900;color:#FBF8F3;background:#1864AB;border-radius:12px;padding:6px 20px;align-self:flex-start">변경</p>
+<p style="font-size:34px;line-height:1.5;color:#1F2433">직업을 바꾸려면 <b>[나의 희망직업 변경하기]</b></p>
+</div><div style="flex:1;background:#FBF8F3;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:28px;font-weight:900;color:#FBF8F3;background:#0E5C58;border-radius:12px;padding:6px 20px;align-self:flex-start">체험</p>
+<p style="font-size:34px;line-height:1.5;color:#1F2433">체험 신청은 <b>선생님과 상의</b>해요</p>
+</div><div style="flex:1;background:#FBF8F3;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:28px;font-weight:900;color:#FBF8F3;background:#6F2DA8;border-radius:12px;padding:6px 20px;align-self:flex-start">다음</p>
+<p style="font-size:34px;line-height:1.5;color:#1F2433">진학 준비는 <b>2-2 [진학] 탭</b>에서!</p>
+</div></div>
+<p style="font-size:32px;color:#CFE7E3">고른 활동과 체험처는 진로로드맵에 계획으로 넣어 봐요.</p>
+<div style="position:absolute;right:128px;bottom:80px;width:560px;background:#FFD23F;border-radius:24px;padding:22px 32px;box-shadow:0 6px 0 #C9A21A;display:flex;flex-direction:column;align-items:center;gap:4px">
+<p style="font-size:38px;font-weight:900;color:#0E5C58;text-align:center"><a href="../career.html">↩ 매뉴얼로 돌아가기</a></p>
+<p style="font-size:24px;font-weight:700;color:#5A4300;text-align:center">2-1 진로 직업탐색 한 장용</p>
+</div>
+<aside>다음 시간에는 같은 화면의 진학 탭을 살펴봅니다.</aside>
+</section>
+</div></div>
+<div id="bar">
+<a class="home" href="../career.html">◀&nbsp;<span>한 장용으로&nbsp;</span>돌아가기</a>
+<button id="prev" aria-label="이전 슬라이드">◀ 이전</button><span id="num"></span><button id="next" aria-label="다음 슬라이드">다음 ▶</button>
+<button class="full" id="full">전체 화면</button>
+</div>
+<script>
+(function(){
+var s=[].slice.call(document.querySelectorAll('#deck>section')),i=0,d=document.getElementById('deck'),v=document.getElementById('view');
+var h=parseInt(location.hash.slice(1),10);if(h>0&&h<=s.length)i=h-1;
+function show(){s.forEach(function(x,k){x.classList.toggle('on',k===i)});document.getElementById('num').textContent=(i+1)+' / '+s.length;history.replaceState(null,'','#'+(i+1));}
+function fit(){var r=Math.min(v.clientWidth/1920,v.clientHeight/1080);d.style.transform='scale('+r+')';}
+function go(n){i=Math.max(0,Math.min(s.length-1,i+n));show();}
+document.getElementById('prev').onclick=function(){go(-1)};
+document.getElementById('next').onclick=function(){go(1)};
+document.getElementById('full').onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();};
+addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();go(1)}if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1)}});
+var sx=null;v.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+v.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)go(dx<0?1:-1);sx=null});
+addEventListener('hashchange',function(){var n=parseInt(location.hash.slice(1),10);if(n>0&&n<=s.length&&n-1!==i){i=n-1;show();}});
+addEventListener('resize',fit);fit();show();
+})();
+</script>
+</body>
+</html>
