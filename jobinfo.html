@@ -158,6 +158,62 @@ html,body{margin:0;background:#e9ecf1}
 #wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
 @media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
 </style>
+<style id="mobile">
+/* 스마트폰·좁은 화면 반응형 (CSS만) */
+@media (max-width:900px){
+html,body{background:#fff!important}
+#stage{display:block!important;width:auto!important;height:auto!important;min-height:0!important;overflow:visible!important}
+#wrap{transform:none!important;width:auto!important;margin:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important}
+.root{width:100%!important;height:auto!important;min-height:100vh;overflow:visible!important}
+.root *{min-width:0}
+/* 머리말 */
+.hd{height:auto!important;flex-wrap:wrap;padding:12px 14px!important;gap:10px!important;row-gap:10px!important}
+.hd .ht{flex:1 1 100%;order:-1}
+.hd .ht h1{font-size:22px!important;flex-wrap:wrap;gap:8px!important;line-height:1.3}
+.hd .ht p{font-size:13px!important;line-height:1.5}
+.hd .org{display:none}
+.hd .stp{order:-2}
+.logo{width:64px!important;height:40px!important}.logo svg{width:52px;height:28px}
+.modes,.gojr,.kitbtn,.home,.ttip{flex-shrink:0}
+/* 본문 칸 → 한 줄 */
+.board,.body,.cols,.kit,.vids,.how,.tips,.band,.main,.cb,.ag,.dlb2{display:flex!important;flex-direction:column!important;grid-template-columns:none!important;grid-template-rows:none!important;height:auto!important;flex:none!important;padding-left:12px!important;padding-right:12px!important;gap:14px!important}
+.tips,.band{margin-left:0!important;margin-right:0!important}
+.body>*,.cols>*,.board>*,.kit>*,.main>*,.cb>*{height:auto!important;max-height:none!important;flex:none!important}
+.steps,.gos,.frame,.state,.pts{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.steps{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.wn{display:block!important}.wn b.t{display:inline-block;margin-right:6px}
+.bot .bt span b{font-size:inherit!important;display:inline!important}
+.mk,.mock,.tname{width:auto!important;max-width:100%}
+/* 가로로 붙은 줄 → 접어서 쌓기 */
+.bot,.rb,.lec,.bar,.info,.kh,.fi,.warnbar,.ch,.top{flex-wrap:wrap!important}
+.warnbar{flex-direction:column}
+.bot>.bt,.lec>.li,.bar>.bt,.rb>*,.warnbar>*{flex:1 1 100%!important}
+.root div:has(>.mock){flex-wrap:wrap!important}
+.mock,.rb>.mk{flex:1 1 100%!important;width:auto!important}
+.ch>b{flex:1 1 auto}.ch>small{flex:1 1 100%}
+.lec,.bar{margin-left:12px!important;margin-right:12px!important}
+.card,.col,.left,.right,.sec{flex:none!important;height:auto!important}
+/* 표지(목차) */
+.board .head{padding:16px 6px 10px!important}
+.board .head b{font-size:40px!important}
+.board .ic{width:56px!important;height:56px!important}
+.board .rows{flex:none!important}
+.board .rt{flex-wrap:wrap;row-gap:4px}
+.board .rt b{white-space:normal!important;flex:1 1 calc(100% - 100px)}
+.board .rt .more{order:4;align-self:center;height:30px!important;flex:none}.board .rt .need{order:5;margin-left:42px}
+.board .st{grid-template-columns:1fr!important}
+.board .st>div{white-space:normal!important}
+.board .scroll::after{display:none}
+img,video,iframe,svg{max-width:100%}
+img,video{height:auto}
+.ft{flex-wrap:wrap;gap:6px;padding:10px 14px 16px!important}
+/* 선생님 TIP 팝업: 화면 아래쪽 카드로 */
+.ttbox{position:fixed!important;left:10px!important;right:10px!important;top:auto!important;bottom:10px!important;width:auto!important;max-height:72vh;overflow:auto}
+.ttbox::before{display:none}
+.ttrow{grid-template-columns:1fr!important;gap:4px!important}
+.ttrow>b{justify-self:start}
+}
+</style>
 </head>
 <body>
 <div id="stage"><div id="wrap">
