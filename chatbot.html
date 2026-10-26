@@ -145,6 +145,22 @@ a{color:#1864AB}a:hover{color:#0d3f73}
 .warn2 b{color:#B42318}
 .bot{display:block;text-decoration:none;border-radius:10px;background:#fff;border:2px solid var(--d);color:var(--d);font-weight:900;font-size:13.5px;text-align:center;padding:8px}
 .bot:hover{background:var(--l);color:var(--d)}
+
+.ttip{position:relative;flex-shrink:0}
+.ttip>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;background:#FFF7D6;color:#5A4300;font-weight:900;font-size:15px;border-radius:999px;padding:10px 18px;border:2px solid #E0B400;min-height:24px;white-space:nowrap}
+.ttip>summary::-webkit-details-marker{display:none}
+.ttip>summary:hover{background:#fff}
+.ttip[open]>summary{background:#ffd23f;border-color:#ffd23f;color:#0E5C58}
+.ttbox{position:absolute;right:0;top:calc(100% + 12px);width:540px;background:#fff;color:#1f2433;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.28);border:2px solid #E0B400;padding:18px 20px;z-index:50;display:grid;gap:12px;text-align:left}
+.ttbox::before{content:"";position:absolute;right:40px;top:-10px;border:9px solid transparent;border-top:0;border-bottom:10px solid #E0B400}
+.ttbox h4{margin:0;font-size:18px;font-weight:900;color:#0E5C58;display:flex;align-items:center;justify-content:space-between}
+.ttbox h4 button{font:inherit;font-size:13px;font-weight:700;border:1.5px solid #c9ccd6;background:#fff;color:#4a4f5c;border-radius:999px;padding:3px 12px;cursor:pointer}
+.ttrow{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:start;font-size:14.5px;line-height:1.6;letter-spacing:-0.02em}
+.ttrow>b{font-size:13px;font-weight:900;border-radius:8px;padding:3px 8px;text-align:center}
+.ttrow ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.tt-t>b{background:#E6F2F0;color:#0E5C58}.tt-p>b{background:#E8F2FC;color:#1864AB}.tt-w>b{background:#FDF1EF;color:#B42318}
+.kitbtn{flex-shrink:0;text-decoration:none;background:#F4EAFB;color:#6F2DA8;font-weight:900;font-size:16px;border-radius:999px;padding:11px 20px;border:2px solid #E2CDF2}
+.kitbtn:hover{background:#fff;color:#6F2DA8}
 </style>
 
 <style>
@@ -186,10 +202,11 @@ html,body{margin:0;background:#e9ecf1}
     <div class="stp" style="background: #8E3FB0"><small>STEP 03</small><b>상담 지원</b></div>
     <div class="ht">
       <h1><span class="no">3-2</span>상담게시판용 <span style="color: #ffd23f">챗봇 · 상담 예시</span></h1>
-      <p>상담 답변 예시 파일을 내려받아 살펴보고, 내 고민을 상담게시판에 어떻게 올리면 좋을지 미리 정리해 봐요</p>
+      <p>상담 답변 예시를 학생과 함께 살펴보고, 상담게시판에 고민을 올리는 방법을 안내해요</p>
     </div>
+    <details class="ttip"><summary aria-label="선생님 TIP 열기">선생님 TIP</summary><div class="ttbox" role="note"><h4>선생님 TIP<button type="button" data-close>닫기</button></h4><div class="ttrow tt-t"><b>권장 시간</b><div>예시 함께 보기 10분</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>상담 예시 파일을 미리 열어 봐요</li><li>답변 챗봇에는 학생 이름·반·번호를 지우고 고민 내용만 넣어요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>예시 답변을 그대로 따라 써요 → 내 희망 직업과 궁금한 점으로 바꾸게 해요</li><li>챗봇 답변은 꼭 확인하고 다듬은 뒤 올려요</li></ul></div></div></details>
     <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
-    <a class="home" href="index.html" aria-label="학생용 매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
+    <a class="home" href="index.html" aria-label="매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
   </header>
   <div class="flow" style="background: #8E3FB0"></div>
 
@@ -226,7 +243,7 @@ html,body{margin:0;background:#e9ecf1}
 
   <footer class="ft">
     <div>내 고민을 정리했다면 <b>3-1 상담게시판</b>에 올려 선생님께 진로상담을 요청해요.</div>
-    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="counsel.html">◀ 3-1 상담게시판</a><a class="back" href="index.html">학생용 매뉴얼로 돌아가기</a></div>
+    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="counsel.html">◀ 3-1 상담게시판</a><a class="back" href="index.html">매뉴얼 홈으로</a></div>
   </footer>
 </div>
 </div></div>
@@ -234,6 +251,12 @@ html,body{margin:0;background:#e9ecf1}
 (function(){var W=1760,H=990,w=document.getElementById('wrap');
 function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
 addEventListener('resize',fit);fit();})();
+</script>
+<script>
+(function(){var d=document.querySelector('.ttip');if(!d)return;
+document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});
+var c=d.querySelector('[data-close]');if(c)c.onclick=function(){d.open=false;};})();
 </script>
 </body>
 </html>

@@ -101,6 +101,22 @@ a.mode:hover{background:rgba(255,255,255,0.22);color:#fff}
 .back{text-decoration:none;color:#fff;background:#0E5C58;font-weight:900;border-radius:999px;padding:6px 14px;font-size:12.5px}
 .back:hover{background:#0a4542;color:#fff}
 .ft{display:flex;justify-content:space-between;align-items:center;padding:10px 26px 12px;font-size:12.5px;color:#4a4f5c;flex-shrink:0}
+
+.ttip{position:relative;flex-shrink:0}
+.ttip>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;background:#FFF7D6;color:#5A4300;font-weight:900;font-size:15px;border-radius:999px;padding:10px 18px;border:2px solid #E0B400;min-height:24px;white-space:nowrap}
+.ttip>summary::-webkit-details-marker{display:none}
+.ttip>summary:hover{background:#fff}
+.ttip[open]>summary{background:#ffd23f;border-color:#ffd23f;color:#0E5C58}
+.ttbox{position:absolute;right:0;top:calc(100% + 12px);width:540px;background:#fff;color:#1f2433;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.28);border:2px solid #E0B400;padding:18px 20px;z-index:50;display:grid;gap:12px;text-align:left}
+.ttbox::before{content:"";position:absolute;right:40px;top:-10px;border:9px solid transparent;border-top:0;border-bottom:10px solid #E0B400}
+.ttbox h4{margin:0;font-size:18px;font-weight:900;color:#0E5C58;display:flex;align-items:center;justify-content:space-between}
+.ttbox h4 button{font:inherit;font-size:13px;font-weight:700;border:1.5px solid #c9ccd6;background:#fff;color:#4a4f5c;border-radius:999px;padding:3px 12px;cursor:pointer}
+.ttrow{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:start;font-size:14.5px;line-height:1.6;letter-spacing:-0.02em}
+.ttrow>b{font-size:13px;font-weight:900;border-radius:8px;padding:3px 8px;text-align:center}
+.ttrow ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.tt-t>b{background:#E6F2F0;color:#0E5C58}.tt-p>b{background:#E8F2FC;color:#1864AB}.tt-w>b{background:#FDF1EF;color:#B42318}
+.kitbtn{flex-shrink:0;text-decoration:none;background:#F4EAFB;color:#6F2DA8;font-weight:900;font-size:16px;border-radius:999px;padding:11px 20px;border:2px solid #E2CDF2}
+.kitbtn:hover{background:#fff;color:#6F2DA8}
 </style>
 
 <style>
@@ -117,12 +133,13 @@ html,body{margin:0;background:#e9ecf1}
     <div class="stp"><small>STEP 01</small><b>자기이해</b></div>
     <div class="ht">
       <h1><span class="no">1-3</span>진로심리검사 <span style="color: #ffd23f">실시하기</span></h1>
-      <p>커리어넷·고용24 진로심리검사를 꿈it(잇)다에서 실시하고, 결과를 올려 희망 직업까지 골라요 · 검사는 1개 이상 필수!</p>
+      <p>학생이 진로심리검사를 실시하고 결과를 올려 희망 직업까지 고르도록 지도해요 · 검사 1개 이상 필수</p>
     </div>
     <nav class="modes" aria-label="보기 방식"><span class="mode on" aria-current="page">한 장용</span><a class="mode" href="slides/test.html">PPT용 ↗</a></nav>
     <a class="gojr" href="https://jinro.goedu.kr" target="_blank" rel="noopener">꿈it(잇)다 바로가기 ↗<small>jinro.goedu.kr</small></a>
+    <details class="ttip"><summary aria-label="선생님 TIP 열기">선생님 TIP</summary><div class="ttbox" role="note"><h4>선생님 TIP<button type="button" data-close>닫기</button></h4><div class="ttrow tt-t"><b>권장 시간</b><div>검사 1개와 결과 PDF 저장·업로드까지 1차시(45분)를 권장해요</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>1-1 로그인을 먼저 끝내요</li><li>결과지 PDF 저장 방법(프린터 → PDF로 저장)을 화면으로 먼저 보여 줘요</li><li>직업흥미검사(H)는 고용24 로그인·본인 인증이 필요해요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>인쇄 창에서 대상을 ‘PDF로 저장’으로 바꾸지 못해요</li><li>저장한 PDF 파일 위치를 못 찾아요 → 파일 이름을 미리 정해 주기</li><li>직업흥미검사(H) 결과는 꿈it(잇)다에 올라가지 않아요</li></ul></div></div></details>
     <div class="org"><small>매탄중학교</small><b>진로상담실</b></div>
-    <a class="home" href="index.html" aria-label="학생용 매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
+    <a class="home" href="index.html" aria-label="매뉴얼 홈으로"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h5v-6h4v6h5V9"></path></svg><span>홈</span></a>
   </header>
   <div class="flow"></div>
 
@@ -284,7 +301,7 @@ html,body{margin:0;background:#e9ecf1}
 
   <footer class="ft">
     <div>검사 중 문제가 생기면 <b>매탄중 진로상담실</b>에 문의해요. <span style="color: #8a8f9c">※ 화면 그림은 이해를 돕기 위한 예시로, 실제 화면과 조금 다를 수 있어요.</span></div>
-    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="breath.html">◀ 1-2 심장 집중 호흡</a><a class="back" href="index.html">학생용 매뉴얼로 돌아가기</a><a class="back" href="result.html">다음 ▶ 1-4 결과정리</a></div>
+    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="breath.html">◀ 1-2 심장 집중 호흡</a><a class="back" href="index.html">매뉴얼 홈으로</a><a class="back" href="result.html">다음 ▶ 1-4 결과정리</a></div>
   </footer>
 </div>
 </div></div>
@@ -294,5 +311,11 @@ function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidt
 addEventListener('resize',fit);fit();})();
 </script>
 
+<script>
+(function(){var d=document.querySelector('.ttip');if(!d)return;
+document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});
+var c=d.querySelector('[data-close]');if(c)c.onclick=function(){d.open=false;};})();
+</script>
 </body>
 </html>
