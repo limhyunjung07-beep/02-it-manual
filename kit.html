@@ -127,6 +127,28 @@ html,body{margin:0;background:#e9ecf1}
 #wrap{flex-shrink:0;transform-origin:top center;margin-top:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;background:#fff}
 @media print{html,body{background:#fff}#wrap{transform:none!important;box-shadow:none;margin:0}#stage{display:block}}
 </style>
+<style id="tipsall">
+#wrap{display:flex;flex-direction:column;gap:24px;background:transparent!important;box-shadow:none!important}
+#wrap>.root{box-shadow:0 8px 30px rgba(0,0,0,.18);border-radius:6px}
+.tp .tah{background:#0E5C58;color:#fff;display:flex;align-items:center;gap:18px;padding:0 36px;height:88px;flex-shrink:0}
+.tp .tah em{font-style:normal;background:#ffd23f;color:#0E5C58;font-weight:900;font-size:16px;border-radius:999px;padding:4px 14px}
+.tp .tah b{font-size:30px;font-weight:900;letter-spacing:-0.02em}
+.tp .tah span{font-size:14px;color:#d3ebe8;flex:1}
+.tagrid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:minmax(0,1.18fr) minmax(0,1fr) minmax(0,1fr);gap:12px 16px;padding:16px 24px 0}
+.tc{border:2px solid var(--m);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:0;background:#fff}
+.tch{display:flex;align-items:center;gap:8px;background:var(--l);padding:7px 12px;text-decoration:none;color:#1f2433;flex-shrink:0}
+.tch:hover{background:var(--m)}
+.tno{background:var(--d);color:#fff;font-weight:900;font-size:15px;border-radius:999px;padding:1px 10px}
+.tch b{flex:1;font-size:17px;font-weight:900;letter-spacing:-0.04em}
+.tgo{color:var(--d);font-size:13px;font-weight:900}
+.tcb{padding:7px 12px 8px;display:grid;gap:5px;align-content:start}
+.tcb .ttrow{display:grid;grid-template-columns:86px 1fr;gap:8px;align-items:start;font-size:12.2px;line-height:1.45;letter-spacing:-0.04em}
+.tcb .ttrow>b{font-size:11.5px;font-weight:900;border-radius:7px;padding:2px 4px;text-align:center;white-space:nowrap;letter-spacing:-0.06em}
+.tcb .ttrow ul{margin:0;padding-left:16px;display:grid;gap:1px}
+.tcb .tt-t>b{background:#E6F2F0;color:#0E5C58}.tcb .tt-p>b{background:#E8F2FC;color:#1864AB}.tcb .tt-w>b{background:#FDF1EF;color:#B42318}
+.totips{text-decoration:none;color:#5A4300;background:#FFF7D6;border:2px solid #E0B400;font-weight:900;border-radius:999px;padding:6px 14px;font-size:12.5px}
+@media (max-width:900px){#wrap{gap:0}#wrap>.root{border-radius:0;box-shadow:none}.tp .tah{height:auto;flex-wrap:wrap;padding:12px 14px;gap:8px}.tp .tah b{font-size:22px}.tp .tah span{flex:1 1 100%}.tagrid{display:flex!important;flex-direction:column;padding:12px!important}.tcb .ttrow{font-size:14px;grid-template-columns:1fr}.tcb .ttrow>b{justify-self:start}}
+</style>
 <style id="mobile">
 /* 스마트폰·좁은 화면 반응형 (CSS만) */
 @media (max-width:900px){
@@ -238,13 +260,32 @@ img,video{height:auto}
 
   <footer class="ft">
     <div>꿀팁 슬라이드는 <b>1-1 로그인 방법 › PPT용</b>에서도 볼 수 있어요.</div>
-    <div style="display: flex; gap: 12px; align-items: center"><a class="back" href="login.html">◀ 1-1 로그인 방법</a><a class="back" href="index.html">매뉴얼 홈으로</a></div>
+    <div style="display: flex; gap: 12px; align-items: center"><a class="totips" href="#tips">▼ 단계별 선생님 TIP 모음</a><a class="back" href="login.html">◀ 1-1 로그인 방법</a><a class="back" href="index.html">매뉴얼 홈으로</a></div>
   </footer>
+</div>
+
+<div class="root tp" id="tips">
+  <header class="tah"><em>선생님 TIP</em><b>단계별 선생님 TIP 모음</b><span>권장 시간 · 수업 전 준비 · 자주 막히는 곳을 활동별로 모았어요. 제목을 누르면 그 활동으로 가요.</span></header>
+  <div class="tagrid">
+    <section class="tc" style="--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF"><a class="tch" href="login.html"><span class="tno">1-1</span><b>로그인</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>첫 로그인은 10~15분 · 회원가입이 안 된 학생이 많으면 1차시를 따로 잡아요</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>담임 선생님께 학급별 회원가입 현황을 미리 받아요</li><li>만 14세 미만은 법정대리인 동의가 필요해요 — 가정통신문을 먼저 보내요</li><li>반마다 진로 도우미를 정해 두면 도움을 나눌 수 있어요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>[교직원] 칸을 눌러 로그인이 안 돼요 → [학생]의 로그인</li><li>아이디·비밀번호 분실 → 원패스 [아이디/비밀번호 찾기]</li><li>개인정보 동의에서 [비동의]를 누르면 로그아웃돼요</li></ul></div></div></section>
+    <section class="tc" style="--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF"><a class="tch" href="breath.html"><span class="tno">1-2</span><b>검사 전 컨디션 관리</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>설명 영상 약 2분 + 따라 하기 2분, 모두 5분 이내</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>스피커 소리와 전체 화면 재생을 미리 확인해요</li><li>검사 시작 직전에 실시하면 효과가 좋아요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>억지로 깊게 쉬다가 어지러워해요 → 멈추고 평소처럼 숨 쉬게 해요</li><li>웃거나 떠드는 분위기 → 눈을 감고 손을 가슴에 얹게 해요</li></ul></div></div></section>
+    <section class="tc" style="--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF"><a class="tch" href="test.html"><span class="tno">1-3</span><b>진로심리검사 실시</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>검사 1개와 결과 PDF 저장·업로드까지 1차시(45분)를 권장해요</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>1-1 로그인을 먼저 끝내요</li><li>결과지 PDF 저장 방법(프린터 → PDF로 저장)을 화면으로 먼저 보여 줘요</li><li>직업흥미검사(H)는 커리어넷 로그인·본인 인증이 필요해요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>인쇄 창에서 대상을 ‘PDF로 저장’으로 바꾸지 못해요</li><li>저장한 PDF 파일 위치를 못 찾아요 → 파일 이름을 미리 정해 주기</li><li>직업흥미검사(H) 결과는 꿈it(잇)다에 올라가지 않아요</li></ul></div></div></section>
+    <section class="tc" style="--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF"><a class="tch" href="result.html"><span class="tno">1-4</span><b>심리검사 결과정리</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>활동지 작성 1차시를 권장해요</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>‘나의 진로 보물지도’ 활동지를 인쇄해요(PDF·HWP 내려받기)</li><li>1-3 검사 결과가 저장·업로드되었는지 확인해요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>검사 결과 화면을 못 찾아요 → 검사 카드의 [검사결과 보기]</li><li>검사를 1개만 한 학생 → 해당 칸만 채우고 나머지는 다음 시간에</li></ul></div></div></section>
+    <section class="tc" style="--d:#C2410C;--l:#FFF1E6;--m:#FFD8BF"><a class="tch" href="gold.html"><span class="tno">1-5</span><b>채팅으로 황금지점 찾기</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>챗봇 대화와 직업 고르기까지 1차시를 권장해요</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>1-4 활동지를 먼저 완성해요</li><li>챗봇 링크가 수업 기기에서 열리는지 미리 확인해요(구글 로그인이 필요할 수 있어요)</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>이름·학번 같은 개인정보를 챗봇에 넣어요 → 넣지 않게 안내</li><li>추천 직업을 그대로 고르기만 해요 → 활동지의 탐색할 직업 3순위를 직접 쓰게 해요</li></ul></div></div></section>
+    <section class="tc" style="--d:#1864AB;--l:#E8F2FC;--m:#C5DEF7"><a class="tch" href="career.html"><span class="tno">2-1</span><b>진로 직업탐색</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>20~30분</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>1-5에서 희망 직업을 고르고 꿈it(잇)다에 선택했는지 확인해요</li><li>체험 신청은 선생님과 상의하도록 미리 안내해요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>고른 직업이 안 보여요 → [나의 희망직업 변경하기]</li><li>[진로]·[진학] 탭을 헷갈려요 → 2-1은 [진로] 탭</li></ul></div></div></section>
+    <section class="tc" style="--d:#1864AB;--l:#E8F2FC;--m:#C5DEF7"><a class="tch" href="advance.html"><span class="tno">2-2</span><b>진로 진학탐색</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>20~30분 · 2-1과 이어서 하면 좋아요</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>2-1과 같은 화면의 [진학] 탭을 써요</li><li>관심 학교는 학교 홈페이지·입학설명회로 더 알아보도록 안내해요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>학교추천이 너무 많아요 → 지역·학교유형으로 먼저 거르기</li><li>학과 이름만 적고 끝내요 → 준비방법 중 지금 할 일 1가지 적기</li></ul></div></div></section>
+    <section class="tc" style="--d:#1864AB;--l:#E8F2FC;--m:#C5DEF7"><a class="tch" href="jobinfo.html"><span class="tno">2-3</span><b>진로로드맵(직업정보)</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>20~30분</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>학생마다 알아볼 직업을 1~2개 미리 정해요</li><li>직업인 영상은 이어폰을 준비해요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>직업 이름이 검색되지 않아요 → 비슷한 이름이나 직업군으로 검색</li><li>읽기만 하고 끝내요 → 알게 된 점·더 궁금한 점을 한 줄씩 쓰게 해요</li></ul></div></div></section>
+    <section class="tc" style="--d:#1864AB;--l:#E8F2FC;--m:#C5DEF7"><a class="tch" href="roadmap.html"><span class="tno">2-4</span><b>진학로드맵</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>20~30분 · 고입을 앞둔 학년에 특히 좋아요</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>학년에 맞춰 중학교·고등학교·대학교 중 어디부터 볼지 정해요</li><li>고입 일정·전형은 학교 홈페이지와 입학설명회로 꼭 확인하게 해요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>학교 정보만 보고 끝내요 → 나의 진학 경로를 한 줄로 그려 보게 해요</li></ul></div></div></section>
+    <section class="tc" style="--d:#1864AB;--l:#E8F2FC;--m:#C5DEF7"><a class="tch" href="interview.html"><span class="tno">2-5</span><b>모의면접기</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>질문 1개에 생각 30초 + 답변 1분 · 한 학생에 5~10분</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>모의면접기는 Claude 페이지라 선생님 계정으로 열어 화면에 띄워 써요</li><li>녹화하려면 카메라·마이크가 되는 노트북을 준비해요</li><li>지원 학교의 입학전형 요강으로 면접 방식을 먼저 확인해요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>답을 외워서 말해요 → 결론 → 이유 → 경험 → 다짐 틀로 내 말로</li><li>면접 방식은 학교와 해마다 달라요</li></ul></div></div></section>
+    <section class="tc" style="--d:#6F2DA8;--l:#F4EAFB;--m:#E2CDF2"><a class="tch" href="counsel.html"><span class="tno">3-1</span><b>상담게시판 상담</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>학생 글 쓰기 10~15분 · 답변은 선생님이 따로</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>진로심리검사(1-3) 응시 후 신청하도록 안내해요</li><li>학생용 계정으로 로그인해야 글을 쓸 수 있어요</li><li>답변 초안은 3-2 상담게시판용 챗봇을 활용해요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>고민을 너무 짧게 써요 → 희망 직업 + 궁금한 점 한 가지로 쓰게 해요</li><li>개인정보(연락처 등)를 쓰지 않도록 안내해요</li></ul></div></div></section>
+    <section class="tc" style="--d:#6F2DA8;--l:#F4EAFB;--m:#E2CDF2"><a class="tch" href="chatbot.html"><span class="tno">3-2</span><b>상담게시판용 챗봇</b><span class="tgo">▶</span></a><div class="tcb"><div class="ttrow tt-t"><b>권장 시간</b><div>예시 함께 보기 10분</div></div><div class="ttrow tt-p"><b>수업 전 준비</b><ul><li>상담 예시 파일을 미리 열어 봐요</li><li>답변 챗봇에는 학생 이름·반·번호를 지우고 고민 내용만 넣어요</li></ul></div><div class="ttrow tt-w"><b>자주 막히는 곳</b><ul><li>예시 답변을 그대로 따라 써요 → 내 희망 직업과 궁금한 점으로 바꾸게 해요</li><li>챗봇 답변은 꼭 확인하고 다듬은 뒤 올려요</li></ul></div></div></section>
+  </div>
+  <footer class="ft"><div>※ 수업 전에 해당 활동의 TIP을 한 번 훑어보고 들어가면 수업이 끊기지 않아요.</div><div style="display: flex; gap: 12px; align-items: center"><a class="back" href="#">▲ 꿀팁 꾸러미 위로</a><a class="back" href="index.html">매뉴얼 홈으로</a></div></footer>
 </div>
 </div></div>
 <script>
-(function(){var W=1760,H=990,w=document.getElementById('wrap');
-function fit(){var s=Math.min(innerWidth/(W+20),innerHeight/(H+20));if(innerWidth<700)s=Math.min(s*1.0,innerWidth/W);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+20)+'px';w.parentNode.style.width=innerWidth+'px';}
+(function(){var W=1760,w=document.getElementById('wrap');
+function fit(){var H=w.offsetHeight;var s=Math.min(innerWidth/(W+20),1);w.style.transform='scale('+s+')';w.parentNode.style.height=(H*s+40)+'px';w.parentNode.style.width=innerWidth+'px';}
 addEventListener('resize',fit);fit();})();
 </script>
 
