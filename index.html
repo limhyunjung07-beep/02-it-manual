@@ -153,6 +153,24 @@ img,video{height:auto}
 .ttrow>b{justify-self:start}
 }
 </style>
+<style id="steptabs">
+.stabs,.snext{display:none}
+@media (max-width:900px){
+.stabs{display:flex;gap:8px;position:sticky;top:0;z-index:30;padding:10px 12px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.stabs button{flex:1;font:inherit;font-family:'Noto Sans KR',sans-serif;border:2px solid var(--m);background:var(--l);color:var(--d);border-radius:14px;padding:8px 4px;font-size:14px;font-weight:900;letter-spacing:.04em;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;line-height:1.2}
+.stabs button small{font-size:13px;font-weight:700;letter-spacing:0}
+.stabs button.on{background:var(--c);border-color:var(--c);color:#fff}
+.board[data-s="1"] .scroll:not(.g1),.board[data-s="2"] .scroll:not(.g2),.board[data-s="3"] .scroll:not(.g3){display:none!important}
+.board .rod,.board .head .pill,.board .head .ic{display:none!important}
+.board .paper{border-radius:18px!important}
+.board .head{padding:12px 6px 8px!important;gap:2px!important}
+.board .head b{font-size:28px!important}
+.board .head>span:last-child{margin-top:2px!important;font-size:15px!important}
+.board{padding-top:12px!important}
+.snext{display:block;width:100%;margin:12px 0 4px;font:inherit;font-family:'Noto Sans KR',sans-serif;font-size:15px;font-weight:900;color:#fff;background:var(--c);border:0;border-radius:999px;padding:12px 16px;cursor:pointer}
+.snext.alt{background:var(--l);color:var(--d);border:2px solid var(--m)}
+}
+</style>
 <style id="protect-css">html{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,select,[contenteditable]{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none}.org em.crn{display:block;font-style:normal;font-size:11px;font-weight:500;color:#a9d3cd;margin-top:3px;white-space:nowrap}.crm{display:none}@media (max-width:900px){.crm{display:block;padding:14px 16px 22px;font-size:12px;line-height:1.5;color:#6b7280;text-align:center;background:#fff}}</style>
 </head>
 <body>
@@ -176,7 +194,8 @@ img,video{height:auto}
     <div class="org" title="© 2026 매탄중학교 진로상담실 · 수업 활용은 자유롭게, 무단 수정·재배포는 금지해요"><small>매탄중학교</small><b>진로상담실</b><em class="crn">© 무단 수정·재배포 금지</em></div>
   </header>
 
-  <div class="board">
+  <nav class="stabs" aria-label="단계 선택"><button type="button" class="g1 on" data-s="1">STEP 01<small>자기이해</small></button><button type="button" class="g2" data-s="2">STEP 02<small>진로설계</small></button><button type="button" class="g3" data-s="3">STEP 03<small>진로 상담</small></button></nav>
+  <div class="board" data-s="1">
     <!-- STEP 01 -->
     <div class="scroll g1">
       <div class="rod"><i></i></div>
@@ -235,6 +254,7 @@ img,video{height:auto}
             </div>
           </div>
         </div>
+        <button type="button" class="snext" data-s="2">STEP 01 완료 → STEP 02 진로설계 ▶</button>
       </div>
       <div class="rod b"><i></i></div>
     </div>
@@ -296,6 +316,7 @@ img,video{height:auto}
             </div>
           </div>
         </div>
+        <button type="button" class="snext" data-s="3">STEP 02 완료 → STEP 03 진로 상담 ▶</button>
       </div>
       <div class="rod b"><i></i></div>
     </div>
@@ -356,6 +377,7 @@ img,video{height:auto}
             </div>
           </div>
         </div>
+        <button type="button" class="snext alt" data-s="1">▲ STEP 01부터 다시 보기</button>
       </div>
       <div class="rod b"><i></i></div>
     </div>
@@ -374,6 +396,10 @@ addEventListener('resize',fit);fit();})();
 </script>
 
 <div class="crm">© 2026 매탄중학교 진로상담실 · 수업 활용은 자유롭게, 무단 수정·재배포는 금지해요</div>
+<script id="steptabs-js">(function(){var b=document.querySelector('.board'),t=[].slice.call(document.querySelectorAll('.stabs button'));if(!b)return;
+function go(n,scroll){b.setAttribute('data-s',n);t.forEach(function(x){x.classList.toggle('on',x.getAttribute('data-s')==n)});try{history.replaceState(null,'','#step'+n)}catch(e){}if(scroll){var nv=document.querySelector('.stabs');window.scrollTo({top:Math.max(0,b.getBoundingClientRect().top+window.pageYOffset-nv.offsetHeight),behavior:'smooth'})}}
+document.addEventListener('click',function(e){var x=e.target.closest&&e.target.closest('.stabs button,.snext');if(x){go(x.getAttribute('data-s'),true)}});
+var m=/#step([123])/.exec(location.hash);if(m)go(m[1],false);})();</script>
 <script id="protect">(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,select,[contenteditable]')}document.addEventListener('contextmenu',function(e){if(!ok(e.target))e.preventDefault()});document.addEventListener('dragstart',function(e){if(e.target&&e.target.tagName==='IMG')e.preventDefault()});document.addEventListener('copy',function(e){if(!ok(document.activeElement))e.preventDefault()});})();</script>
 </body>
 </html>
