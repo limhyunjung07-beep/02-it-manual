@@ -92,6 +92,11 @@ a{color:#1864AB}a:hover{color:#0d3f73}
 .tt-t>b{background:#E6F2F0;color:#0E5C58}.tt-p>b{background:#E8F2FC;color:#1864AB}.tt-w>b{background:#FDF1EF;color:#B42318}
 .kitbtn{flex-shrink:0;text-decoration:none;background:#F4EAFB;color:#6F2DA8;font-weight:900;font-size:16px;border-radius:999px;padding:11px 20px;border:2px solid #E2CDF2}
 .kitbtn:hover{background:#fff;color:#6F2DA8}
+.pbox{flex:none;align-self:center;display:flex;align-items:center;gap:4px;border:1.5px solid #17325e;border-radius:10px;padding:4px 5px;background:#fff}
+.pbl{font-size:11px;font-weight:800;color:#17325e;padding:0 2px;white-space:nowrap}
+.pdfb{font:inherit;font-weight:800;font-size:12.5px;line-height:1.2;cursor:pointer;white-space:nowrap;border:0;border-radius:7px;padding:6px 8px;min-height:34px;background:#17325e;color:#fff}
+.pdfb.alt{background:#ffd84d;color:#17325e}.pdfb:disabled{opacity:.6;cursor:default}
+@media (max-width:700px){.pbox{display:grid;grid-template-columns:auto auto;gap:3px}.pbl{grid-column:1/-1;text-align:center;font-size:10.5px}.pdfb{font-size:12px;padding:6px 7px;min-height:32px}}
 </style>
 <style>.pickwrap{display:flex;flex-direction:column;flex:1;min-height:0}.pickwrap>.pick{flex:1}.pick[hidden]{display:none}</style>
 <style>
@@ -180,7 +185,7 @@ img,video{height:auto}
       </div>
       <div class="pickwrap"><div class="pick" data-panel="voc">
         <div class="info">
-          <div class="tname"><small>선택한 학교 유형</small><b>특성화고</b></div>
+          <div class="tname"><small>선택한 학교 유형</small><b>특성화고</b></div><div class="pbox"><span class="pbl">🖨 PDF</span><button type="button" class="pdfb" data-t="voc" data-a="0">기출·연습문제</button><button type="button" class="pdfb alt" data-t="voc" data-a="1">모범답안</button></div>
           <div class="desc">전공 학과에서 기술·실무를 배우며 취업과 진학을 함께 준비하는 학교예요.<br><b>면접 포인트</b> · 학과 선택 이유, 진로 계획, 성실성</div>
         </div>
         <div class="qh">예상 질문</div>
@@ -189,7 +194,7 @@ img,video{height:auto}
         </ol>
         <div class="tipb"><b>답변 TIP</b> · 왜 이 학과인지, 졸업 후 무엇을 하고 싶은지 구체적인 직업 이름으로 말해 보세요.</div></div><div class="pick" data-panel="mei" hidden>
         <div class="info">
-          <div class="tname"><small>선택한 학교 유형</small><b>마이스터고</b></div>
+          <div class="tname"><small>선택한 학교 유형</small><b>마이스터고</b></div><div class="pbox"><span class="pbl">🖨 PDF</span><button type="button" class="pdfb" data-t="mei" data-a="0">기출·연습문제</button><button type="button" class="pdfb alt" data-t="mei" data-a="1">모범답안</button></div>
           <div class="desc">산업 분야의 전문 기술 인재(영 마이스터)를 기르는 학교예요.<br><b>면접 포인트</b> · 기술에 대한 관심, 끈기, 협동심</div>
         </div>
         <div class="qh">예상 질문</div>
@@ -198,7 +203,7 @@ img,video{height:auto}
         </ol>
         <div class="tipb"><b>답변 TIP</b> · 그 산업 분야에 관심을 갖게 된 계기와, 직접 만들어 보거나 고쳐 본 경험을 넣어 보세요.</div></div><div class="pick" data-panel="sci" hidden>
         <div class="info">
-          <div class="tname"><small>선택한 학교 유형</small><b>과학고</b></div>
+          <div class="tname"><small>선택한 학교 유형</small><b>과학고</b></div><div class="pbox"><span class="pbl">🖨 PDF</span><button type="button" class="pdfb" data-t="sci" data-a="0">기출·연습문제</button><button type="button" class="pdfb alt" data-t="sci" data-a="1">모범답안</button></div>
           <div class="desc">수학·과학 분야의 깊은 탐구 활동을 하는 학교예요.<br><b>면접 포인트</b> · 탐구 경험, 자기주도학습 과정</div>
         </div>
         <div class="qh">예상 질문</div>
@@ -207,7 +212,7 @@ img,video{height:auto}
         </ol>
         <div class="tipb"><b>답변 TIP</b> · 탐구 과정에서 무엇을 궁금해했고, 어떻게 해결했는지 순서대로 설명해 보세요.</div></div><div class="pick" data-panel="flg" hidden>
         <div class="info">
-          <div class="tname"><small>선택한 학교 유형</small><b>외고·국제고</b></div>
+          <div class="tname"><small>선택한 학교 유형</small><b>외고·국제고</b></div><div class="pbox"><span class="pbl">🖨 PDF</span><button type="button" class="pdfb" data-t="flg" data-a="0">기출·연습문제</button><button type="button" class="pdfb alt" data-t="flg" data-a="1">모범답안</button></div>
           <div class="desc">외국어와 국제 이해 교육에 중점을 둔 학교예요.<br><b>면접 포인트</b> · 외국어 학습 과정, 국제 이슈 관심</div>
         </div>
         <div class="qh">예상 질문</div>
@@ -216,7 +221,7 @@ img,video{height:auto}
         </ol>
         <div class="tipb"><b>답변 TIP</b> · 외국어를 공부한 나만의 방법과, 관심 있는 국제 이슈를 하나 정해 두세요.</div></div><div class="pick" data-panel="pri" hidden>
         <div class="info">
-          <div class="tname"><small>선택한 학교 유형</small><b>자율형사립고</b></div>
+          <div class="tname"><small>선택한 학교 유형</small><b>자율형사립고</b></div><div class="pbox"><span class="pbl">🖨 PDF</span><button type="button" class="pdfb" data-t="pri" data-a="0">기출·연습문제</button><button type="button" class="pdfb alt" data-t="pri" data-a="1">모범답안</button></div>
           <div class="desc">학교만의 특색 있는 교육과정을 운영하는 학교예요.<br><b>면접 포인트</b> · 자기주도학습, 학교 교육과정 이해</div>
         </div>
         <div class="qh">예상 질문</div>
@@ -274,6 +279,80 @@ document.querySelectorAll('[data-panel]').forEach(function(p){p.hidden=p.dataset
 document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});
 var c=d.querySelector('[data-close]');if(c)c.onclick=function(){d.open=false;};})();
+</script>
+<script id="pdf-js">
+(function(){
+var MA2 = {
+"우리 학교, 이 학과에 지원한 이유는 무엇인가요?":"저는 [학과]에서 배우는 [분야]에 관심이 많아 지원했습니다. [계기가 된 경험]을 하며 직접 만들고 다루는 일이 적성에 맞는다는 것을 알게 되었습니다. 이 학교는 실습 환경과 취업 지원이 잘 되어 있어 제 꿈인 [직업]에 가장 빨리 다가갈 수 있다고 생각합니다.",
+"졸업 후 취업이나 진학 계획을 말해 보세요.":"졸업 후에는 [분야]의 [직업]으로 취업해 현장 경험을 쌓고 싶습니다. 일하면서 더 필요한 공부는 선취업 후진학 제도로 이어 가 전문성을 키우겠습니다. 이를 위해 재학 중 [자격증]을 따고 실습에 성실히 참여하겠습니다.",
+"따고 싶은 자격증과 준비 계획이 있나요?":"[자격증 이름]을 따고 싶습니다. 1학년 때 기초 이론을 탄탄히 하고, 2학년 때 필기와 실기 시험에 도전하겠습니다. 방과 후 수업과 기출문제 풀이로 꾸준히 준비하겠습니다.",
+"나의 장점과 단점을 말해 보세요.":"제 장점은 맡은 일을 끝까지 책임지는 것입니다. [경험]에서 마지막까지 역할을 해내 모둠이 좋은 결과를 얻었습니다. 단점은 혼자 해결하려다 시간이 늦어지는 점이라, 요즘은 막히면 바로 친구나 선생님께 묻는 연습을 하고 있습니다.",
+"친구와 의견이 달랐을 때 어떻게 해결했나요?":"모둠 과제 주제를 정할 때 친구와 의견이 달랐습니다. 저는 먼저 친구의 이유를 끝까지 듣고, 두 의견의 장단점을 함께 정리해 모둠원들과 비교했습니다. 결국 두 의견을 합친 주제로 정했고, 서로 존중하면 더 좋은 답이 나온다는 것을 배웠습니다.",
+"마지막으로 하고 싶은 말이 있나요?":"오늘 면접을 준비하면서 제가 왜 이 학교에 오고 싶은지 더 분명해졌습니다. 입학하게 된다면 [다짐, 예: 성실하게 배우고 친구들과 협력하는] 학생이 되겠습니다. 들어 주셔서 감사합니다.",
+"이 산업 분야에 관심을 갖게 된 계기는 무엇인가요?":"[언제] [경험, 예: 고장 난 물건을 직접 고쳐 본 일]을 계기로 관심이 생겼습니다. 원리를 알고 손으로 해결했을 때 큰 보람을 느꼈습니다. 그 뒤 [분야]의 일을 찾아보며 이 산업에서 일하는 기술인이 되고 싶다는 꿈을 갖게 되었습니다.",
+"어려운 일을 끝까지 해낸 경험을 말해 보세요.":"[경험, 예: 과학 탐구 대회 작품 만들기]에서 여러 번 실패했습니다. 원인을 하나씩 기록하며 방법을 바꿨고, 선생님께 조언도 구했습니다. 결국 작품을 완성했고, 포기하지 않으면 해결 방법이 보인다는 것을 배웠습니다.",
+"졸업 후 어떤 기술인이 되고 싶나요?":"현장에서 믿고 맡길 수 있는 [분야] 기술인이 되고 싶습니다. 기본기를 정확히 지키고 안전을 먼저 생각하며, 새로운 기술도 꾸준히 배우겠습니다. 나중에는 후배에게 기술을 가르쳐 줄 수 있는 숙련된 마이스터가 되는 것이 목표입니다.",
+"가장 기억에 남는 수학·과학 탐구 경험은 무엇인가요?":"[탐구 주제]를 탐구한 경험이 가장 기억에 남습니다. [궁금했던 점]에서 출발해 가설을 세우고 [실험·조사 방법]으로 확인했습니다. 예상과 다른 결과가 나와 변인을 다시 통제해 실험했고, 그 과정에서 과학적 사고의 중요성을 배웠습니다.",
+"스스로 공부한 방법과 그 과정에서 배운 점은?":"저는 개념을 공부한 뒤 책을 덮고 스스로 설명해 보는 방법을 썼습니다. 설명이 막히는 부분을 표시해 다시 공부하고, 관련 문제로 확인했습니다. 이 과정에서 '안다고 느끼는 것'과 '설명할 수 있는 것'이 다르다는 것을 배웠습니다.",
+"입학 후 연구하고 싶은 주제가 있나요?":"[연구 주제]를 연구하고 싶습니다. [관심을 갖게 된 계기] 때문에 이 주제가 궁금해졌습니다. 입학하면 관련 과목을 깊이 공부하고, R&E나 동아리 활동으로 실제 탐구를 해 보겠습니다.",
+"외국어를 공부하면서 가장 노력한 점은 무엇인가요?":"매일 꾸준히 듣고 소리 내어 따라 하는 것을 가장 노력했습니다. 하루 [시간]씩 [자료]를 듣고 따라 말하며 표현을 익혔고, 배운 문장으로 짧은 글을 써 보았습니다. 그 결과 [변화]가 있었고, 꾸준함이 외국어 실력을 만든다는 것을 알게 되었습니다.",
+"최근 관심 있게 본 국제 뉴스가 있나요?":"[뉴스 주제, 예: 기후 변화 대응을 위한 국제 협력] 뉴스를 관심 있게 보았습니다. [핵심 내용]을 알게 되었고, 한 나라의 노력만으로는 해결하기 어렵다는 점을 느꼈습니다. 저도 생활 속에서 [실천]을 하며 관심을 이어 가고 있습니다.",
+"외국어 능력을 살려 어떤 일을 하고 싶나요?":"외국어 능력을 살려 [직업, 예: 국제기구에서 일하는 전문가]가 되고 싶습니다. 서로 다른 문화를 이해하고 연결하는 일이 앞으로 더 중요해질 것이라고 생각합니다. 그래서 언어뿐 아니라 그 나라의 문화와 사회도 함께 공부하겠습니다.",
+"우리 학교의 교육과정 중 기대되는 점은?":"[학교 특색 교육과정, 예: 다양한 선택 과목과 프로젝트 수업]이 가장 기대됩니다. 제가 관심 있는 [분야]를 깊이 공부할 수 있기 때문입니다. 입학하면 이 과정을 통해 [진로]를 구체화하고 싶습니다.",
+"스스로 계획을 세워 공부한 경험을 말해 보세요.":"시험 3주 전에 과목별 범위와 공부할 날을 표로 만들어 계획을 세웠습니다. 매일 저녁 지킨 것을 표시하고, 밀린 부분은 주말에 보충했습니다. 계획대로 공부하니 시험 전날 불안이 줄었고, 성적도 [변화]가 있었습니다.",
+"고등학교 3년 동안의 목표는 무엇인가요?":"1학년에는 기초 과목을 탄탄히 하고, 2학년에는 진로와 관련된 탐구·동아리 활동을 깊이 하겠습니다. 3학년에는 그동안의 활동을 바탕으로 [진로]와 연결된 진학을 준비하겠습니다. 3년 동안 꾸준함을 잃지 않는 것이 가장 큰 목표입니다."
+};
+
+var PAST={"school": "수원외고", "py": "2024학년도", "items": [{"tag": "공통", "t": "제시문 (가) 리더는 공동체 이익을 추구 (나) 리더는 의견 수렴이 중요 → (다) 기후변화로 옆 마을 작물을 따라 길러 이웃 마을 이익이 줄어든 이장 A를 판단하고 반론·재반론하기", "a": "[판단] 이장 A는 (가)의 관점에서는 자기 마을의 이익을 지킨 리더지만, (나)의 관점에서는 이웃 마을과 의견을 나누지 않아 아쉬운 리더라고 생각합니다. [반론] 기후변화로 생존이 걸린 상황이니 마을 주민을 먼저 지키는 것이 이장의 책임이라는 반론이 있을 수 있습니다. [재반론] 하지만 이웃 마을의 이익이 줄면 갈등이 생겨 결국 두 마을 모두 손해를 봅니다. 작물을 나누어 기르거나 판로를 함께 찾는 등 의견을 모았다면 더 오래가는 해결책이 되었을 것입니다."}, {"tag": "공통", "t": "모둠장 A라면, 주제와 맞지 않는 자료를 조사한 B와 역할 분담이 불공평하다는 C에게 각각 어떻게 대처할까?", "a": "B에게는 먼저 수고했다고 말한 뒤, 주제와 어떤 점이 다른지 기준을 함께 확인하고 쓸 수 있는 부분은 살려 다시 조사하도록 돕겠습니다. C의 말은 모둠 전체가 함께 듣고, 할 일의 양을 표로 정리해 다시 나누겠습니다. 모둠장은 지시하는 사람이 아니라 모두가 납득할 수 있게 조율하는 사람이라고 생각합니다."}, {"tag": "자기주도", "t": "영어 외 다른 과목 공부법은? 수원외고에서 어떻게 활용할까?", "a": "[과목]은 개념을 내 말로 정리하고 문제를 풀어 확인하는 방법으로 공부했습니다. 틀린 문제는 이유를 한 줄로 적어 두고 일주일 뒤 다시 풀었습니다. 수원외고에서는 전공 언어 외에도 과목이 많으므로, 이 방법으로 과목별 정리 노트를 만들어 균형 있게 공부하겠습니다."}, {"tag": "독서", "t": "가치관 형성에 도움을 준 책과, 그 가치를 실현한 활동은?", "a": "[책 제목]을 읽고 '[가치]'의 중요성을 깨달았습니다. 그 뒤 [활동]에서 그 가치를 실천했습니다. 예를 들어 [구체적 행동]을 했고, 그 결과 [변화]가 있었습니다. 책에서 배운 생각이 행동으로 이어질 때 진짜 내 가치가 된다는 것을 배웠습니다."}, {"tag": "진로", "t": "꿈을 위해 수원외고의 중점 외국어 교육을 어떻게 활용할까?", "a": "제 꿈은 [진로]입니다. 수원외고에서 [전공 외국어]를 깊이 배워 그 나라의 언어와 문화를 이해하는 능력을 기르겠습니다. 전공어 동아리와 교류 활동에 참여해 실제로 쓰는 경험을 쌓고, 꿈과 관련된 자료를 그 언어로 읽을 수 있을 만큼 실력을 키우겠습니다."}, {"tag": "진로", "t": "AI가 내 꿈의 직업을 대체한다면? 4차 산업혁명 시대에 필요한 자질은?", "a": "AI가 반복적인 일은 대신할 수 있지만, 사람의 마음을 이해하고 새로운 질문을 던지는 일은 사람이 해야 한다고 생각합니다. 그래서 저는 AI를 도구로 잘 다루는 능력, 비판적으로 판단하는 능력, 다른 사람과 소통하고 협력하는 능력이 필요하다고 봅니다. 제 직업이 바뀌더라도 이 능력을 키워 AI와 함께 일하는 사람이 되겠습니다."}, {"tag": "인성", "t": "기숙사 규칙 2가지를 정한다면? 어기는 학생이 있다면 어떻게?", "a": "첫째, 정해진 시간 이후에는 조용히 하기, 둘째, 공용 공간을 쓴 뒤 바로 정리하기를 정하겠습니다. 둘 다 서로의 생활을 존중하기 위한 규칙입니다. 어기는 학생이 있으면 먼저 대화로 이유를 듣고, 반복되면 함께 정한 절차에 따라 사감 선생님께 도움을 요청하겠습니다."}, {"tag": "인성", "t": "입학 후 불합리한 일을 당하면 장단점을 활용해 어떻게 대처할까?", "a": "제 장점인 차분함을 살려 먼저 사실을 정확히 정리하겠습니다. 감정적으로 반응하기 쉬운 단점이 있으므로, 바로 반응하지 않고 시간을 두고 생각한 뒤 담임 선생님 등 정해진 절차로 도움을 구하겠습니다. 문제를 해결하는 것뿐 아니라 같은 일이 생기지 않도록 의견을 내겠습니다."}]};
+var FRAME='<b>답변 틀</b> ① 결론(내 답을 한 문장으로) → ② 이유 → ③ 경험(중학교 때 해 본 구체적인 활동) → ④ 다짐(입학 후 하고 싶은 일·계획).';
+var TIPP='<b>기출 문항</b> 지원자 후기를 바탕으로 한 문항이에요. 제시문형은 먼저 내 판단을 말하고, 근거 → 반론 → 재반론 순서로 정리해 보세요.';
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
+var libsP=null;
+function loadJs(src){return new Promise(function(ok,no){var x=document.createElement('script');x.src=src;x.onload=ok;x.onerror=function(){no(new Error('load'))};document.head.appendChild(x);});}
+function libs(){if(!libsP)libsP=loadJs('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js').then(function(){return loadJs('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');});return libsP;}
+function data(pid){var p=document.querySelector('[data-panel="'+pid+'"]');
+  return {name:p.querySelector('.tname b').textContent.trim(), desc:p.querySelector('.desc').innerHTML, qs:[].map.call(p.querySelectorAll('.q span'),function(x){return x.textContent.trim();}), tags:[].map.call(p.querySelectorAll('.q em'),function(x){return x.textContent.trim();}), tip:p.querySelector('.tipb').innerHTML};}
+function blocks(pid,ans){
+  var d=data(pid),B=[],n=0,line='<div class="pl"></div>',L4=line+line+line+line;
+  function A(t){return ans?'<div class="pa"><b>모범답안</b> '+esc(MA2[t]||PAST.items.filter(function(x){return x.t===t;}).map(function(x){return x.a;})[0]||'결론 → 이유 → 경험 → 다짐 순서로 말해 보세요.')+'</div>':L4;}
+  B.push('<div class="ph"><div><small>2-5 모의면접기 · 학교 유형</small><h1>'+esc(d.name)+' 면접 '+(ans?'모범답안':'기출·연습 문제')+'</h1></div><div class="pn">날짜 ________ &nbsp; 이름 ____________</div></div>');
+  B.push('<div class="pb"><h2>이런 학교예요</h2><p>'+d.desc+'</p></div>');
+  if(pid==='flg'){B.push('<h2 class="sec">기출 문항 · '+esc(PAST.school)+' '+esc(PAST.py)+'</h2>');B.push('<div class="ptip">'+TIPP+'</div>');
+    PAST.items.forEach(function(x){n++;B.push('<div class="pq"><b>'+n+'.</b> <span class="pt">'+esc(x.tag)+'</span> '+esc(x.t)+A(x.t)+'</div>');});}
+  B.push('<h2 class="sec">예상 질문 · '+esc(d.name)+'</h2>');B.push('<div class="ptip">'+FRAME+'</div>');B.push('<div class="ptip">'+d.tip+'</div>');
+  d.qs.forEach(function(t,i){n++;B.push('<div class="pq"><b>'+n+'.</b> <span class="pt">'+esc(d.tags[i]||'')+'</span> '+esc(t)+A(t)+'</div>');});
+  B.push('<div class="pf"><span>꿈it(잇)다 <i>사용자 매뉴얼</i></span><small>'+(ans?'[ ] 안은 내 경험으로 바꿔 말하세요 · 외우기보다 내 말로':'소리 내어 1분 안에 말해 보세요')+'</small></div>');
+  return B;}
+function pages(bl){
+  var css='.pg{width:794px;height:1123px;padding:52px 56px 64px;box-sizing:border-box;background:#fff;color:#1d2433;font-family:"Noto Sans KR",sans-serif;font-size:14px;line-height:1.6;overflow:hidden;position:relative;word-break:keep-all}'+
+  '.pg h1{margin:2px 0 0;font-size:24px;color:#17325e;line-height:1.3}.pg small{color:#5b6478;font-weight:700}.ph{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;border-bottom:3px solid #17325e;padding-bottom:10px;margin-bottom:12px}.pn{font-size:13px;white-space:nowrap}'+
+  '.pb{border:1px solid #dfe3eb;border-radius:10px;padding:8px 14px;margin-bottom:10px}.pb p{margin:0}.pb h2,.sec{font-size:16px;color:#17325e;margin:4px 0 6px}.sec{margin-top:14px;border-left:5px solid #2B3A8C;padding-left:8px}'+
+  '.pq{margin:0 0 12px}.pt{font-size:12px;font-weight:700;color:#0e7490}.pl{border-bottom:1px solid #b9c1d0;height:26px}'+
+  '.ptip{background:#fff8e6;border-radius:8px;padding:7px 12px;font-size:13px;margin:0 0 10px}.ptip b{color:#d2541c;margin-right:4px}'+
+  '.pa{margin-top:4px;background:#f1f4fb;border-left:4px solid #2B3A8C;border-radius:6px;padding:6px 10px;font-size:13px;line-height:1.65}.pa b{color:#2B3A8C;margin-right:4px}'+
+  '.pf{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:8px}.pf span{background:#17325e;color:#fff;font-weight:900;border-radius:8px;padding:3px 10px;font-size:13px}.pf span i{font-style:normal;color:#ffd84d}.pf small{font-weight:400}'+
+  '.pgno{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:11px;color:#8a93a6}';
+  var host=document.createElement('div');host.style.cssText='position:fixed;left:-10000px;top:0;z-index:-1';host.innerHTML='<style>'+css+'</style>';document.body.appendChild(host);
+  var ps=[],pg=null,secs=0;function np(){pg=document.createElement('div');pg.className='pg';host.appendChild(pg);ps.push(pg);}np();
+  bl.forEach(function(h){var t=document.createElement('div');t.innerHTML=h;var el=t.firstChild;
+    if(el.classList.contains('sec')){secs++;if(secs>1&&pg.children.length)np();}
+    pg.appendChild(el);
+    if(pg.scrollHeight>pg.clientHeight&&pg.children.length>1){var carry=[el];pg.removeChild(el);
+      while(pg.lastElementChild&&pg.children.length>1&&(pg.lastElementChild.classList.contains('sec')||pg.lastElementChild.classList.contains('ptip'))){carry.unshift(pg.lastElementChild);pg.removeChild(pg.lastElementChild);}
+      np();carry.forEach(function(c){pg.appendChild(c);});}});
+  ps.forEach(function(p,i){var d=document.createElement('div');d.className='pgno';d.textContent=(i+1)+' / '+ps.length;p.appendChild(d);});
+  return {host:host,pages:ps};}
+function make(btn){var pid=btn.dataset.t,ans=btn.dataset.a==='1',lab=btn.textContent,built=null;
+  btn.disabled=true;btn.textContent='만드는 중…';
+  libs().then(function(){built=pages(blocks(pid,ans));return (document.fonts&&document.fonts.ready)||null;})
+  .then(function(){var pdf=new window.jspdf.jsPDF({unit:'mm',format:'a4'}),ch=Promise.resolve();
+    built.pages.forEach(function(p,i){ch=ch.then(function(){return html2canvas(p,{scale:2,backgroundColor:'#ffffff'});}).then(function(cv){if(i)pdf.addPage();pdf.addImage(cv.toDataURL('image/jpeg',0.9),'JPEG',0,0,210,297);});});
+    return ch.then(function(){var name=data(pid).name.replace(/[\\/:*?"<>|·]/g,'')+(ans?'_면접_모범답안.pdf':'_면접_기출연습문제.pdf');
+      var blob=pdf.output('blob');window.__lastPdf={name:name,blob:blob};var u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},4000);});})
+  .catch(function(){alert('PDF를 만들지 못했어요. 인터넷 연결을 확인한 뒤 다시 눌러 주세요.');})
+  .then(function(){if(built)built.host.remove();btn.disabled=false;btn.textContent=lab;});}
+[].forEach.call(document.querySelectorAll('.pdfb'),function(b){b.addEventListener('click',function(){make(b);});});
+})();
 </script>
 <div class="crm">© 2026 매탄중학교 진로상담실 · 수업 활용은 자유롭게, 무단 수정·재배포는 금지해요</div>
 <script id="protect">(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,select,[contenteditable]')}document.addEventListener('contextmenu',function(e){if(!ok(e.target))e.preventDefault()});document.addEventListener('dragstart',function(e){if(e.target&&e.target.tagName==='IMG')e.preventDefault()});document.addEventListener('copy',function(e){if(!ok(document.activeElement))e.preventDefault()});})();</script>
